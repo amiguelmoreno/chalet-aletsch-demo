@@ -113,7 +113,7 @@ export function FloatingMenu() {
         aria-hidden={!open}
         aria-label="Wegweiser"
       >
-        <div className="flex flex-col min-h-full">
+        <div className="flex flex-col min-h-full pb-24 md:pb-28">
           <header className="px-7 md:px-9 pt-7 pb-7 border-b border-ink-700/15">
             <div className="flex items-baseline justify-between mb-3">
               <span className="editorial-caps-sm text-forest-700">Wegweiser</span>
