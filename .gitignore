@@ -11,3 +11,6 @@ prisma/*.db
 prisma/*.db-journal
 .vercel
 next-env.d.ts
+
+# Claude Code internal
+.claude/
