@@ -15,7 +15,7 @@ export function Header() {
   ];
 
   return (
-    <header className="border-b border-ink-700/10 bg-parchment-50/85 backdrop-blur-[2px] above-grain sticky top-0 z-30">
+    <header className="border-b border-ink-700/10 bg-parchment-50 above-grain sticky top-0 z-30 shadow-[0_1px_0_rgba(20,19,15,0.04)]">
       {/* Top hairline strip — letterhead margin, desktop only */}
       <div className="hidden md:block border-b border-ink-700/10 bg-forest-800 text-parchment-100">
         <Container className="flex items-center justify-between py-2.5">
