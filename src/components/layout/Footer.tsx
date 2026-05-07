@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
-import { Monogram } from "@/components/ornaments/Monogram";
+import { LogoMark } from "@/components/ornaments/LogoMark";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { MountainRule } from "@/components/ornaments/MountainRule";
 import { CookieSettingsTrigger } from "@/components/cookies/CookieBanner";
@@ -21,7 +21,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
           {/* Crest + name */}
           <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
-            <Monogram size={120} className="text-parchment-100" />
+            <LogoMark size={140} variant="light" />
             <p className="font-display text-3xl mt-6 text-parchment-50">Chalet Aletsch</p>
             <p className="editorial-caps mt-3 text-parchment-200/80">{t("tagline")}</p>
           </div>

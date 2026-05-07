@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
-import { Monogram } from "@/components/ornaments/Monogram";
+import { LogoMark } from "@/components/ornaments/LogoMark";
 import { ContactMapWrapper } from "@/components/marketing/ContactMapWrapper";
 
 export async function generateMetadata({
@@ -58,7 +58,7 @@ function ContactContent() {
             {/* Letter form */}
             <div className="lg:col-span-7 border border-ink-700/15 p-8 md:p-12 bg-parchment-100/30 relative">
               <div className="flex items-center justify-between mb-8 border-b border-ink-700/15 pb-6">
-                <Monogram size={56} />
+                <LogoMark size={64} />
                 <p className="editorial-caps text-forest-700">
                   {t("form.heading")}
                 </p>

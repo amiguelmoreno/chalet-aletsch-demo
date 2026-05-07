@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
-import { Monogram } from "@/components/ornaments/Monogram";
+import { LogoMark } from "@/components/ornaments/LogoMark";
 import { authConfigured } from "@/auth";
 import { SignInActions } from "./SignInActions";
 
@@ -27,7 +27,7 @@ function Content() {
       <Container width="narrow">
         <div className="border border-ink-700/15 bg-parchment-100/30 p-8 md:p-14">
           <div className="flex flex-col items-center text-center mb-10">
-            <Monogram size={72} />
+            <LogoMark size={88} />
             <Eyebrow className="mt-6">{t("eyebrow")}</Eyebrow>
             <h1 className="font-display italic text-display-md mt-3 text-ink-700">
               {t("title")}

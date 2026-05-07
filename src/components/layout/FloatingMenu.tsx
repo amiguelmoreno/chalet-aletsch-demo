@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Link, usePathname } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { cn } from "@/lib/cn";
+import { LogoMark } from "@/components/ornaments/LogoMark";
 
 type NavKey = "rooms" | "story" | "blog" | "contact" | "account" | "reserve";
 
@@ -113,17 +114,22 @@ export function FloatingMenu() {
         aria-label="Wegweiser"
       >
         <div className="flex flex-col min-h-full">
-          <header className="px-7 md:px-9 pt-9 pb-7 border-b border-ink-700/15">
-            <div className="flex items-baseline justify-between mb-4">
+          <header className="px-7 md:px-9 pt-7 pb-7 border-b border-ink-700/15">
+            <div className="flex items-baseline justify-between mb-3">
               <span className="editorial-caps-sm text-forest-700">Wegweiser</span>
               <span className="editorial-caps-sm text-forest-700">1923</span>
             </div>
-            <h2 className="font-display italic text-[2rem] leading-[1] text-ink-700">
-              Chalet Aletsch
-            </h2>
-            <p className="mt-3 text-sm text-forest-700/85 leading-relaxed">
-              Riederalp · Wallis · Schweiz
-            </p>
+            <div className="flex items-center gap-4">
+              <LogoMark size={64} className="shrink-0" />
+              <div className="min-w-0">
+                <h2 className="font-display italic text-[1.6rem] leading-[1] text-ink-700 truncate">
+                  Chalet Aletsch
+                </h2>
+                <p className="mt-2 text-xs text-forest-700/85 leading-relaxed">
+                  Riederalp · Wallis · Schweiz
+                </p>
+              </div>
+            </div>
           </header>
 
           <nav className="flex-1 px-7 md:px-9 py-2">

@@ -6,7 +6,7 @@ import { auth } from "@/auth";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
-import { Monogram } from "@/components/ornaments/Monogram";
+import { LogoMark } from "@/components/ornaments/LogoMark";
 import { Link } from "@/i18n/routing";
 import { prisma } from "@/lib/prisma";
 import { formatCHF } from "@/lib/pricing";
@@ -75,7 +75,7 @@ export default async function AccountBookingDetailPage({
 
         <div className="border border-ink-700/15 bg-parchment-100/30 p-8 md:p-12">
           <div className="flex items-center justify-between mb-8 border-b border-ink-700/15 pb-6">
-            <Monogram size={56} />
+            <LogoMark size={64} />
             <p className="font-display italic text-3xl text-forest-700">
               {booking.reference}
             </p>

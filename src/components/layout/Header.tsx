@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
-import { Monogram } from "@/components/ornaments/Monogram";
+import { LogoMark } from "@/components/ornaments/LogoMark";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Header() {
@@ -31,8 +31,8 @@ export function Header() {
           className="flex items-center gap-3 group min-w-0"
           aria-label="Chalet Aletsch — Startseite"
         >
-          <Monogram size={44} className="md:hidden transition-opacity duration-300 group-hover:opacity-80 shrink-0" />
-          <Monogram size={56} className="hidden md:block transition-opacity duration-300 group-hover:opacity-80 shrink-0" />
+          <LogoMark size={48} className="md:hidden transition-opacity duration-300 group-hover:opacity-80 shrink-0" priority />
+          <LogoMark size={68} className="hidden md:block transition-opacity duration-300 group-hover:opacity-80 shrink-0" priority />
           <span className="flex flex-col leading-none min-w-0">
             <span className="font-display text-[1.2rem] md:text-[1.55rem] tracking-tight text-ink-700 truncate">
               Chalet Aletsch
