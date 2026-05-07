@@ -39,13 +39,13 @@ export function RoomsLedger() {
               href="/rooms"
               className="group block border-b border-ink-700/15 hover:border-seal/70 transition-colors"
             >
-              <div className="grid grid-cols-12 gap-4 md:gap-8 items-baseline py-7 md:py-8">
-                <div className="col-span-12 md:col-span-1">
+              <div className="grid grid-cols-12 gap-x-4 gap-y-3 md:gap-8 items-baseline py-7 md:py-8">
+                <div className="col-span-2 md:col-span-1">
                   <span className="font-display italic text-forest-700 text-2xl">
                     {String(rooms.indexOf(room) + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <div className="col-span-12 md:col-span-5">
+                <div className="col-span-10 md:col-span-5">
                   <h3 className="font-display text-2xl md:text-3xl text-ink-700 group-hover:text-seal transition-colors">
                     {t(`items.${room.key}.name`)}
                   </h3>
@@ -53,17 +53,17 @@ export function RoomsLedger() {
                     {t(`items.${room.key}.subtitle`)}
                   </p>
                 </div>
-                <div className="col-span-7 md:col-span-4">
-                  <p className="text-ink-600 leading-relaxed">
+                <div className="col-span-12 md:col-span-4 md:order-none order-3">
+                  <p className="text-ink-600 leading-relaxed text-[0.98rem] md:text-base">
                     {t(`items.${room.key}.description`)}
                   </p>
                 </div>
-                <div className="col-span-5 md:col-span-2 text-right">
+                <div className="col-span-12 md:col-span-2 text-left md:text-right flex md:block items-baseline gap-3 md:gap-0 pt-1 md:pt-0">
                   <p className="editorial-caps text-forest-700/70">{t("from")}</p>
-                  <p className="font-display text-2xl text-ink-700 mt-1">
+                  <p className="font-display text-xl md:text-2xl text-ink-700 md:mt-1">
                     CHF {room.price}
                   </p>
-                  <p className="text-xs text-ink-500 mt-1">{t("perNight")}</p>
+                  <p className="hidden md:block text-xs text-ink-500 mt-1">{t("perNight")}</p>
                 </div>
               </div>
             </Link>

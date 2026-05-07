@@ -18,11 +18,11 @@ export function CookieBanner() {
     <div
       role="region"
       aria-label={t("title")}
-      className="fixed bottom-0 inset-x-0 z-50 bg-parchment-50 border-t border-ink-700/25 shadow-[0_-2px_24px_-12px_rgba(20,19,15,0.25)]"
+      className="fixed bottom-0 inset-x-0 z-[45] bg-parchment-50 border-t border-ink-700/25 shadow-[0_-2px_24px_-12px_rgba(20,19,15,0.25)]"
     >
       <div className="container-editorial py-4 md:py-5">
         {!expanded ? (
-          // Compact bar — single line on desktop
+          // Compact bar — stacks on mobile, single line on desktop
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
             <div className="flex-1 min-w-0">
               <p className="font-display text-[1.05rem] text-ink-700 leading-tight">
@@ -32,25 +32,27 @@ export function CookieBanner() {
                 {t("intro")}
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-2 md:gap-3 shrink-0">
+            <div className="flex flex-col md:flex-row md:items-center gap-2.5 md:gap-3 md:shrink-0">
               <button
                 onClick={() => setExpanded(true)}
-                className="ink-link editorial-caps-sm text-forest-700"
+                className="editorial-caps-sm text-forest-700 hover:text-seal transition-colors text-left md:text-center md:order-first underline decoration-forest-700/30 underline-offset-4 self-start md:self-auto"
               >
                 {t("customize")}
               </button>
-              <button
-                onClick={acceptNecessaryOnly}
-                className="editorial-caps-sm border border-ink-700/40 px-4 py-2 text-ink-700 hover:border-ink-700 transition-colors"
-              >
-                {t("necessaryOnly")}
-              </button>
-              <button
-                onClick={acceptAll}
-                className="editorial-caps-sm border border-ink-700 px-5 py-2 bg-ink-700 text-parchment-50 hover:bg-ink-800 transition-colors"
-              >
-                {t("acceptAll")}
-              </button>
+              <div className="grid grid-cols-2 md:flex gap-2 md:gap-3 w-full md:w-auto">
+                <button
+                  onClick={acceptNecessaryOnly}
+                  className="editorial-caps-sm border border-ink-700/40 px-3 md:px-4 py-2.5 md:py-2 text-ink-700 hover:border-ink-700 transition-colors whitespace-nowrap"
+                >
+                  {t("necessaryOnly")}
+                </button>
+                <button
+                  onClick={acceptAll}
+                  className="editorial-caps-sm border border-ink-700 px-3 md:px-5 py-2.5 md:py-2 bg-ink-700 text-parchment-50 hover:bg-ink-800 transition-colors whitespace-nowrap"
+                >
+                  {t("acceptAll")}
+                </button>
+              </div>
             </div>
           </div>
         ) : (
@@ -89,16 +91,16 @@ export function CookieBanner() {
               />
             </div>
 
-            <div className="flex flex-wrap items-center justify-end gap-2 pt-2">
+            <div className="grid grid-cols-2 md:flex md:flex-wrap md:items-center md:justify-end gap-2 pt-2">
               <button
                 onClick={acceptNecessaryOnly}
-                className="editorial-caps-sm border border-ink-700/40 px-4 py-2 text-ink-700 hover:border-ink-700 transition-colors"
+                className="editorial-caps-sm border border-ink-700/40 px-3 md:px-4 py-2.5 md:py-2 text-ink-700 hover:border-ink-700 transition-colors whitespace-nowrap"
               >
                 {t("necessaryOnly")}
               </button>
               <button
                 onClick={() => saveCustom({ analytics, marketing })}
-                className="editorial-caps-sm border border-ink-700 px-5 py-2 bg-ink-700 text-parchment-50 hover:bg-ink-800 transition-colors"
+                className="editorial-caps-sm border border-ink-700 px-3 md:px-5 py-2.5 md:py-2 bg-ink-700 text-parchment-50 hover:bg-ink-800 transition-colors whitespace-nowrap"
               >
                 {t("save")}
               </button>

@@ -4,20 +4,20 @@ type Props = {
   className?: string;
   /** Size in pixels — width and height are equal */
   size?: number;
-  /** crest = ring + peak + wordmark · mark = peak only · seal = ring + AC interlocked */
+  /** crest = heraldic shield · mark = peak silhouette · seal = wax-stamp roundel */
   variant?: "crest" | "mark" | "seal";
 };
 
 /**
- * Refined house mark for Chalet Aletsch.
+ * House mark for Chalet Aletsch.
  *
- * Conceptually: a single triangular alpine peak inside a hairline ring,
- * with the "AC" monogram tucked into the negative space above it.
- * Reads clearly at every size — from 24px favicon to 240px footer hero.
+ * The crest reads as a Walliser Wappen — a Swiss escutcheon (pointed shield)
+ * with the alpine peak inside, the "CA" cipher above it and the founding
+ * year along the foot. Keeps the heraldic, hand-pressed feel without the
+ * "iris ring" of a circular seal.
  */
 export function Monogram({ className, size = 88, variant = "crest" }: Props) {
   if (variant === "mark") {
-    // Standalone peak — for favicons, tight nav, footer corners.
     return (
       <svg
         viewBox="0 0 64 64"
@@ -27,13 +27,7 @@ export function Monogram({ className, size = 88, variant = "crest" }: Props) {
         aria-hidden
       >
         <g fill="none" stroke="currentColor" strokeLinejoin="round">
-          {/* Outer peak silhouette */}
-          <path
-            d="M 8 50 L 32 14 L 56 50 Z"
-            fill="currentColor"
-            stroke="none"
-          />
-          {/* Inner snowline notch */}
+          <path d="M 8 50 L 32 14 L 56 50 Z" fill="currentColor" stroke="none" />
           <path
             d="M 23 30 L 32 18 L 41 30"
             stroke="rgb(251 248 241)"
@@ -46,7 +40,6 @@ export function Monogram({ className, size = 88, variant = "crest" }: Props) {
   }
 
   if (variant === "seal") {
-    // Compact circular seal — wax-stamp feel, for very small marks.
     return (
       <svg
         viewBox="0 0 64 64"
@@ -71,7 +64,7 @@ export function Monogram({ className, size = 88, variant = "crest" }: Props) {
     );
   }
 
-  // Default crest — elegant ring + peak + wordmark
+  // Default crest — Swiss escutcheon (pointed shield).
   return (
     <svg
       viewBox="0 0 200 200"
@@ -80,75 +73,69 @@ export function Monogram({ className, size = 88, variant = "crest" }: Props) {
       className={cn("text-forest-700", className)}
       aria-hidden
     >
-      <defs>
-        <path
-          id="crest-bottom-arc"
-          d="M 38,108 A 62,62 0 0 0 162,108"
-          fill="none"
-        />
-      </defs>
-
-      {/* Outer hairline ring */}
-      <circle
-        cx="100"
-        cy="100"
-        r="92"
+      {/* Outer hairline shield */}
+      <path
+        d="M 36 36 L 164 36 L 164 128 Q 164 166 100 184 Q 36 166 36 128 Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="0.6"
+        strokeWidth="0.7"
       />
-      {/* Inner ring — slightly thicker */}
-      <circle
-        cx="100"
-        cy="100"
-        r="78"
+      {/* Inner shield — slightly thicker, classic heraldic double-line */}
+      <path
+        d="M 44 44 L 156 44 L 156 126 Q 156 160 100 175 Q 44 160 44 126 Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.2"
+        strokeWidth="1.3"
       />
 
-      {/* Central peak — solid triangle, the dominant graphic */}
-      <path d="M 60 130 L 100 60 L 140 130 Z" fill="currentColor" />
+      {/* Top compartment: CA cipher */}
+      <text
+        x="100"
+        y="64"
+        textAnchor="middle"
+        fontFamily="var(--font-display), Georgia, serif"
+        fontSize="15"
+        fontStyle="italic"
+        fill="currentColor"
+        letterSpacing="0.5"
+      >
+        C · A
+      </text>
+
+      {/* Hairline divider between cipher and peak */}
+      <line
+        x1="58"
+        y1="74"
+        x2="142"
+        y2="74"
+        stroke="currentColor"
+        strokeWidth="0.5"
+      />
+
+      {/* Central peak — solid triangle, dominant graphic */}
+      <path d="M 60 138 L 100 84 L 140 138 Z" fill="currentColor" />
 
       {/* Snowline highlight on the peak */}
       <path
-        d="M 84 88 L 100 68 L 116 88"
+        d="M 82 110 L 100 90 L 118 110"
         fill="none"
         stroke="rgb(251 248 241)"
         strokeWidth="1.6"
         strokeLinejoin="round"
       />
 
-      {/* Tiny "CA" monogram tucked into the upper negative space, above the peak */}
+      {/* Date along the bottom of the shield */}
       <text
         x="100"
-        y="50"
+        y="160"
         textAnchor="middle"
         fontFamily="var(--font-display), Georgia, serif"
-        fontSize="18"
-        fontStyle="italic"
+        fontSize="9"
         fill="currentColor"
+        letterSpacing="3"
       >
-        CA
+        1923
       </text>
-
-      {/* Curved date along the bottom interior of the ring */}
-      <text
-        fill="currentColor"
-        fontSize="8"
-        fontFamily="var(--font-display), Georgia, serif"
-        letterSpacing="3.6"
-      >
-        <textPath href="#crest-bottom-arc" startOffset="50%" textAnchor="middle">
-          MCMXXIII
-        </textPath>
-      </text>
-
-      {/* Side dot ornaments at 9 and 3 o'clock between rings */}
-      <g fill="currentColor">
-        <circle cx="14" cy="100" r="1.4" />
-        <circle cx="186" cy="100" r="1.4" />
-      </g>
     </svg>
   );
 }

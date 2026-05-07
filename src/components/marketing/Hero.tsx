@@ -2,99 +2,116 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Container } from "@/components/ui/Container";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { RomanNumeral } from "@/components/ui/RomanNumeral";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { Reveal } from "@/components/motion/Reveal";
-import { Parallax } from "@/components/motion/Parallax";
 
 export function Hero() {
   const t = useTranslations("home.hero");
 
   return (
-    <section className="pt-12 md:pt-20 pb-20 md:pb-28">
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
-          {/* Left — hero photograph in editorial frame */}
-          <Reveal from="left" className="lg:col-span-5 order-2 lg:order-1">
-            <Parallax amplitude={18}>
-              <div className="border border-ink-700/15 p-3 md:p-5 bg-parchment-100/40 relative">
-                {/* Tiny corner brackets, like an old map cartouche */}
-                <CornerBrackets />
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1747137985267-2cee0fad023a?w=1400&q=88&auto=format&fit=crop"
-                    alt="Ein Walliser Chalet auf einer Bergwiese, dahinter schneebedeckte Gipfel"
-                    fill
-                    sizes="(min-width: 1024px) 36vw, 92vw"
-                    priority
-                    className="object-cover"
-                    style={{ filter: "saturate(0.95) contrast(1.04)" }}
-                  />
-                </div>
-                <p className="editorial-caps text-center mt-3 md:mt-4 text-forest-700/80">
-                  {t("plate")}
-                </p>
-              </div>
-            </Parallax>
-          </Reveal>
+    <section className="relative">
+      {/* Full-bleed photograph */}
+      <div className="relative w-full h-[88vh] min-h-[640px] md:min-h-[720px] overflow-hidden bg-ink-700">
+        <Image
+          src="https://images.unsplash.com/photo-1594069758873-e79e9075eb7d?w=2400&q=88&auto=format&fit=crop"
+          alt="Walliser Bergdorf Grimentz, Holzchalets unter Wolken und schneebedeckten Gipfeln"
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover hero-photo"
+          style={{ filter: "saturate(0.92) contrast(1.06)" }}
+        />
 
-          {/* Right — opening text */}
-          <div className="lg:col-span-7 order-1 lg:order-2">
-            <Reveal>
-              <div className="flex items-center gap-4 mb-7">
-                <RomanNumeral value={1} className="text-2xl" />
-                <span className="block w-12 h-px bg-forest-700/40" />
-                <Eyebrow>{t("eyebrow")}</Eyebrow>
+        {/* Bottom darkening gradient — for text legibility */}
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-ink-700/85 via-ink-700/30 to-ink-700/0"
+          aria-hidden
+        />
+        {/* Left darkening gradient — keeps text readable on overlap */}
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-ink-700/55 via-ink-700/10 to-transparent"
+          aria-hidden
+        />
+        {/* Subtle warm grain — paper texture */}
+        <div
+          className="absolute inset-0 mix-blend-overlay opacity-25 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 50% 50%, rgba(180,150,110,0.15) 0%, transparent 50%)",
+          }}
+          aria-hidden
+        />
+
+        {/* Top-right meta strip — editorial detail */}
+        <div className="absolute top-5 md:top-8 right-5 md:right-10 z-10 flex items-center gap-3 md:gap-4 text-parchment-50/70">
+          <span className="hidden sm:block h-px w-12 md:w-20 bg-parchment-50/40" />
+          <span className="editorial-caps-sm">{t("plate")}</span>
+        </div>
+
+        {/* Bottom-left content */}
+        <Container className="relative z-10 h-full flex items-end pb-14 md:pb-20 lg:pb-24">
+          <div className="max-w-[42rem]">
+            <Reveal delay={120}>
+              <div className="flex items-center gap-4 mb-6 md:mb-7">
+                <span className="font-display italic text-parchment-50 text-xl md:text-2xl">
+                  1
+                </span>
+                <span className="block w-10 md:w-14 h-px bg-parchment-50/45" />
+                <span className="editorial-caps text-parchment-50/85">
+                  {t("eyebrow")}
+                </span>
               </div>
             </Reveal>
 
-            <Reveal delay={120}>
-              <h1 className="font-display text-display-lg text-ink-700 max-w-editorial">
-                <span className="block italic font-light text-forest-700">
+            <Reveal delay={260}>
+              <h1 className="font-display text-parchment-50 leading-[1.04] text-[2.25rem] xs:text-[2.6rem] sm:text-[3.2rem] md:text-[4rem] lg:text-[4.6rem]">
+                <span className="block italic font-light text-parchment-50/95">
                   {t("titleA")}
                 </span>
                 <span className="block">{t("titleB")}</span>
               </h1>
             </Reveal>
 
-            <Reveal delay={260}>
-              <p className="mt-8 max-w-prose text-[1.12rem] leading-relaxed text-ink-600">
+            <Reveal delay={420}>
+              <p className="mt-6 md:mt-8 max-w-prose text-[0.98rem] md:text-[1.08rem] leading-relaxed text-parchment-50/85">
                 {t("lead")}
               </p>
             </Reveal>
 
-            <Reveal delay={400}>
-              <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-5">
+            <Reveal delay={560}>
+              <div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-y-4 gap-x-8">
                 <Link
                   href="/rooms"
-                  className="editorial-caps border border-ink-700 px-7 py-3.5 text-ink-700 hover:bg-ink-700 hover:text-parchment-50 transition-colors"
+                  className="editorial-caps inline-flex items-center justify-center border border-parchment-50 px-7 py-3.5 text-parchment-50 hover:bg-parchment-50 hover:text-ink-700 transition-colors w-full sm:w-auto"
                 >
                   {t("ctaPrimary")}
                 </Link>
-                <Link href="/story" className="ink-link editorial-caps">
+                <Link
+                  href="/story"
+                  className="editorial-caps text-parchment-50 underline decoration-parchment-50/40 underline-offset-[6px] hover:decoration-parchment-50 transition-colors text-center sm:text-left"
+                >
                   {t("ctaSecondary")}
                 </Link>
               </div>
             </Reveal>
           </div>
-        </div>
-      </Container>
+        </Container>
 
-      <div className="mt-20 md:mt-28">
+        {/* Tiny scroll hint at bottom-right (desktop only) */}
+        <div
+          className="hidden lg:flex absolute bottom-8 right-10 z-10 flex-col items-center gap-3 text-parchment-50/55"
+          aria-hidden
+        >
+          <span className="editorial-caps-sm rotate-90 origin-center mb-6 whitespace-nowrap">
+            Tafel 1
+          </span>
+          <span className="block w-px h-12 bg-parchment-50/30" />
+        </div>
+      </div>
+
+      <div className="mt-16 md:mt-24">
         <OrnamentRule />
       </div>
     </section>
-  );
-}
-
-function CornerBrackets() {
-  return (
-    <>
-      <span className="absolute top-2 left-2 w-3 h-3 border-t border-l border-forest-700/50" aria-hidden />
-      <span className="absolute top-2 right-2 w-3 h-3 border-t border-r border-forest-700/50" aria-hidden />
-      <span className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-forest-700/50" aria-hidden />
-      <span className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-forest-700/50" aria-hidden />
-    </>
   );
 }

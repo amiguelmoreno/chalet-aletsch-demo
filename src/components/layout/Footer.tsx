@@ -73,7 +73,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 text-sm text-parchment-200/70">
           <p>
-            © MMXXIII–MMXXVI Chalet Aletsch · {t("copyright.held")}
+            © 2023–2026 Chalet Aletsch · {t("copyright.held")}
           </p>
           <div className="flex items-center gap-4">
             <CookieSettingsTrigger className="text-parchment-200/70 hover:text-parchment-100" />

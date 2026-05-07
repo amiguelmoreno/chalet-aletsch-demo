@@ -150,6 +150,23 @@
   .page-fade {
     animation: chalet-page-in 500ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
   }
+
+  /* Hero photo — slow Ken Burns drift, gives the photograph life
+     without distracting from the editorial type. */
+  @keyframes chalet-hero-drift {
+    0%   { transform: scale(1.04) translate3d(0, 0, 0); }
+    100% { transform: scale(1.10) translate3d(-1%, -0.5%, 0); }
+  }
+  .hero-photo {
+    animation: chalet-hero-drift 24s cubic-bezier(0.4, 0.0, 0.6, 1) both;
+    will-change: transform;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-photo {
+      animation: none;
+      transform: scale(1.04);
+    }
+  }
 }
 
 @layer components {

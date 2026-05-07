@@ -25,18 +25,19 @@ export function Header() {
         </Container>
       </div>
 
-      <Container className="flex items-center justify-between py-5 md:py-7">
+      <Container className="flex items-center justify-between py-4 md:py-7 gap-4">
         <Link
           href="/"
-          className="flex items-center gap-3 group"
+          className="flex items-center gap-3 group min-w-0"
           aria-label="Chalet Aletsch — Startseite"
         >
-          <Monogram size={56} className="transition-opacity duration-300 group-hover:opacity-80" />
-          <span className="hidden md:flex flex-col leading-none">
-            <span className="font-display text-[1.55rem] tracking-tight text-ink-700">
+          <Monogram size={48} className="md:hidden transition-opacity duration-300 group-hover:opacity-80 shrink-0" />
+          <Monogram size={56} className="hidden md:block transition-opacity duration-300 group-hover:opacity-80 shrink-0" />
+          <span className="flex flex-col leading-none min-w-0">
+            <span className="font-display text-[1.15rem] md:text-[1.55rem] tracking-tight text-ink-700 truncate">
               Chalet Aletsch
             </span>
-            <span className="editorial-caps mt-1 text-forest-700">
+            <span className="hidden md:block editorial-caps mt-1 text-forest-700">
               {t("tagline")}
             </span>
           </span>

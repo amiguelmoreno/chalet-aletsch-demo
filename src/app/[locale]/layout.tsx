@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingMenu } from "@/components/layout/FloatingMenu";
 import { ConsentProvider } from "@/components/cookies/ConsentProvider";
 import { CookieBanner } from "@/components/cookies/CookieBanner";
 import { AnalyticsLoader } from "@/components/cookies/AnalyticsLoader";
@@ -34,6 +35,7 @@ export default async function LocaleLayout({
           <Header />
           <main key={locale} className="page-fade">{children}</main>
           <Footer />
+          <FloatingMenu />
           <ChatWidget />
           <CookieBanner />
           <AnalyticsLoader />
