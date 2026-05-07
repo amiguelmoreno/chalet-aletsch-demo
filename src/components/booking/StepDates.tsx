@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { CalendarField } from "./CalendarField";
 import type { FlowAction, FlowState } from "./types";
 
 export function StepDates({
@@ -21,6 +22,24 @@ export function StepDates({
     state.checkIn < state.checkOut &&
     state.adults + state.children > 0;
 
+  // Departure can't be before arrival + 1 day
+  const minCheckOut = state.checkIn
+    ? new Date(new Date(state.checkIn).getTime() + 86400000)
+        .toISOString()
+        .slice(0, 10)
+    : undefined;
+
+  const setDates = (patch: Partial<Pick<FlowState, "checkIn" | "checkOut" | "adults" | "children">>) => {
+    dispatch({
+      type: "SET_DATES",
+      checkIn: state.checkIn,
+      checkOut: state.checkOut,
+      adults: state.adults,
+      children: state.children,
+      ...patch,
+    });
+  };
+
   return (
     <div>
       <header className="text-center max-w-xl mx-auto mb-12">
@@ -30,78 +49,44 @@ export function StepDates({
       </header>
 
       <form
-        className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 max-w-3xl mx-auto"
+        className="space-y-10 max-w-3xl mx-auto"
         onSubmit={(e) => {
           e.preventDefault();
           if (valid) onContinue();
         }}
       >
-        <Field
-          className="md:col-span-4"
-          label={t("checkIn")}
-          type="date"
-          value={state.checkIn}
-          onChange={(v) =>
-            dispatch({
-              type: "SET_DATES",
-              checkIn: v,
-              checkOut: state.checkOut,
-              adults: state.adults,
-              children: state.children,
-            })
-          }
-        />
-        <Field
-          className="md:col-span-4"
-          label={t("checkOut")}
-          type="date"
-          value={state.checkOut}
-          onChange={(v) =>
-            dispatch({
-              type: "SET_DATES",
-              checkIn: state.checkIn,
-              checkOut: v,
-              adults: state.adults,
-              children: state.children,
-            })
-          }
-        />
-        <Field
-          className="md:col-span-2"
-          label={t("adults")}
-          type="number"
-          min={1}
-          max={10}
-          value={String(state.adults)}
-          onChange={(v) =>
-            dispatch({
-              type: "SET_DATES",
-              checkIn: state.checkIn,
-              checkOut: state.checkOut,
-              adults: Math.max(1, parseInt(v || "1", 10)),
-              children: state.children,
-            })
-          }
-        />
-        <Field
-          className="md:col-span-2"
-          label={t("children")}
-          type="number"
-          min={0}
-          max={6}
-          value={String(state.children)}
-          onChange={(v) =>
-            dispatch({
-              type: "SET_DATES",
-              checkIn: state.checkIn,
-              checkOut: state.checkOut,
-              adults: state.adults,
-              children: Math.max(0, parseInt(v || "0", 10)),
-            })
-          }
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+          <CalendarField
+            label={t("checkIn")}
+            value={state.checkIn}
+            onChange={(v) => setDates({ checkIn: v })}
+          />
+          <CalendarField
+            label={t("checkOut")}
+            value={state.checkOut}
+            onChange={(v) => setDates({ checkOut: v })}
+            minDate={minCheckOut}
+          />
+        </div>
 
-        <div className="md:col-span-12 flex justify-end">
+        <div className="grid grid-cols-2 gap-6 md:gap-10 max-w-md">
+          <NumberStepper
+            label={t("adults")}
+            value={state.adults}
+            min={1}
+            max={10}
+            onChange={(v) => setDates({ adults: v })}
+          />
+          <NumberStepper
+            label={t("children")}
+            value={state.children}
+            min={0}
+            max={6}
+            onChange={(v) => setDates({ children: v })}
+          />
+        </div>
+
+        <div className="flex justify-end pt-4">
           <button
             type="submit"
             disabled={!valid || state.loading}
@@ -115,34 +100,45 @@ export function StepDates({
   );
 }
 
-function Field({
-  className,
+function NumberStepper({
   label,
-  type,
   value,
   onChange,
-  min,
-  max,
+  min = 0,
+  max = 99,
 }: {
-  className?: string;
   label: string;
-  type: "date" | "number" | "text";
-  value: string;
-  onChange: (v: string) => void;
+  value: number;
+  onChange: (v: number) => void;
   min?: number;
   max?: number;
 }) {
   return (
-    <label className={className}>
-      <span className="editorial-caps block text-forest-700 mb-2">{label}</span>
-      <input
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        min={min}
-        max={max}
-        className="w-full bg-transparent border-0 border-b border-ink-700/40 focus:border-ink-700 focus:outline-none py-2 font-serif text-[1.05rem] text-ink-700"
-      />
+    <label className="block">
+      <span className="editorial-caps-sm block text-forest-700 mb-2">{label}</span>
+      <div className="flex items-center justify-between border-b border-ink-700/40 py-2">
+        <button
+          type="button"
+          onClick={() => onChange(Math.max(min, value - 1))}
+          aria-label="−"
+          disabled={value <= min}
+          className="w-7 h-7 flex items-center justify-center font-display text-ink-700 hover:bg-parchment-100/80 transition-colors disabled:opacity-30"
+        >
+          −
+        </button>
+        <span className="font-serif text-[1.1rem] text-ink-700 tabular-nums">
+          {value}
+        </span>
+        <button
+          type="button"
+          onClick={() => onChange(Math.min(max, value + 1))}
+          aria-label="+"
+          disabled={value >= max}
+          className="w-7 h-7 flex items-center justify-center font-display text-ink-700 hover:bg-parchment-100/80 transition-colors disabled:opacity-30"
+        >
+          +
+        </button>
+      </div>
     </label>
   );
 }

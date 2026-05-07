@@ -6,6 +6,7 @@ import { useRouter } from "@/i18n/routing";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
+import { CalendarField } from "@/components/booking/CalendarField";
 
 export function AvailabilityNudge() {
   const t = useTranslations("home.availability");
@@ -14,6 +15,11 @@ export function AvailabilityNudge() {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [guests, setGuests] = useState(2);
+
+  // Departure can't be before arrival + 1 day
+  const minTo = from
+    ? new Date(new Date(from).getTime() + 86400000).toISOString().slice(0, 10)
+    : undefined;
 
   return (
     <section className="py-24 md:py-32">
@@ -40,13 +46,17 @@ export function AvailabilityNudge() {
           }}
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
-            <UnderlineField label={t("from")} type="date" value={from} onChange={setFrom} />
-            <UnderlineField label={t("to")} type="date" value={to} onChange={setTo} />
-            <UnderlineField
+            <CalendarField label={t("from")} value={from} onChange={setFrom} />
+            <CalendarField
+              label={t("to")}
+              value={to}
+              onChange={setTo}
+              minDate={minTo}
+            />
+            <NumberField
               label={t("guests")}
-              type="number"
-              value={String(guests)}
-              onChange={(v) => setGuests(Math.max(1, parseInt(v || "1", 10)))}
+              value={guests}
+              onChange={setGuests}
               min={1}
               max={12}
             />
@@ -69,34 +79,47 @@ export function AvailabilityNudge() {
   );
 }
 
-function UnderlineField({
-  className,
+function NumberField({
   label,
-  type,
   value,
   onChange,
   min,
   max,
 }: {
-  className?: string;
   label: string;
-  type: "date" | "number" | "text";
-  value: string;
-  onChange: (v: string) => void;
+  value: number;
+  onChange: (v: number) => void;
   min?: number;
   max?: number;
 }) {
   return (
-    <label className={className}>
-      <span className="editorial-caps block text-forest-700 mb-2">{label}</span>
-      <input
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        min={min}
-        max={max}
-        className="w-full bg-transparent border-0 border-b border-ink-700/40 focus:border-ink-700 focus:outline-none py-2 font-serif text-[1.05rem] text-ink-700"
-      />
+    <label className="block">
+      <span className="editorial-caps-sm block text-forest-700 mb-2">
+        {label}
+      </span>
+      <div className="flex items-center justify-between border-b border-ink-700/40 py-2">
+        <button
+          type="button"
+          onClick={() => onChange(Math.max(min ?? 1, value - 1))}
+          aria-label="−"
+          className="w-7 h-7 flex items-center justify-center font-display text-ink-700 hover:bg-parchment-100/80 transition-colors disabled:opacity-30"
+          disabled={value <= (min ?? 1)}
+        >
+          −
+        </button>
+        <span className="font-serif text-[1.1rem] text-ink-700 tabular-nums">
+          {value}
+        </span>
+        <button
+          type="button"
+          onClick={() => onChange(Math.min(max ?? 99, value + 1))}
+          aria-label="+"
+          className="w-7 h-7 flex items-center justify-center font-display text-ink-700 hover:bg-parchment-100/80 transition-colors disabled:opacity-30"
+          disabled={value >= (max ?? 99)}
+        >
+          +
+        </button>
+      </div>
     </label>
   );
 }
