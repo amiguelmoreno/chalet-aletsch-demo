@@ -2,9 +2,9 @@ import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { Edelweiss } from "@/components/ornaments/Edelweiss";
 import { RomanNumeral } from "@/components/ui/RomanNumeral";
+import { PageHero } from "@/components/marketing/PageHero";
 
 export async function generateMetadata({
   params,
@@ -38,20 +38,13 @@ function StoryContent() {
 
   return (
     <>
-      <section className="pt-16 md:pt-24 pb-12">
-        <Container width="narrow" className="text-center">
-          <Eyebrow ornament>{t("eyebrow")}</Eyebrow>
-          <h1 className="font-display italic text-display-lg mt-6">
-            {t("title")}
-          </h1>
-          <p className="mt-7 text-[1.1rem] leading-relaxed text-ink-600 max-w-prose mx-auto">
-            {t("subtitle")}
-          </p>
-        </Container>
-        <div className="mt-12">
-          <OrnamentRule />
-        </div>
-      </section>
+      <PageHero
+        imageSrc="https://images.unsplash.com/photo-1695135210851-5c6628d45100?w=2400&q=88&auto=format&fit=crop"
+        imageAlt="Kleines Berghaus auf grüner Anhöhe vor Walliser Gipfeln"
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        intro={t("subtitle")}
+      />
 
       <section className="pb-24">
         <Container width="narrow">

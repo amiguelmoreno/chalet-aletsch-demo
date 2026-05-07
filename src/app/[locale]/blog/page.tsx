@@ -1,12 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { safeFetch } from "@/sanity/client";
 import { RECENT_BLOG_POSTS } from "@/sanity/queries";
 import { Link } from "@/i18n/routing";
 import { SAMPLE_NOTES, type Locale as SampleLocale } from "@/lib/sample-notes";
+import { PageHero } from "@/components/marketing/PageHero";
 
 type SanityPost = {
   _id: string;
@@ -61,20 +60,13 @@ export default async function BlogPage({
 
   return (
     <>
-      <section className="pt-16 md:pt-24 pb-12">
-        <Container width="narrow" className="text-center">
-          <Eyebrow ornament>{t("eyebrow")}</Eyebrow>
-          <h1 className="font-display italic text-display-lg mt-6">
-            {t("title")}
-          </h1>
-          <p className="mt-7 text-[1.1rem] leading-relaxed text-ink-600 max-w-prose mx-auto">
-            {t("intro")}
-          </p>
-        </Container>
-        <div className="mt-12">
-          <OrnamentRule />
-        </div>
-      </section>
+      <PageHero
+        imageSrc="https://images.unsplash.com/photo-1747137985267-2cee0fad023a?w=2400&q=88&auto=format&fit=crop"
+        imageAlt="Walliser Chalet auf einer Bergwiese mit Aussicht"
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        intro={t("intro")}
+      />
 
       <section className="pb-24">
         <Container width="narrow">

@@ -3,11 +3,11 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { RomanNumeral } from "@/components/ui/RomanNumeral";
-import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { Edelweiss } from "@/components/ornaments/Edelweiss";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { hotelJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 import { RoomGallery } from "@/components/marketing/RoomGallery";
+import { PageHero } from "@/components/marketing/PageHero";
 import { Link } from "@/i18n/routing";
 
 type RoomKey = "arvenstube" | "blauseeli" | "fiescher" | "konkordia";
@@ -28,10 +28,10 @@ const rooms: Array<{
     sleeps: 2,
     area: 22,
     photos: [
+      { src: u("1631940182015-6604116ead7d"), alt: "Arvenstube, Bett zwischen getäfelten Holzwänden" },
       { src: u("1722603931808-d5ddd71f4924"), alt: "Arvenstube, Bett am Fenster" },
-      { src: u("1723258345401-793598c38e10"), alt: "Arvenstube, Doppelbett, Holzwand" },
+      { src: u("1680703261560-11c234762abe"), alt: "Arvenstube, Detail in Arvenholz" },
       { src: u("1722650364897-33fb86a44592"), alt: "Arvenstube, Holzgetäfelte Wände" },
-      { src: u("1645640929991-867520dce42a"), alt: "Arvenstube, Detail am Bett" },
     ],
   },
   {
@@ -40,10 +40,10 @@ const rooms: Array<{
     sleeps: 2,
     area: 18,
     photos: [
-      { src: u("1721824297615-bdce9177708d"), alt: "Blauseeli, Stube mit Fenster" },
-      { src: u("1721743170664-55c9602291ac"), alt: "Blauseeli, Holzboden" },
-      { src: u("1721396187257-a2bcdabb25c0"), alt: "Blauseeli, Bett, Holzwand" },
-      { src: u("1606602266678-d29114013ac6"), alt: "Blauseeli, Detail" },
+      { src: u("1631805991633-eb01749753af"), alt: "Blauseeli, schmales Bett vor Holzwand" },
+      { src: u("1699629208190-672f7ef56d7b"), alt: "Blauseeli, Bett am Erker mit Fenster" },
+      { src: u("1664361238207-164532d1934e"), alt: "Blauseeli, kleiner Spiegel und Bett" },
+      { src: u("1721396187257-a2bcdabb25c0"), alt: "Blauseeli, Bett vor Holzwand" },
     ],
   },
   {
@@ -52,10 +52,10 @@ const rooms: Array<{
     sleeps: 4,
     area: 36,
     photos: [
-      { src: u("1631941392209-70cad44ecfb7"), alt: "Fiescher, Stube mit Specksteinofen" },
-      { src: u("1698933787104-3f91cf25909c"), alt: "Fiescher, Specksteinofen" },
-      { src: u("1631756964162-25c8c07579b5"), alt: "Fiescher, Wohnstube" },
-      { src: u("1721396187827-8606a4a6b4e3"), alt: "Fiescher, Schlafraum" },
+      { src: u("1773423389979-b28b469967f8"), alt: "Fiescher, Wohnstube mit Specksteinofen" },
+      { src: u("1631941392209-70cad44ecfb7"), alt: "Fiescher, Stube mit Holzbalken" },
+      { src: u("1727706572437-4fcda0cbd66f"), alt: "Fiescher, Schlafraum mit zwei Betten" },
+      { src: u("1698933787104-3f91cf25909c"), alt: "Fiescher, Specksteinofen aus Naters" },
     ],
   },
   {
@@ -64,10 +64,10 @@ const rooms: Array<{
     sleeps: 6,
     area: 58,
     photos: [
+      { src: u("1773423391716-04e278b07b1b"), alt: "Konkordia, Schlafraum mit Holzwänden und Aussicht" },
       { src: u("1774627868171-0a08bcc8d9ca"), alt: "Konkordia, Suite mit Bergblick" },
-      { src: u("1670914120781-4b7c8512fc41"), alt: "Konkordia, Wohnraum" },
-      { src: u("1773423391716-04e278b07b1b"), alt: "Konkordia, Schlafraum mit Ausblick" },
-      { src: u("1551927411-95e412943b58"), alt: "Konkordia, Detail am Fenster" },
+      { src: u("1670914120781-4b7c8512fc41"), alt: "Konkordia, Wohnraum unter Dachbalken" },
+      { src: u("1680703008401-c5daa1789316"), alt: "Konkordia, Schlafnische unter dem Dach" },
     ],
   },
 ];
@@ -117,20 +117,13 @@ function RoomsContent() {
 
   return (
     <>
-      <section className="pt-16 md:pt-24 pb-12">
-        <Container width="narrow" className="text-center">
-          <Eyebrow ornament>{t("eyebrow")}</Eyebrow>
-          <h1 className="font-display italic text-display-lg mt-6">
-            {t("title")}
-          </h1>
-          <p className="mt-7 text-[1.1rem] leading-relaxed text-ink-600">
-            {t("intro")}
-          </p>
-        </Container>
-        <div className="mt-12">
-          <OrnamentRule />
-        </div>
-      </section>
+      <PageHero
+        imageSrc="https://images.unsplash.com/photo-1610486870542-70d0062d150f?w=2400&q=88&auto=format&fit=crop"
+        imageAlt="Holzchalet auf grüner Almwiese vor Berggipfeln"
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        intro={t("intro")}
+      />
 
       <section className="pb-24">
         <Container>

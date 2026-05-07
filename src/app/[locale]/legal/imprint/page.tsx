@@ -43,7 +43,20 @@ function Content() {
           </Block>
           <Block title={t("vat")}>{t("vatBody")}</Block>
           <Block title={t("liability")}>{t("liabilityBody")}</Block>
-          <Block title={t("colophon")}>{t("colophonBody")}</Block>
+          <Block title={t("colophon")}>
+            {t.rich("colophonBody", {
+              link: (chunks) => (
+                <a
+                  href="https://morenodev.ch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ink-link"
+                >
+                  {chunks}
+                </a>
+              ),
+            })}
+          </Block>
         </div>
       </Container>
     </section>

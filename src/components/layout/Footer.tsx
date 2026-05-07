@@ -75,10 +75,22 @@ export function Footer() {
           <p>
             © 2023–2026 Chalet Aletsch · {t("copyright.held")}
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <CookieSettingsTrigger className="text-parchment-200/70 hover:text-parchment-100" />
             <span className="text-parchment-200/30">·</span>
             <p className="editorial-caps">{t("colophon")}</p>
+            <span className="text-parchment-200/30">·</span>
+            <p className="editorial-caps text-parchment-200/70">
+              {t("by")}{" "}
+              <a
+                href="https://morenodev.ch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-parchment-100 hover:text-parchment-50 underline decoration-parchment-200/40 underline-offset-4 hover:decoration-parchment-50"
+              >
+                Morenodev
+              </a>
+            </p>
           </div>
         </div>
       </Container>

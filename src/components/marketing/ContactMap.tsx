@@ -3,9 +3,8 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { MAP_COORDS, MAP_DIRECTIONS_URL } from "@/lib/map";
 
-// Build a custom marker that matches the editorial design — a small ring
-// with a triangular peak inside, in forest green.
 const peakMarker = L.divIcon({
   html: `
     <svg viewBox="0 0 40 48" width="36" height="44" xmlns="http://www.w3.org/2000/svg">
@@ -21,13 +20,18 @@ const peakMarker = L.divIcon({
   popupAnchor: [0, -42],
 });
 
+const CENTER: [number, number] = [MAP_COORDS.lat, MAP_COORDS.lng];
+
 export function ContactMap({
   labels,
 }: {
-  labels: { popupTitle: string; popupAddress: string; popupHint: string };
+  labels: {
+    popupTitle: string;
+    popupAddress: string;
+    popupHint: string;
+    directionsLabel: string;
+  };
 }) {
-  const center: [number, number] = [46.3833, 8.0333]; // Riederalp
-
   return (
     <div className="border border-ink-700/15 overflow-hidden bg-parchment-100">
       <style>{`
@@ -48,18 +52,36 @@ export function ContactMap({
           border-color: rgba(20, 19, 15, 0.2); border-radius: 0;
           font-family: var(--font-display), Georgia, serif; font-weight: 400;
         }
+        .chalet-popup-link {
+          display: inline-block;
+          margin-top: 0.5rem;
+          font-family: var(--font-serif), Georgia, serif;
+          font-size: 0.7rem;
+          font-weight: 600;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: #2A3F2C;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(42, 63, 44, 0.4);
+          padding-bottom: 1px;
+          transition: color 200ms, border-color 200ms;
+        }
+        .chalet-popup-link:hover {
+          color: #A82A1F;
+          border-bottom-color: rgba(168, 42, 31, 0.6);
+        }
       `}</style>
       <MapContainer
-        center={center}
+        center={CENTER}
         zoom={13}
-        scrollWheelZoom={false}
+        scrollWheelZoom
         className="chalet-leaflet h-[460px] w-full"
       >
         <TileLayer
           attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={center} icon={peakMarker}>
+        <Marker position={CENTER} icon={peakMarker}>
           <Popup>
             <div className="px-1 py-1">
               <p className="font-display italic text-lg text-ink-700">
@@ -67,6 +89,14 @@ export function ContactMap({
               </p>
               <p className="text-sm mt-1 leading-relaxed">{labels.popupAddress}</p>
               <p className="text-xs italic text-ink-500 mt-2">{labels.popupHint}</p>
+              <a
+                href={MAP_DIRECTIONS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="chalet-popup-link"
+              >
+                {labels.directionsLabel} →
+              </a>
             </div>
           </Popup>
         </Marker>
@@ -74,3 +104,4 @@ export function ContactMap({
     </div>
   );
 }
+

@@ -25,7 +25,8 @@
       "privacy": "Privacy"
     },
     "copyright": { "held": "Tutti i diritti riservati" },
-    "colophon": "Composto in Fraunces & EB Garamond"
+    "colophon": "Composto in Fraunces & EB Garamond",
+    "by": "Progettato da"
   },
   "home": {
     "hero": {
@@ -218,7 +219,8 @@
       "title": "Sulla Riederalp.",
       "popupTitle": "Chalet Aletsch",
       "popupAddress": "Furkastrasse 14 · 3987 Riederalp · Vallese",
-      "popupHint": "Si raggiunge in funivia da Mörel."
+      "popupHint": "Si raggiunge in funivia da Mörel.",
+      "directions": "Apri indicazioni"
     }
   },
   "imprint": {
@@ -233,7 +235,7 @@
     "liability": "Responsabilità",
     "liabilityBody": "Decliniamo ogni responsabilità per i contenuti dei siti esterni a cui rimandiamo. La responsabilità spetta esclusivamente ai gestori di tali siti.",
     "colophon": "Colophon",
-    "colophonBody": "Questo sito è stato disegnato e sviluppato da Morenodev. Composto in Fraunces (titoli) e EB Garamond (testo). Illustrazioni disegnate a mano."
+    "colophonBody": "Questo sito è stato disegnato e sviluppato da <link>Morenodev</link>. Composto in Fraunces (titoli) e EB Garamond (testo). Illustrazioni disegnate a mano."
   },
   "privacy": {
     "eyebrow": "Privacy",

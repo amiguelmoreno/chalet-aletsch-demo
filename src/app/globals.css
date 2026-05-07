@@ -17,6 +17,9 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     color-scheme: light;
+    /* Reserve space for the scrollbar so opening the floating menu (which
+       sets body overflow: hidden) doesn't cause a horizontal layout shift. */
+    scrollbar-gutter: stable;
   }
 
   body {

@@ -15,7 +15,13 @@ const ContactMap = dynamic(
 );
 
 export function ContactMapWrapper(props: {
-  labels: { popupTitle: string; popupAddress: string; popupHint: string };
+  labels: {
+    popupTitle: string;
+    popupAddress: string;
+    popupHint: string;
+    directionsLabel: string;
+  };
 }) {
   return <ContactMap {...props} />;
 }
+

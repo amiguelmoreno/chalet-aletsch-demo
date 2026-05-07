@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ContactMapWrapper } from "./ContactMapWrapper";
+import { MAP_DIRECTIONS_URL } from "@/lib/map";
 
 export async function HomeMap({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "contact.map" });
@@ -20,8 +21,19 @@ export async function HomeMap({ locale }: { locale: string }) {
             popupTitle: t("popupTitle"),
             popupAddress: t("popupAddress"),
             popupHint: t("popupHint"),
+            directionsLabel: t("directions"),
           }}
         />
+        <div className="flex justify-center mt-8">
+          <a
+            href={MAP_DIRECTIONS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="editorial-caps inline-flex items-center gap-2 border border-ink-700 px-7 py-3 text-ink-700 hover:bg-ink-700 hover:text-parchment-50 transition-colors"
+          >
+            {t("directions")} →
+          </a>
+        </div>
       </Container>
     </section>
   );

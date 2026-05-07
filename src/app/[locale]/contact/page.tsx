@@ -2,9 +2,10 @@ import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { LogoMark } from "@/components/ornaments/LogoMark";
 import { ContactMapWrapper } from "@/components/marketing/ContactMapWrapper";
+import { PageHero } from "@/components/marketing/PageHero";
+import { MAP_DIRECTIONS_URL } from "@/lib/map";
 
 export async function generateMetadata({
   params,
@@ -37,20 +38,13 @@ function ContactContent() {
 
   return (
     <>
-      <section className="pt-16 md:pt-24 pb-12">
-        <Container width="narrow" className="text-center">
-          <Eyebrow ornament>{t("eyebrow")}</Eyebrow>
-          <h1 className="font-display italic text-display-lg mt-6">
-            {t("title")}
-          </h1>
-          <p className="mt-7 text-[1.1rem] leading-relaxed text-ink-600 max-w-prose mx-auto">
-            {t("intro")}
-          </p>
-        </Container>
-        <div className="mt-12">
-          <OrnamentRule />
-        </div>
-      </section>
+      <PageHero
+        imageSrc="https://images.unsplash.com/photo-1760288386669-0cbb712ab564?w=2400&q=88&auto=format&fit=crop"
+        imageAlt="Walliser Holzchalets auf Almwiese unter bewölktem Himmel"
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        intro={t("intro")}
+      />
 
       <section className="pb-24">
         <Container>
@@ -139,8 +133,19 @@ function ContactContent() {
               popupTitle: t("map.popupTitle"),
               popupAddress: t("map.popupAddress"),
               popupHint: t("map.popupHint"),
+              directionsLabel: t("map.directions"),
             }}
           />
+          <div className="flex justify-center mt-8">
+            <a
+              href={MAP_DIRECTIONS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="editorial-caps inline-flex items-center gap-2 border border-ink-700 px-7 py-3 text-ink-700 hover:bg-ink-700 hover:text-parchment-50 transition-colors"
+            >
+              {t("map.directions")} →
+            </a>
+          </div>
         </Container>
       </section>
     </>
