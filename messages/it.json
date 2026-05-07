@@ -100,7 +100,9 @@
       "quote": "Raramente abbiamo viaggiato così lontano per fare così poco. Era esattamente giusto.",
       "author": "Famiglia Lehnherr, Berna",
       "date": "Annotato il 14 febbraio 2026",
-      "note": "Estratto dal libro degli ospiti della suite Konkordia. Riportato con permesso."
+      "prev": "Voce precedente",
+      "next": "Voce successiva",
+      "note": "Estratti dal libro degli ospiti. Riportati con permesso."
     },
     "availability": {
       "eyebrow": "Verifica disponibilità",

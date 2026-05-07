@@ -100,7 +100,9 @@
       "quote": "Selten sind wir so weit gefahren, um so wenig zu tun. Es war genau richtig.",
       "author": "Familie Lehnherr, Bern",
       "date": "Eintrag vom 14. Februar 2026",
-      "note": "Auszug aus dem Gästebuch der Stube Konkordia. Mit freundlicher Erlaubnis."
+      "prev": "Vorheriger Eintrag",
+      "next": "Nächster Eintrag",
+      "note": "Auszüge aus dem Gästebuch der Stuben. Mit freundlicher Erlaubnis."
     },
     "availability": {
       "eyebrow": "Verfügbarkeit prüfen",

@@ -16,11 +16,11 @@ export function Header() {
 
   return (
     <header className="border-b border-ink-700/10 bg-parchment-50/85 backdrop-blur-[2px] above-grain sticky top-0 z-30">
-      {/* Top hairline strip — like an old letterhead margin */}
-      <div className="border-b border-ink-700/10 bg-forest-800 text-parchment-100">
+      {/* Top hairline strip — letterhead margin, desktop only */}
+      <div className="hidden md:block border-b border-ink-700/10 bg-forest-800 text-parchment-100">
         <Container className="flex items-center justify-between py-2.5">
           <span className="editorial-caps-sm">Riederalp · Wallis · Schweiz</span>
-          <span className="hidden md:inline editorial-caps-sm">+41 27 928 00 23</span>
+          <span className="editorial-caps-sm">+41 27 928 00 23</span>
           <LanguageSwitcher />
         </Container>
       </div>
@@ -31,10 +31,10 @@ export function Header() {
           className="flex items-center gap-3 group min-w-0"
           aria-label="Chalet Aletsch — Startseite"
         >
-          <Monogram size={48} className="md:hidden transition-opacity duration-300 group-hover:opacity-80 shrink-0" />
+          <Monogram size={44} className="md:hidden transition-opacity duration-300 group-hover:opacity-80 shrink-0" />
           <Monogram size={56} className="hidden md:block transition-opacity duration-300 group-hover:opacity-80 shrink-0" />
           <span className="flex flex-col leading-none min-w-0">
-            <span className="font-display text-[1.15rem] md:text-[1.55rem] tracking-tight text-ink-700 truncate">
+            <span className="font-display text-[1.2rem] md:text-[1.55rem] tracking-tight text-ink-700 truncate">
               Chalet Aletsch
             </span>
             <span className="hidden md:block editorial-caps mt-1 text-forest-700">
@@ -43,6 +43,10 @@ export function Header() {
           </span>
         </Link>
 
+        {/* Mobile: language switcher only */}
+        <LanguageSwitcher variant="light" className="md:hidden shrink-0" />
+
+        {/* Desktop: full horizontal nav */}
         <nav aria-label="Hauptmenü" className="hidden md:flex items-center gap-10">
           {items.map((item) => (
             <Link

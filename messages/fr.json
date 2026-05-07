@@ -100,7 +100,9 @@
       "quote": "Rarement nous sommes allés si loin pour faire si peu. C'était exactement juste.",
       "author": "Famille Lehnherr, Berne",
       "date": "Inscription du 14 février 2026",
-      "note": "Extrait du livre d'or de la suite Konkordia. Reproduit avec permission."
+      "prev": "Inscription précédente",
+      "next": "Inscription suivante",
+      "note": "Extraits du livre d'or. Reproduits avec permission."
     },
     "availability": {
       "eyebrow": "Vérifier la disponibilité",

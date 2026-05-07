@@ -100,7 +100,9 @@
       "quote": "Rarely have we travelled so far to do so little. It was exactly right.",
       "author": "The Lehnherr family, Bern",
       "date": "Entered 14 February 2026",
-      "note": "Excerpt from the guest book of the Konkordia suite. Reproduced with permission."
+      "prev": "Previous entry",
+      "next": "Next entry",
+      "note": "Excerpts from the guest book. Reproduced with permission."
     },
     "availability": {
       "eyebrow": "Check availability",

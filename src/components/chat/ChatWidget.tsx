@@ -122,8 +122,8 @@ export function ChatWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? t("close") : t("open")}
         className={cn(
-          "fixed bottom-24 md:bottom-28 right-4 md:right-6 z-40",
-          "w-14 h-14 border border-ink-700 bg-forest-700 text-parchment-50",
+          "fixed bottom-6 md:bottom-8 right-6 md:right-8 z-[50]",
+          "w-14 h-14 md:w-[60px] md:h-[60px] border border-ink-700 bg-forest-700 text-parchment-50",
           "shadow-[0_4px_24px_-6px_rgba(20,19,15,0.4)] hover:bg-forest-800 transition-colors",
           "flex items-center justify-center",
         )}
@@ -137,7 +137,7 @@ export function ChatWidget() {
           role="dialog"
           aria-label={t("title")}
           className={cn(
-            "fixed bottom-44 md:bottom-48 right-4 md:right-6 z-40",
+            "fixed bottom-24 md:bottom-28 right-4 md:right-6 z-[50]",
             "w-[calc(100vw-2rem)] md:w-[420px] h-[min(540px,75vh)]",
             "border border-ink-700/30 bg-parchment-50 shadow-[0_8px_40px_-8px_rgba(20,19,15,0.35)]",
             "flex flex-col",
