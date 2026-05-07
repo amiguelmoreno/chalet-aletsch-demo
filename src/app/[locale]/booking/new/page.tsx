@@ -1,10 +1,8 @@
 import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { Container } from "@/components/ui/Container";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { BookingFlow } from "@/components/booking/BookingFlow";
+import { PageHero } from "@/components/marketing/PageHero";
 
 export default async function BookingNewPage({
   params,
@@ -20,18 +18,13 @@ function Content() {
   const t = useTranslations("booking");
   return (
     <>
-      <section className="pt-16 md:pt-24 pb-8">
-        <Container width="narrow" className="text-center">
-          <Eyebrow ornament>{t("eyebrow")}</Eyebrow>
-          <h1 className="font-display italic text-display-lg mt-6">{t("title")}</h1>
-          <p className="mt-7 text-[1.1rem] leading-relaxed text-ink-600 max-w-prose mx-auto">
-            {t("intro")}
-          </p>
-        </Container>
-        <div className="mt-12">
-          <OrnamentRule />
-        </div>
-      </section>
+      <PageHero
+        imageSrc="https://images.unsplash.com/photo-1769976723592-d720ce28439f?w=2400&q=88&auto=format&fit=crop"
+        imageAlt="Verschneite Bäume rund um ein Berghaus auf einer Anhöhe"
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        intro={t("intro")}
+      />
       <Suspense fallback={<div className="py-24 text-center text-ink-500 italic">…</div>}>
         <BookingFlow />
       </Suspense>
