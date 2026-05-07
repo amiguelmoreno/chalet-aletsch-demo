@@ -1,0 +1,679 @@
+{
+  "nav": {
+    "tagline": "A mountain house since MCMXXIII",
+    "rooms": "Rooms",
+    "story": "Our story",
+    "blog": "Notes",
+    "contact": "Find us",
+    "reserve": "Reserve",
+    "account": "My account"
+  },
+  "footer": {
+    "tagline": "Riederalp · Valais · since 1923",
+    "address": { "label": "Address" },
+    "contact": { "label": "Phone & post" },
+    "hours": {
+      "front": "Reception 7.30–22.00",
+      "kitchen": "Dining room 12.00–14.00 / 18.30–21.30"
+    },
+    "pages": {
+      "label": "Pages",
+      "rooms": "Rooms",
+      "story": "Our story",
+      "contact": "Find us",
+      "imprint": "Imprint",
+      "privacy": "Privacy"
+    },
+    "copyright": { "held": "All rights reserved" },
+    "colophon": "Set in Fraunces & EB Garamond"
+  },
+  "home": {
+    "hero": {
+      "plate": "Plate I — The house from the south",
+      "eyebrow": "An invitation",
+      "titleA": "In the shadow of the Aletsch glacier,",
+      "titleB": "a mountain house for one hundred years.",
+      "lead": "Four generations have kept Chalet Aletsch on the Riederalp. The pine-panelled parlour, the rye bread from the wood-fired oven and the view that quiets every guest at dawn — none of it has changed much. We rather like it that way.",
+      "ctaPrimary": "Rooms & rates",
+      "ctaSecondary": "The history of the house"
+    },
+    "glance": {
+      "eyebrow": "At a glance",
+      "title": "Three things we look after.",
+      "lage": {
+        "title": "The setting",
+        "body": "At 1,925 metres, on the edge of the Aletschwald. The cable car from Mörel arrives thirty steps from the front door. In winter the cross-country trail begins on our doorstep; in summer the high traverse.",
+        "aside": "Konkordiaplatz is a single day’s walk."
+      },
+      "stube": {
+        "title": "The dining room",
+        "body": "An old Valaisan parlour panelled in Swiss stone pine, joined by a carpenter from Naters and warmed by a soapstone stove. Rye bread from the village oven, hay-milk cheese, air-dried meat from Mund.",
+        "aside": "Tables for non-guests by telephone only."
+      },
+      "handwerk": {
+        "title": "The craft",
+        "body": "The house is kept by hand. Bedlinen of Swiss wool, soap from Visp, much of the furniture still carved by the woman who raised the walls. We mend before we replace.",
+        "aside": "Patience handles the rest."
+      }
+    },
+    "story": {
+      "eyebrow": "From the house chronicle",
+      "title": "Anton Imboden, carpenter, built the first house.",
+      "body1": "In the summer of 1923, Anton Imboden brought his wife Marie and their four children up to the Riederalp to raise a house for travellers on a clearing at the edge of the Aletschwald. He carried the beams up from the valley himself, and roofed it with the heavy schist tiles from the Goms.",
+      "body2": "Three generations on, the house still stands — a little lower in the soil, a little darker in the timber, with a roof renewed in 1987. It is run today by Annelies Imboden-Truffer, Anton’s great-granddaughter. She still cooks on Sundays.",
+      "pullQuote": "We did not build this house to do business. We built it to remain.",
+      "pullQuoteAttribution": "Anton Imboden, house chronicle, 1924",
+      "cta": "Read the full chronicle"
+    },
+    "rooms": {
+      "eyebrow": "Rooms",
+      "title": "Four rooms, each with its own character.",
+      "intro": "We don’t call them rooms; we call them Stuben — the Valaisan word for parlour. Each carries the name of a nearby peak, hut or lake. No two are alike.",
+      "from": "from",
+      "perNight": "per night",
+      "cta": "See all rooms",
+      "items": {
+        "arvenstube": {
+          "name": "Arvenstube",
+          "subtitle": "Double · south-facing",
+          "description": "The original parlour from the 1923 build. Walls, floor and bed are made of two-hundred-year-old Swiss stone pine. South-facing, with the Bietschhorn in the window."
+        },
+        "blauseeli": {
+          "name": "Blauseeli",
+          "subtitle": "Single · east-facing",
+          "description": "Small and quiet, with a narrow oriel window and a writing desk. Named after the small alpine lake above the house — first to catch the morning sun."
+        },
+        "fiescher": {
+          "name": "Fiescher",
+          "subtitle": "Family · west-facing",
+          "description": "Two rooms — a sitting room with the soapstone stove, and a bedroom with two beds and a child’s berth. For a family, or two travelling couples."
+        },
+        "konkordia": {
+          "name": "Konkordia",
+          "subtitle": "Suite · attic floor",
+          "description": "The whole top floor. Three bedrooms, a small kitchen, the long timber balcony reaching out across the Aletschwald to the Rhône valley. For families and small parties."
+        }
+      }
+    },
+    "guestbook": {
+      "eyebrow": "From the guest book",
+      "quote": "Rarely have we travelled so far to do so little. It was exactly right.",
+      "author": "The Lehnherr family, Bern",
+      "date": "Entered 14 February 2026",
+      "note": "Excerpt from the guest book of the Konkordia suite. Reproduced with permission."
+    },
+    "availability": {
+      "eyebrow": "Check availability",
+      "title": "Would you like to come and stay?",
+      "from": "Arrival",
+      "to": "Departure",
+      "guests": "Guests",
+      "cta": "Enquire",
+      "note": "We answer by hand, usually within a day. Bookings are also accepted by telephone."
+    }
+  },
+  "rooms": {
+    "eyebrow": "Register of rooms",
+    "title": "Four rooms.",
+    "intro": "Each room has grown over the decades — through repairs, small additions, a new window here, a different bed there. We describe each one separately, so you can choose what suits you best.",
+    "specs": {
+      "from": "From",
+      "sleeps": "Sleeps",
+      "area": "Area",
+      "bath": "Bath",
+      "view": "View"
+    },
+    "items": {
+      "arvenstube": {
+        "name": "Arvenstube",
+        "subtitle": "Double · south-facing · ground floor",
+        "description": "The original parlour from the 1923 build. Walls, floor and the four-poster bed are made of two-hundred-year-old Swiss stone pine, cut by Anton Imboden himself. The floorboard creaks — some say it’s part of the lullaby.",
+        "quirk": "The door only closes if you lift it slightly. A peculiarity we will not be fixing.",
+        "bath": "Private shower, separate WC",
+        "view": "Bietschhorn, Schinhorn"
+      },
+      "blauseeli": {
+        "name": "Blauseeli",
+        "subtitle": "Single · east-facing · ground floor",
+        "description": "Small and still, with a slim oriel that catches the first sun. Named after the small alpine lake above the house, just deep enough to swim in summer. Ideal for those who write.",
+        "quirk": "In the oriel stands a writing-desk inherited from the village priest, Pfarrer Truffer.",
+        "bath": "Private bath",
+        "view": "Aletschwald, Blauseeli"
+      },
+      "fiescher": {
+        "name": "Fiescher",
+        "subtitle": "Family · west-facing · first floor",
+        "description": "Two rooms in line — a sitting room with the old soapstone stove in front, and a bedroom behind, with two beds and a child’s berth. The west balcony catches the evening light.",
+        "quirk": "The soapstone stove has been fired the same way since 1947.",
+        "bath": "Private bath with tub",
+        "view": "Eggishorn, Fiescherhörner"
+      },
+      "konkordia": {
+        "name": "Konkordia",
+        "subtitle": "Suite · attic floor",
+        "description": "The whole top floor. Three bedrooms, a small kitchen with a gas hob, a shared sitting room under the rafters, a long timber balcony with views across the Aletschwald to the Rhône valley. Named after the place where three glaciers meet.",
+        "quirk": "In summer the heat shimmers under the roof — we recommend rising early.",
+        "bath": "Two bathrooms",
+        "view": "Aletsch glacier (on clear days)"
+      }
+    },
+    "closing": "There are no other rooms. We do not grow."
+  },
+  "story": {
+    "eyebrow": "House chronicle",
+    "title": "One hundred years on the Riederalp.",
+    "subtitle": "A short account in three chapters, for those who like to know which house they are entering before they cross the threshold.",
+    "ch1": {
+      "eyebrow": "Chapter the first · 1923–1948",
+      "title": "Anton builds. Marie runs the house.",
+      "body1": "Anton Imboden was a carpenter. In the spring of 1923, on the clearing above Riederalp, there stood only a small alp-cheese hut, half collapsed. Anton bought the parcel for six hundred francs, felled the pines, sawed them in the valley and carried the beams back up. By late summer the house stood — without electricity, without running water, with a tiled stove brought up from Brig. Marie ran the house.",
+      "body2": "The first guests came from the Bernese Oberland — climbers seeking quarters before the Konkordia hut. They paid in five-franc coins and now and then with a ham. Anton died in the winter of 1948. Marie kept the house alone until 1962."
+    },
+    "ch2": {
+      "eyebrow": "Chapter the second · 1962–1995",
+      "title": "Hans and Trudi. The house meets the grid.",
+      "body1": "In 1962 the son Hans took over, with his wife Trudi from Naters. They had the house wired in 1967, built out the two upper rooms in 1972 and put in the first telephone in 1981. Trudi cooked. Hans cared for the timber. Each evening they wrote into the house book what had happened that day.",
+      "body2": "In 1987 the schist roof was replaced with a new one. In 1995 Hans retired. The same year — had such things existed yet — the house might have had its first website."
+    },
+    "ch3": {
+      "eyebrow": "Chapter the third · 1995–today",
+      "title": "Annelies. Little changes. Some things remain.",
+      "body1": "Annelies Imboden-Truffer took the house from her father Hans. She studied hospitality in Lausanne and Florence, returned after ten years in Zürich. She has changed some things — modernised the bathrooms, renewed the heating, brought in a lighter breakfast. Many things, deliberately, she has not: the parlours, the bread, the silence.",
+      "body2": "She still cooks on Sundays. The house book is still kept. The next generation, Annelies’ daughter Lea, is currently apprenticing as a cook at the Walliser Stube in Brig. Who knows."
+    },
+    "closing": "We hope this will do for now.",
+    "signoff": "Greetings from the parlour"
+  },
+  "contact": {
+    "eyebrow": "Find us & write",
+    "title": "Send us a letter.",
+    "intro": "We answer letters, emails and telephone calls by hand. Reservation enquiries are usually answered within a day. General questions may take a moment longer.",
+    "form": {
+      "heading": "Letter to the house",
+      "name": "Your name",
+      "email": "E-mail",
+      "subject": "Subject",
+      "message": "Your message",
+      "send": "Send",
+      "note": "By sending, you consent to being contacted. Your details are never shared."
+    },
+    "info": {
+      "eyebrow": "House register",
+      "title": "How to reach us.",
+      "address": "Address",
+      "phone": "Telephone",
+      "email": "E-mail",
+      "hours": "Hours",
+      "frontDesk": "Reception 7.30–22.00 daily",
+      "kitchen": "Dining room 12.00–14.00 / 18.30–21.30",
+      "access": "Getting here",
+      "accessBody": "Train to Mörel (BLS), then cable car to the Riederalp. Around 15 minutes door to door. Car-free village — parking down in the valley."
+    }
+  },
+  "imprint": {
+    "eyebrow": "Required disclosure",
+    "title": "Imprint",
+    "operator": "Operator",
+    "contact": "Contact",
+    "registry": "Commercial register",
+    "registryNote": "Entered in the commercial register of the Canton of Valais, registered office Riederalp",
+    "vat": "VAT",
+    "vatBody": "Chalet Aletsch is below the Swiss VAT threshold and is therefore not VAT-registered. A simple receipt is available on request.",
+    "liability": "Liability",
+    "liabilityBody": "We accept no liability for content on external sites linked from these pages. The operators of those sites are solely responsible for their content.",
+    "colophon": "Colophon",
+    "colophonBody": "This site was designed and developed by Morenodev. Set in Fraunces (display) and EB Garamond (text). Illustrations drawn by hand."
+  },
+  "privacy": {
+    "eyebrow": "Privacy",
+    "title": "Privacy notice",
+    "intro": "This notice explains what personal data we collect, why we collect it, and the rights you have as a data subject.",
+    "controllerLabel": "Controller",
+    "controllerBody": "Chalet Aletsch GmbH, Furkastrasse 14, 3987 Riederalp. Please address requests concerning the processing of your data to hallo@chalet-aletsch.ch.",
+    "dataLabel": "What we collect",
+    "dataBody": "When you make a reservation: name, address, email, telephone, dates of stay, payment information. When you contact us: name, email, content of your message. When you visit the site: anonymised log data (IP, browser, time of access).",
+    "purposesLabel": "Purposes of processing",
+    "purposesBody": "To handle your reservation and stay, answer enquiries, comply with statutory retention obligations, and ensure the security of the website.",
+    "rightsLabel": "Your rights",
+    "rightsBody": "You have the right to access, rectification, deletion, restriction, and objection. You may also contact the Swiss Federal Data Protection and Information Commissioner (FDPIC).",
+    "cookiesLabel": "Cookies",
+    "cookiesBody": "We use only technically necessary cookies. Optional cookies (analytics, heatmaps) are set only after explicit consent.",
+    "note": "Last updated: May 2026."
+  },
+  "notFound": {
+    "eyebrow": "Page not found",
+    "title": "There is nothing to see here.",
+    "body": "Either we have moved this page, or it never existed. Please return to the front page.",
+    "home": "Return home"
+  },
+  "cookies": {
+    "eyebrow": "House notice",
+    "title": "About the cookies we use.",
+    "intro": "To keep our parlour in order, we leave a few small notes in your browser. You decide which ones.",
+    "necessary": {
+      "title": "Necessary",
+      "body": "Session cookies and security. Always on — without them the reservation flow does not work."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "body": "Anonymous insight into what our guests read on the site. Helps us write more clearly."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "body": "So we can remind you about our newsletter, if you've subscribed and don't see it any more."
+    },
+    "acceptAll": "Accept all",
+    "necessaryOnly": "Necessary only",
+    "customize": "Customise",
+    "save": "Save selection",
+    "openSettings": "Cookie settings",
+    "note": "You can change your choice any time from the link at the bottom of the page."
+  },
+  "blog": {
+    "eyebrow": "From the house notes",
+    "title": "Letters, recipes and dispatches from the mountain.",
+    "intro": "Four or five times a year we sit down and write what's on our mind — from the first snowline to the Sunday loaf out of the wood-fired oven.",
+    "emptyTitle": "Nothing written yet.",
+    "emptyBody": "The next note will appear when the first flakes reach the Aletschwald.",
+    "comingSoonTitle": "House notes are coming.",
+    "comingSoonBody": "We're setting up the writing room. As soon as it's ready, you'll find our dispatches from the mountain here.",
+    "back": "Back to the list"
+  },
+  "signIn": {
+    "eyebrow": "My account",
+    "title": "Sign in",
+    "intro": "Sign in to view your reservation, write to the parlour or leave a note in the guest book.",
+    "withGoogle": "Continue with Google",
+    "withEmail": "Send a magic letter",
+    "emailLabel": "E-mail address",
+    "or": "or",
+    "loading": "One moment …",
+    "notConfiguredEyebrow": "Note",
+    "notConfigured": "Sign-in is not configured yet. Set AUTH_GOOGLE_ID + AUTH_GOOGLE_SECRET or RESEND_API_KEY in your environment and it will work straight away.",
+    "note": "We don't use passwords. Either we send you a link by e-mail, or you continue with Google.",
+    "verify": {
+      "eyebrow": "Letter on the way",
+      "title": "We've sent you a sign-in link.",
+      "body": "Please open your inbox and follow the link. It is valid for one hour. If nothing arrives, also check your spam folder.",
+      "hint": "You can close this window afterwards."
+    }
+  },
+  "account": {
+    "eyebrow": "My account",
+    "title": "Welcome back, {name}.",
+    "intro": "Here you'll find your reservations, can write to the parlour, and update your details.",
+    "name": "Name",
+    "email": "E-mail",
+    "signOut": "Sign out",
+    "bookings": {
+      "heading": "Reservations",
+      "empty": "No reservation on file yet.",
+      "emptyHint": "When you book a room, it will appear here.",
+      "startBooking": "Book a room now",
+      "entryOne": "entry",
+      "entryMany": "entries"
+    }
+  },
+  "accountBooking": {
+    "back": "Back to my reservations",
+    "eyebrow": "Reservation",
+    "stay": "Stay",
+    "checkIn": "Arrival",
+    "checkOut": "Departure",
+    "guests": "Guests",
+    "rooms": "Room",
+    "nights": "nights",
+    "extras": "Extras",
+    "deposit": "Deposit (30%)",
+    "total": "Total",
+    "payDeposit": "Pay deposit now · {amount}",
+    "cancel": "Cancel reservation",
+    "policy": "Free cancellation up to 7 days before arrival. After that the deposit is retained.",
+    "status": {
+      "pending_payment": {
+        "title": "Awaiting confirmation.",
+        "body": "We've noted your reservation; the deposit is still pending. Once it arrives, the room is firmly held for you."
+      },
+      "confirmed": {
+        "title": "Confirmed — we look forward to your arrival.",
+        "body": "Three days before your arrival we'll send a short letter with the final details."
+      },
+      "checked_in": {
+        "title": "You've arrived.",
+        "body": "We hope you're comfortable. If anything's missing, please let us know."
+      },
+      "checked_out": {
+        "title": "Thank you for your visit.",
+        "body": "We hope you'll return. A short note in the guest book would mean a lot."
+      },
+      "cancelled": {
+        "title": "Reservation cancelled.",
+        "body": "This reservation is no longer active."
+      },
+      "no_show": {
+        "title": "Marked as no-show.",
+        "body": "Please call us if this is a mistake."
+      }
+    },
+    "review": {
+      "heading": "A note in the guest book",
+      "intro": "Did you enjoy your stay? Please leave us a short review — it helps other travellers choose.",
+      "ratingLabel": "Rating",
+      "bodyLabel": "Your words",
+      "bodyPlaceholder": "What stayed with you — the parlour, the silence, Sunday's bread …",
+      "submit": "Sign the book",
+      "submitting": "Submitting …",
+      "thanks": "Noted. Thank you.",
+      "thanksBody": "We'll review it briefly and publish it to the guest book."
+    }
+  },
+  "booking": {
+    "eyebrow": "Reservation",
+    "title": "Reserve your stay.",
+    "intro": "Five short steps. Payment and deposit follow only after we confirm — nothing is owed before you hear from us in person.",
+    "steps": {
+      "dates": "Dates",
+      "room": "Room",
+      "extras": "Extras",
+      "details": "Details",
+      "review": "Review"
+    },
+    "stepDates": {
+      "eyebrow": "First step",
+      "title": "When would you like to come?",
+      "intro": "Choose your arrival and departure dates and the number of guests. We'll then check which rooms are free.",
+      "checkIn": "Arrival",
+      "checkOut": "Departure",
+      "adults": "Adults",
+      "children": "Children",
+      "continue": "Check availability",
+      "loading": "One moment …"
+    },
+    "stepRoom": {
+      "eyebrow": "Second step",
+      "title": "Choose your room.",
+      "intro": "For your {nights} nights, the following rooms are open.",
+      "noneTitle": "Nothing free for those dates.",
+      "noneBody": "Please try other dates — or write to us directly, sometimes something can be arranged.",
+      "back": "Other dates",
+      "continue": "Continue to extras"
+    },
+    "stepExtras": {
+      "eyebrow": "Third step",
+      "title": "Extras — entirely as you wish.",
+      "intro": "Optional. You may also leave it at the room and skip the rest.",
+      "from": "from",
+      "note": "Final settlement happens at the house. Quantities can still be changed.",
+      "back": "Back",
+      "continue": "Continue to your details",
+      "units": {
+        "person": "per person",
+        "day": "per day",
+        "piece": "per piece",
+        "hour": "per hour"
+      },
+      "items": {
+        "halbpension": {
+          "name": "Half board",
+          "body": "Breakfast and a four-course dinner in the parlour. What appears morning and evening depends on the market — Annelies decides."
+        },
+        "transfer-moerel": {
+          "name": "Mörel station transfer",
+          "body": "We collect you from the station and accompany you up the cable car. Practical if you arrive with ski gear."
+        },
+        "bergführer-tag": {
+          "name": "Mountain guide · one day",
+          "body": "Walter, our house mountain guide, has known every path between the Aletschwald and Konkordiaplatz since 1978. By request."
+        },
+        "raclette-abend": {
+          "name": "Raclette evening",
+          "body": "Valaisan raclette with sides from the garden and Goms potatoes, by the soapstone stove. Minimum four people."
+        }
+      }
+    },
+    "stepDetails": {
+      "eyebrow": "Fourth step",
+      "title": "Who is coming?",
+      "intro": "So we can address you correctly. Required fields are marked with ·",
+      "name": "First and last name",
+      "email": "E-mail",
+      "phone": "Telephone",
+      "notes": "Notes",
+      "notesPlaceholder": "Allergies, birthdays, time of arrival, or simply a hello …",
+      "marketing": "Yes, I'd like to hear from the house notes occasionally (about four times a year). One click to unsubscribe.",
+      "back": "Back",
+      "continue": "Continue to review"
+    },
+    "stepReview": {
+      "eyebrow": "Fifth step",
+      "title": "Does everything look right?",
+      "intro": "Please review the details. On submit we'll send you a confirmation by e-mail; payment follows only after we reply.",
+      "stay": "Stay",
+      "checkIn": "Arrival",
+      "checkOut": "Departure",
+      "guests": "Guests",
+      "adultsLabel": "ad.",
+      "childrenLabel": "ch.",
+      "room": "Room",
+      "extras": "Extras",
+      "subtotal": "Subtotal",
+      "deposit": "Deposit (30%)",
+      "total": "Total",
+      "you": "Your details",
+      "name": "Name",
+      "email": "E-mail",
+      "phone": "Telephone",
+      "notes": "Notes",
+      "back": "Back",
+      "submit": "Send reservation",
+      "submitting": "Sending …",
+      "note": "By submitting you accept our cancellation terms (free cancellation up to 7 days before arrival)."
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again.",
+      "network": "We couldn't reach our server. Please check your connection.",
+      "invalid_dates": "Please choose a valid arrival and departure date.",
+      "too_many_guests": "We have no room large enough for that party.",
+      "min_stay": "These dates carry a minimum-stay requirement.",
+      "room_unavailable": "That room has just been taken. Please choose another.",
+      "missing_fields": "Please fill in all required fields.",
+      "invalid_json": "We couldn't read your input. Please try again.",
+      "service_unavailable": "The reservation system is temporarily unreachable. Please try again later or call us."
+    }
+  },
+  "bookingConfirm": {
+    "eyebrow": "Reservation received",
+    "title": "We've noted you down.",
+    "intro": "Many thanks, {name}. A confirmation with all the details is on its way. Until it arrives, nothing further is required.",
+    "stay": "Stay",
+    "checkIn": "Arrival",
+    "checkOut": "Departure",
+    "guests": "Guests",
+    "rooms": "Room",
+    "nights": "nights",
+    "extras": "Extras",
+    "deposit": "Deposit (30%)",
+    "total": "Total",
+    "nextStep": "What happens next.",
+    "nextStepBody": "Annelies will reply within one working day — usually sooner — with the deposit details and everything else. Your room is held for you until then.",
+    "home": "Back to the front page",
+    "payDeposit": "Pay deposit now · {amount}",
+    "paid": {
+      "eyebrow": "Deposit received",
+      "title": "We look forward to your arrival.",
+      "body": "Many thanks, {name}. Your deposit has been received and the room is yours.",
+      "nextStep": "What happens next.",
+      "nextStepBody": "Three days before your arrival we'll send a short letter with the final details — arrival, weather, what we'll cook on your first evening."
+    },
+    "processing": {
+      "eyebrow": "Payment processing",
+      "title": "We're waiting for confirmation from the bank.",
+      "body": "Twint and some cards take a brief moment. As soon as the payment is confirmed, the status on this page will update."
+    },
+    "cancelled": {
+      "eyebrow": "Payment cancelled",
+      "title": "The payment was not completed.",
+      "body": "No problem — the room is still held for you for 15 minutes. You can try again or contact us by phone."
+    }
+  },
+  "admin": {
+    "nav": {
+      "eyebrow": "House office",
+      "overview": "Overview",
+      "calendar": "Calendar",
+      "bookings": "Reservations",
+      "reviews": "Reviews",
+      "rooms": "Rooms",
+      "pricing": "Pricing",
+      "experiences": "Experiences"
+    },
+    "calendar": {
+      "eyebrow": "Occupancy",
+      "title": "Calendar",
+      "intro": "All active reservations at a glance. Click a reservation to open it."
+    },
+    "rooms": {
+      "eyebrow": "Rooms",
+      "title": "Manage rooms",
+      "intro": "Four rooms — we don't grow. You can edit descriptions, capacity and the base price.",
+      "back": "Back to list",
+      "editEyebrow": "Edit room",
+      "guests": "guests",
+      "rooms": "units",
+      "active": "Active",
+      "inactive": "Inactive",
+      "save": "Save",
+      "saving": "Saving …",
+      "saved": "Saved",
+      "fields": {
+        "nameDe": "Name (German)",
+        "nameEn": "Name (English)",
+        "subtitleDe": "Subtitle (German)",
+        "subtitleEn": "Subtitle (English)",
+        "descriptionDe": "Description (German)",
+        "descriptionEn": "Description (English)",
+        "capacity": "Capacity",
+        "basePrice": "Base price (CHF)",
+        "areaSqm": "Area (m²)",
+        "position": "Position",
+        "active": "Active"
+      }
+    },
+    "pricing": {
+      "eyebrow": "Pricing rules",
+      "title": "Seasonal pricing & minimum stay",
+      "intro": "Rules are sorted by priority. The highest-priority rule whose dates touch a given night is applied.",
+      "new": "New rule",
+      "newEyebrow": "New pricing rule",
+      "newTitle": "Create rule",
+      "editEyebrow": "Edit rule",
+      "back": "Back to list",
+      "empty": "No rules yet.",
+      "nights": "nights",
+      "priority": "prio.",
+      "save": "Save",
+      "saving": "Saving …",
+      "saved": "Saved",
+      "delete": "Delete",
+      "deleting": "Deleting …",
+      "confirmDelete": "Really delete this rule?",
+      "fields": {
+        "name": "Name",
+        "dateFrom": "Valid from",
+        "dateTo": "Valid to",
+        "multiplier": "Multiplier",
+        "flatAdjust": "Flat surcharge CHF",
+        "minStay": "Min. stay",
+        "priority": "Priority",
+        "notes": "Notes"
+      }
+    },
+    "experiences": {
+      "eyebrow": "Extras",
+      "title": "Manage extras",
+      "intro": "Half board, transfers, mountain guides — anything guests can add to a stay.",
+      "new": "New extra",
+      "newEyebrow": "New extra",
+      "newTitle": "Create extra",
+      "editEyebrow": "Edit extra",
+      "back": "Back to list",
+      "empty": "No extras yet.",
+      "active": "Active",
+      "inactive": "Inactive",
+      "save": "Save",
+      "saving": "Saving …",
+      "saved": "Saved",
+      "delete": "Delete",
+      "deleting": "Deleting …",
+      "confirmDelete": "Really delete this extra?",
+      "fields": {
+        "slug": "Slug",
+        "nameDe": "Name (German)",
+        "nameEn": "Name (English)",
+        "descriptionDe": "Description (German)",
+        "descriptionEn": "Description (English)",
+        "unitPrice": "Unit price (CHF)",
+        "unit": "Unit",
+        "active": "Active"
+      },
+      "units": {
+        "person": "per person",
+        "day": "per day",
+        "piece": "per piece",
+        "hour": "per hour"
+      }
+    },
+    "reviews": {
+      "eyebrow": "Reviews",
+      "title": "Guest book",
+      "all": "All",
+      "pendingFilter": "Pending",
+      "approvedFilter": "Published",
+      "empty": "No reviews yet."
+    },
+    "overview": {
+      "title": "What's happening at the house.",
+      "intro": "A short view of running reservations, year-to-date revenue and what's coming next.",
+      "revenueYtd": "Revenue YTD",
+      "upcoming": "Upcoming",
+      "pending": "Pending",
+      "recent": "Recent entries",
+      "seeAll": "See all",
+      "empty": "No reservations yet."
+    },
+    "bookings": {
+      "eyebrow": "Reservations",
+      "title": "Booking ledger",
+      "all": "All",
+      "empty": "No reservations found.",
+      "status": {
+        "pending_payment": "Pending",
+        "confirmed": "Confirmed",
+        "checked_in": "Checked in",
+        "checked_out": "Checked out",
+        "cancelled": "Cancelled",
+        "no_show": "No show"
+      }
+    },
+    "bookingDetail": {
+      "back": "Back to list",
+      "eyebrow": "Reservation",
+      "guest": "Guest",
+      "name": "Name",
+      "email": "E-mail",
+      "user": "Account",
+      "locale": "Language",
+      "stay": "Stay",
+      "checkIn": "Arrival",
+      "checkOut": "Departure",
+      "guests": "Guests",
+      "hold": "Hold expires",
+      "rooms": "Rooms",
+      "extras": "Extras",
+      "payments": "Payments",
+      "noPayments": "No payments yet.",
+      "total": "Total",
+      "notes": "Guest notes"
+    }
+  }
+}

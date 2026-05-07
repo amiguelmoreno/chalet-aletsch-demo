@@ -1,0 +1,679 @@
+{
+  "nav": {
+    "tagline": "Berghaus seit MCMXXIII",
+    "rooms": "Stuben",
+    "story": "Geschichte",
+    "blog": "Hausgeflüster",
+    "contact": "Anreise",
+    "reserve": "Reservieren",
+    "account": "Mein Bereich"
+  },
+  "footer": {
+    "tagline": "Riederalp · Wallis · seit 1923",
+    "address": { "label": "Hausanschrift" },
+    "contact": { "label": "Anruf · Brief" },
+    "hours": {
+      "front": "Empfang: 7.30–22.00 Uhr",
+      "kitchen": "Stube: 12.00–14.00 / 18.30–21.30"
+    },
+    "pages": {
+      "label": "Wegweiser",
+      "rooms": "Stuben",
+      "story": "Geschichte",
+      "contact": "Anreise",
+      "imprint": "Impressum",
+      "privacy": "Datenschutz"
+    },
+    "copyright": { "held": "Alle Rechte vorbehalten" },
+    "colophon": "Gesetzt in Fraunces & EB Garamond"
+  },
+  "home": {
+    "hero": {
+      "plate": "Tafel I — Das Haus von Süden",
+      "eyebrow": "Eine Einladung",
+      "titleA": "Im Schatten des Aletschgletschers,",
+      "titleB": "ein Berghaus seit hundert Jahren.",
+      "lead": "Vier Generationen führen das Chalet Aletsch auf der Riederalp. Geblieben ist die Arvenstube, das Roggenbrot vom Holzofen und der Blick, der täglich aufs Neue jeden zum Schweigen bringt. Geändert hat sich beinah nichts. So mag es weitergehen.",
+      "ctaPrimary": "Stuben & Preise",
+      "ctaSecondary": "Die Geschichte des Hauses"
+    },
+    "glance": {
+      "eyebrow": "Auf einen Blick",
+      "title": "Drei Dinge, die wir hüten.",
+      "lage": {
+        "title": "Die Lage",
+        "body": "Auf 1925 Metern, an der Kante des Aletschwaldes. Die Seilbahn aus Mörel hält dreissig Schritte vom Eingang. Im Winter beginnt die Loipe vor der Haustür; im Sommer der Höhenweg.",
+        "aside": "Der Konkordiaplatz ist eine Tagestour entfernt."
+      },
+      "stube": {
+        "title": "Die Stube",
+        "body": "Eine alte Walliser Wirtsstube aus Arvenholz, getäfert von einem Schreiner aus Naters, geheizt mit dem gusseisernen Specksteinofen. Walliser Roggenbrot, Heumilchkäse, Trockenfleisch aus Mund.",
+        "aside": "Reservation für Auswärtige nur am Telefon."
+      },
+      "handwerk": {
+        "title": "Das Handwerk",
+        "body": "Das Haus wird von Hand gepflegt. Die Bettdecken aus Schweizer Schurwolle, die Seife aus Visp, die Möbel zum grossen Teil noch von der Erbauerin geschnitzt. Wir reparieren, bevor wir ersetzen.",
+        "aside": "Mit Geduld geht alles."
+      }
+    },
+    "story": {
+      "eyebrow": "Aus der Hauschronik",
+      "title": "Anton Imboden, Schreiner, baute das erste Haus.",
+      "body1": "Im Sommer 1923 zog Anton Imboden mit seiner Frau Marie und vier Kindern auf die Riederalp, um auf einer Lichtung am Aletschwald ein Haus für Wanderer zu errichten. Die Balken trug er selbst aus dem Tal herauf, das Dach deckte er mit den schweren Schieferplatten aus dem Goms.",
+      "body2": "Drei Generationen später steht das Haus noch immer dort, etwas tiefer im Boden, etwas dunkler im Holz, mit einem neuen Dach aus dem Jahr 1987. Geführt wird es heute von Annelies Imboden-Truffer, der Urenkelin Antons. Sie kocht sonntags noch selbst.",
+      "pullQuote": "Wir haben dieses Haus nicht gebaut, um Geschäfte zu machen. Wir haben es gebaut, um zu bleiben.",
+      "pullQuoteAttribution": "Anton Imboden, Hauschronik 1924",
+      "cta": "Die ganze Hauschronik lesen"
+    },
+    "rooms": {
+      "eyebrow": "Stuben & Zimmer",
+      "title": "Vier Stuben, jede mit eigenem Charakter.",
+      "intro": "Wir nennen sie nicht Zimmer, sondern Stuben — wie es im Wallis seit jeher gemacht wird. Jede trägt den Namen eines Berges, einer Hütte oder eines Sees aus der Umgebung. Keine zwei sind gleich.",
+      "from": "ab",
+      "perNight": "pro Nacht",
+      "cta": "Alle Stuben ansehen",
+      "items": {
+        "arvenstube": {
+          "name": "Arvenstube",
+          "subtitle": "Doppelstube · Süd",
+          "description": "Die ursprüngliche Stube aus dem Bauteil von 1923. Wände, Boden und Bett aus 200-jährigem Arvenholz. Süd­ausrichtung, mit Blick auf das Bietschhorn."
+        },
+        "blauseeli": {
+          "name": "Blauseeli",
+          "subtitle": "Einzelstube · Ost",
+          "description": "Klein, ruhig, mit eigenem Erker und einem schmalen Schreibtisch. Benannt nach dem kleinen Bergsee oberhalb des Hauses, der morgens als Erstes die Sonne fängt."
+        },
+        "fiescher": {
+          "name": "Fiescher",
+          "subtitle": "Familienstube · West",
+          "description": "Zwei Räume, ein Wohnraum mit Specksteinofen und ein Schlafraum mit zwei Betten und einer Schlafkoje. Geeignet für eine Familie oder zwei reisende Paare."
+        },
+        "konkordia": {
+          "name": "Konkordia",
+          "subtitle": "Suite · Dachgeschoss",
+          "description": "Die ganze Dachetage. Drei Schlafräume, eine kleine Küche, der Holzbalkon mit Sicht über den Aletschwald bis hinunter ins Rhonetal. Für Familien und kleine Reisegruppen."
+        }
+      }
+    },
+    "guestbook": {
+      "eyebrow": "Aus dem Gästebuch",
+      "quote": "Selten sind wir so weit gefahren, um so wenig zu tun. Es war genau richtig.",
+      "author": "Familie Lehnherr, Bern",
+      "date": "Eintrag vom 14. Februar 2026",
+      "note": "Auszug aus dem Gästebuch der Stube Konkordia. Mit freundlicher Erlaubnis."
+    },
+    "availability": {
+      "eyebrow": "Verfügbarkeit prüfen",
+      "title": "Möchten Sie zu uns kommen?",
+      "from": "Ankunft",
+      "to": "Abreise",
+      "guests": "Gäste",
+      "cta": "Anfragen",
+      "note": "Wir antworten von Hand, meist innerhalb eines Tages. Reservation auch per Telefon."
+    }
+  },
+  "rooms": {
+    "eyebrow": "Tafel der Stuben",
+    "title": "Vier Stuben.",
+    "intro": "Jede Stube ist über die Jahrzehnte gewachsen — durch Reparaturen, kleine Anbauten, ein neues Fenster hier, ein anderes Bett dort. Wir beschreiben jede einzeln, damit Sie wählen können, was Ihnen am ehesten zusagt.",
+    "specs": {
+      "from": "Ab",
+      "sleeps": "Plätze",
+      "area": "Fläche",
+      "bath": "Bad",
+      "view": "Aussicht"
+    },
+    "items": {
+      "arvenstube": {
+        "name": "Arvenstube",
+        "subtitle": "Doppelstube · Süd · Erdgeschoss",
+        "description": "Die ursprüngliche Stube aus dem Bauteil von 1923. Wände, Boden und das Himmelbett sind aus zweihundertjährigem Arvenholz, von Anton Imboden persönlich geschnitten. Der Tritt knarrt — manche sagen, das gehört zum Schlaflied.",
+        "quirk": "Die Tür schliesst nur, wenn man sie leicht anhebt. Eine Eigenheit, die wir nicht beheben werden.",
+        "bath": "Eigene Dusche, getrennte Toilette",
+        "view": "Bietschhorn, Schinhorn"
+      },
+      "blauseeli": {
+        "name": "Blauseeli",
+        "subtitle": "Einzelstube · Ost · Erdgeschoss",
+        "description": "Klein und ruhig, mit einem schmalen Erker, der morgens als Erstes die Sonne fängt. Benannt nach dem kleinen Bergsee, der über dem Haus liegt und im Sommer eintauchbar wird. Ideal für Schreibende.",
+        "quirk": "Im Erker steht ein Sekretär aus dem Nachlass des Pfarrers Truffer.",
+        "bath": "Eigenes Bad",
+        "view": "Aletschwald, Blauseeli"
+      },
+      "fiescher": {
+        "name": "Fiescher",
+        "subtitle": "Familienstube · West · 1. Stock",
+        "description": "Zwei Räume in Reihe: vorne ein Wohnraum mit dem alten Specksteinofen, hinten der Schlafraum mit zwei Betten und einer Schlafkoje für ein Kind. Der Westbalkon nimmt das Abendlicht.",
+        "quirk": "Der Specksteinofen wird seit 1947 unverändert befeuert.",
+        "bath": "Eigenes Bad mit Wanne",
+        "view": "Eggishorn, Fiescherhörner"
+      },
+      "konkordia": {
+        "name": "Konkordia",
+        "subtitle": "Suite · Dachgeschoss",
+        "description": "Die ganze Dachetage. Drei Schlafräume, eine kleine Küche mit Gasherd, ein gemeinsamer Wohnraum unter den Dachbalken, ein langer Holzbalkon mit Sicht über den Aletschwald bis ins Rhonetal. Benannt nach der Stelle, an der drei Gletscher zusammenfliessen.",
+        "quirk": "Im Sommer flimmert die Hitze unter dem Dach — wir empfehlen, früh aufzustehen.",
+        "bath": "Zwei Bäder",
+        "view": "Aletschgletscher (an klaren Tagen)"
+      }
+    },
+    "closing": "Mehr Stuben gibt es nicht. Wir wachsen nicht."
+  },
+  "story": {
+    "eyebrow": "Hauschronik",
+    "title": "Hundert Jahre auf der Riederalp.",
+    "subtitle": "Ein kurzer Bericht in drei Kapiteln, für alle, die wissen möchten, in welches Haus sie eintreten, bevor sie es betreten.",
+    "ch1": {
+      "eyebrow": "Erstes Kapitel · 1923–1948",
+      "title": "Anton baut. Marie führt.",
+      "body1": "Anton Imboden war Schreiner. Im Frühjahr 1923 stand auf der Lichtung über Riederalp nur eine kleine Sennhütte, halb verfallen. Anton kaufte das Stück für 600 Franken, schlug Arven, sägte sie im Tal, trug die Balken zurück. Im Spätsommer stand das Haus, ohne Strom, ohne fliessendes Wasser, mit einem Kachelofen aus Brig. Marie führte die Wirtschaft.",
+      "body2": "Die ersten Gäste kamen aus dem Berner Oberland — Bergsteiger, die für die Konkordiahütte Quartier suchten. Bezahlt wurde mit Fünflibern und gelegentlich mit einem Schinken. Im Winter 1948 starb Anton. Marie führte das Haus allein bis 1962."
+    },
+    "ch2": {
+      "eyebrow": "Zweites Kapitel · 1962–1995",
+      "title": "Hans und Trudi. Strom kommt aufs Haus.",
+      "body1": "1962 übernahm der Sohn Hans, gemeinsam mit seiner Frau Trudi aus Naters. Sie liessen das Haus 1967 elektrifizieren, bauten 1972 die zwei oberen Stuben aus, und führten 1981 das erste Telefon ein. Trudi kochte. Hans pflegte das Holz. Beide schrieben jeden Abend ins Hausbuch, was an dem Tag geschehen war.",
+      "body2": "1987 wurde das Schieferdach durch ein neues ersetzt. 1995 ging Hans in Ruhestand. In dem Jahr, in dem das Haus erstmals einen Webauftritt bekommen hätte, wenn man so etwas damals schon gemacht hätte."
+    },
+    "ch3": {
+      "eyebrow": "Drittes Kapitel · 1995–heute",
+      "title": "Annelies. Wenig ändert sich. Manches bleibt.",
+      "body1": "Annelies Imboden-Truffer übernahm das Haus von ihrem Vater Hans. Sie hat in Lausanne und Florenz Hotellerie studiert, ist nach zehn Jahren in Zürich zurückgekehrt. Sie hat manches geändert — die Bäder modernisiert, die Heizung erneuert, ein leichteres Frühstück eingeführt. Vieles bewusst nicht: die Stuben, das Brot, die Stille.",
+      "body2": "Sie kocht sonntags selbst. Das Hausbuch wird weitergeführt. Die nächste Generation, Annelies' Tochter Lea, lernt zur Zeit Köchin im Restaurant Walliser Stube in Brig. Wer weiss."
+    },
+    "closing": "Wir hoffen, das genügt fürs Erste.",
+    "signoff": "Mit Gruss aus der Stube"
+  },
+  "contact": {
+    "eyebrow": "Anreise & Kontakt",
+    "title": "Schreiben Sie uns einen Brief.",
+    "intro": "Wir antworten Briefen, E-Mails und Telefonaten von Hand. Reservierungsanfragen werden meist innerhalb eines Tages beantwortet. Allgemeine Fragen können einen Augenblick länger dauern.",
+    "form": {
+      "heading": "Hausanschreiben",
+      "name": "Ihr Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Ihre Nachricht",
+      "send": "Absenden",
+      "note": "Mit dem Absenden willigen Sie der Kontaktaufnahme ein. Wir geben Ihre Daten an niemanden weiter."
+    },
+    "info": {
+      "eyebrow": "Hausverzeichnis",
+      "title": "So erreichen Sie uns.",
+      "address": "Adresse",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "hours": "Öffnungszeiten",
+      "frontDesk": "Empfang täglich 7.30–22.00 Uhr",
+      "kitchen": "Stube 12.00–14.00 / 18.30–21.30 Uhr",
+      "access": "Anreise",
+      "accessBody": "Mit der Bahn nach Mörel (BLS), dann mit der Seilbahn auf die Riederalp. Vom Bahnhof Mörel bis zur Türe rund 15 Minuten. Auto­frei — Parkplatz im Tal."
+    }
+  },
+  "imprint": {
+    "eyebrow": "Pflichtangaben",
+    "title": "Impressum",
+    "operator": "Betreiberin",
+    "contact": "Kontakt",
+    "registry": "Handelsregister",
+    "registryNote": "Eintragung im Handelsregister des Kantons Wallis, Sitz Riederalp",
+    "vat": "Mehrwertsteuer",
+    "vatBody": "Das Chalet Aletsch ist nicht mehrwertsteuerpflichtig (Schwelle nicht überschritten). Auf Wunsch kann eine Quittung ausgestellt werden.",
+    "liability": "Haftung",
+    "liabilityBody": "Für externe Verweise (Links zu Dritten) wird keine Haftung übernommen. Für die Inhalte dieser fremden Seiten sind ausschliesslich deren Betreiber verantwortlich.",
+    "colophon": "Kolophon",
+    "colophonBody": "Diese Seite wurde gestaltet und entwickelt von Morenodev. Gesetzt in Fraunces (Anzeige) und EB Garamond (Werk). Illustrationen von Hand."
+  },
+  "privacy": {
+    "eyebrow": "Datenschutz",
+    "title": "Datenschutzerklärung",
+    "intro": "Diese Erklärung gibt einen Überblick darüber, welche personenbezogenen Daten wir erheben, wozu wir sie verwenden und welche Rechte Sie als betroffene Person haben.",
+    "controllerLabel": "Verantwortliche Stelle",
+    "controllerBody": "Chalet Aletsch GmbH, Furkastrasse 14, 3987 Riederalp. Anfragen zur Verarbeitung Ihrer Daten richten Sie bitte an hallo@chalet-aletsch.ch.",
+    "dataLabel": "Welche Daten wir erheben",
+    "dataBody": "Bei Reservierungen: Name, Adresse, E-Mail, Telefon, Aufenthaltsdaten, Zahlungsangaben. Bei Anfragen: Name, E-Mail, Inhalt der Nachricht. Beim Besuch der Webseite: anonymisierte Logdaten (IP-Adresse, Browser, Zugriffszeit).",
+    "purposesLabel": "Zwecke der Verarbeitung",
+    "purposesBody": "Abwicklung der Reservation und des Aufenthalts, Beantwortung von Anfragen, gesetzliche Aufbewahrungspflichten, Sicherheit und Stabilität der Webseite.",
+    "rightsLabel": "Ihre Rechte",
+    "rightsBody": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Sie können sich auch an die zuständige schweizerische Aufsichtsbehörde EDÖB wenden.",
+    "cookiesLabel": "Cookies",
+    "cookiesBody": "Wir verwenden ausschliesslich technisch notwendige Cookies. Optionale Cookies (Analyse, Heatmaps) werden erst nach ausdrücklicher Einwilligung gesetzt.",
+    "note": "Stand der Erklärung: Mai 2026."
+  },
+  "notFound": {
+    "eyebrow": "Seite nicht gefunden",
+    "title": "Hier ist nichts zu sehen.",
+    "body": "Vermutlich haben wir die Seite umgehängt oder sie ist nie erschienen. Bitte kehren Sie zur Startseite zurück.",
+    "home": "Zur Startseite"
+  },
+  "cookies": {
+    "eyebrow": "Hausnotiz",
+    "title": "Über die Cookies, die wir verwenden.",
+    "intro": "Damit unsere Stuben in Ordnung bleiben, hinterlegen wir ein paar kleine Notizen in Ihrem Browser. Sie wählen, welche.",
+    "necessary": {
+      "title": "Notwendig",
+      "body": "Sitzungs-Cookies und Sicherheit. Immer aktiv, ohne sie funktioniert die Reservation nicht."
+    },
+    "analytics": {
+      "title": "Analyse",
+      "body": "Anonyme Auswertung, was unsere Gäste auf der Webseite lesen. Hilft uns, klarere Texte zu schreiben."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "body": "Damit wir Sie an unseren Newsletter erinnern können, falls Sie ihn abonniert haben und nicht mehr daran denken."
+    },
+    "acceptAll": "Alles akzeptieren",
+    "necessaryOnly": "Nur Notwendiges",
+    "customize": "Auswählen",
+    "save": "Auswahl speichern",
+    "openSettings": "Cookie-Einstellungen",
+    "note": "Sie können Ihre Auswahl jederzeit über den Link im Hausverzeichnis am Fuss der Seite ändern."
+  },
+  "blog": {
+    "eyebrow": "Aus dem Hausgeflüster",
+    "title": "Notizen, Rezepte und Berichte aus den Bergen.",
+    "intro": "Vier- bis fünfmal im Jahr setzen wir uns hin und schreiben auf, was uns beschäftigt — von der ersten Schneelinie bis zum Ofenbrot vom Sonntag.",
+    "emptyTitle": "Noch nichts geschrieben.",
+    "emptyBody": "Die nächste Notiz erscheint, wenn die ersten Schneeflocken den Aletschwald erreichen.",
+    "comingSoonTitle": "Hausgeflüster kommt bald.",
+    "comingSoonBody": "Wir richten gerade die Schreibstube ein. Sobald sie fertig ist, finden Sie hier unsere Notizen aus den Bergen.",
+    "back": "Zurück zur Übersicht"
+  },
+  "signIn": {
+    "eyebrow": "Mein Bereich",
+    "title": "Anmeldung",
+    "intro": "Melden Sie sich an, um Ihre Reservation einzusehen, Briefe an die Stube zu schreiben oder eine Bewertung zu hinterlassen.",
+    "withGoogle": "Mit Google anmelden",
+    "withEmail": "Magisches Briefchen senden",
+    "emailLabel": "E-Mail-Adresse",
+    "or": "oder",
+    "loading": "Einen Augenblick …",
+    "notConfiguredEyebrow": "Hinweis",
+    "notConfigured": "Die Anmeldung ist noch nicht eingerichtet. Setzen Sie AUTH_GOOGLE_ID + AUTH_GOOGLE_SECRET oder RESEND_API_KEY in Ihrer Umgebung, dann funktioniert sie auf Anhieb.",
+    "note": "Wir verwenden keine Passwörter. Stattdessen senden wir Ihnen einen Anmeldelink per E-Mail oder Sie wählen Google.",
+    "verify": {
+      "eyebrow": "Brief unterwegs",
+      "title": "Wir haben Ihnen einen Anmeldelink gesendet.",
+      "body": "Bitte öffnen Sie Ihre E-Mail und folgen Sie dem Link. Er ist für eine Stunde gültig. Wenn nichts ankommt, schauen Sie auch im Spam-Ordner.",
+      "hint": "Sie können dieses Fenster danach schliessen."
+    }
+  },
+  "account": {
+    "eyebrow": "Mein Bereich",
+    "title": "Willkommen zurück, {name}.",
+    "intro": "Hier sehen Sie Ihre Reservationen, können Briefe an die Stube schreiben und Ihre Daten pflegen.",
+    "name": "Name",
+    "email": "E-Mail",
+    "signOut": "Abmelden",
+    "bookings": {
+      "heading": "Reservationen",
+      "empty": "Noch keine Reservation eingetragen.",
+      "emptyHint": "Sobald Sie eine Stube buchen, erscheint sie hier.",
+      "startBooking": "Jetzt eine Stube reservieren",
+      "entryOne": "Eintrag",
+      "entryMany": "Einträge"
+    }
+  },
+  "accountBooking": {
+    "back": "Zurück zu meinen Reservationen",
+    "eyebrow": "Reservation",
+    "stay": "Aufenthalt",
+    "checkIn": "Ankunft",
+    "checkOut": "Abreise",
+    "guests": "Gäste",
+    "rooms": "Stube",
+    "nights": "Nächte",
+    "extras": "Erweiterungen",
+    "deposit": "Anzahlung (30 %)",
+    "total": "Gesamt",
+    "payDeposit": "Anzahlung jetzt bezahlen · {amount}",
+    "cancel": "Stornieren",
+    "policy": "Kostenloser Rücktritt bis 7 Tage vor Anreise. Danach wird die Anzahlung einbehalten.",
+    "status": {
+      "pending_payment": {
+        "title": "Wartend auf Bestätigung.",
+        "body": "Wir haben Ihre Reservation eingetragen, die Anzahlung steht noch aus. Sobald sie eingegangen ist, ist die Stube fest für Sie reserviert."
+      },
+      "confirmed": {
+        "title": "Bestätigt — wir freuen uns auf Sie.",
+        "body": "Drei Tage vor Ihrer Anreise senden wir Ihnen einen kurzen Brief mit den letzten Angaben."
+      },
+      "checked_in": {
+        "title": "Sie sind angekommen.",
+        "body": "Wir hoffen, Sie fühlen sich wohl. Wenn etwas fehlt, sagen Sie bitte Bescheid."
+      },
+      "checked_out": {
+        "title": "Vielen Dank für Ihren Besuch.",
+        "body": "Wir hoffen, Sie kommen wieder. Eine kurze Bewertung im Gästebuch würde uns freuen."
+      },
+      "cancelled": {
+        "title": "Reservation storniert.",
+        "body": "Diese Reservation ist nicht mehr aktiv."
+      },
+      "no_show": {
+        "title": "Reservation als nicht erschienen markiert.",
+        "body": "Bitte rufen Sie uns an, falls dies ein Fehler ist."
+      }
+    },
+    "review": {
+      "heading": "Eine Notiz im Gästebuch",
+      "intro": "Hat Ihnen der Aufenthalt gefallen? Bitte hinterlassen Sie uns eine kurze Bewertung — sie hilft anderen Reisenden bei der Wahl.",
+      "ratingLabel": "Bewertung",
+      "bodyLabel": "Ihre Worte",
+      "bodyPlaceholder": "Was Ihnen geblieben ist — die Stube, die Stille, das Brot vom Sonntag …",
+      "submit": "Eintragen",
+      "submitting": "Wird eingetragen …",
+      "thanks": "Eingetragen. Vielen Dank.",
+      "thanksBody": "Wir prüfen kurz und veröffentlichen sie dann im Gästebuch."
+    }
+  },
+  "booking": {
+    "eyebrow": "Reservation",
+    "title": "Schreiben Sie sich ein.",
+    "intro": "In fünf einfachen Schritten reservieren Sie eine Stube. Bezahlung und Anzahlung folgen erst nach Bestätigung — Sie sind nichts schuldig, bevor wir uns persönlich gemeldet haben.",
+    "steps": {
+      "dates": "Tage",
+      "room": "Stube",
+      "extras": "Erweiterungen",
+      "details": "Angaben",
+      "review": "Übersicht"
+    },
+    "stepDates": {
+      "eyebrow": "Erster Schritt",
+      "title": "Wann möchten Sie kommen?",
+      "intro": "Wählen Sie An- und Abreisedatum sowie die Anzahl Gäste. Wir prüfen anschliessend, welche Stuben frei sind.",
+      "checkIn": "Ankunft",
+      "checkOut": "Abreise",
+      "adults": "Erwachsene",
+      "children": "Kinder",
+      "continue": "Verfügbarkeit prüfen",
+      "loading": "Einen Augenblick …"
+    },
+    "stepRoom": {
+      "eyebrow": "Zweiter Schritt",
+      "title": "Wählen Sie Ihre Stube.",
+      "intro": "Für Ihre {nights} Nächte stehen die folgenden Stuben offen.",
+      "noneTitle": "Für diese Tage ist nichts mehr frei.",
+      "noneBody": "Bitte wählen Sie andere Daten — oder schreiben Sie uns direkt, manchmal lässt sich etwas einrichten.",
+      "back": "Andere Daten",
+      "continue": "Weiter zu den Erweiterungen"
+    },
+    "stepExtras": {
+      "eyebrow": "Dritter Schritt",
+      "title": "Erweiterungen — ganz nach Belieben.",
+      "intro": "Optional. Sie können auch alles weglassen und es bei der Stube belassen.",
+      "from": "ab",
+      "note": "Endabrechnung erfolgt vor Ort. Mengen können Sie noch ändern.",
+      "back": "Zurück",
+      "continue": "Weiter zu den Angaben",
+      "units": {
+        "person": "pro Person",
+        "day": "pro Tag",
+        "piece": "pro Stück",
+        "hour": "pro Stunde"
+      },
+      "items": {
+        "halbpension": {
+          "name": "Halbpension",
+          "body": "Frühstück und viergängiges Abendessen in der Stube. Was Sie morgens und abends erwartet, hängt vom Markt ab — Annelies entscheidet."
+        },
+        "transfer-moerel": {
+          "name": "Bahnhoftransfer Mörel",
+          "body": "Wir holen Sie vom Bahnhof ab und begleiten Sie mit der Seilbahn aufs Dorf. Praktisch, wenn Sie mit Skiausrüstung anreisen."
+        },
+        "bergführer-tag": {
+          "name": "Bergführer · ein Tag",
+          "body": "Walter, unser Hausbergführer, kennt jeden Pfad zwischen Aletschwald und Konkordiaplatz seit 1978. Auf Anfrage."
+        },
+        "raclette-abend": {
+          "name": "Raclette-Abend",
+          "body": "Walliser Raclette mit Beilagen aus dem Garten und Kartoffeln aus dem Goms, am Specksteinofen. Mindestens vier Personen."
+        }
+      }
+    },
+    "stepDetails": {
+      "eyebrow": "Vierter Schritt",
+      "title": "Wer kommt zu uns?",
+      "intro": "Damit wir uns korrekt an Sie wenden können. Pflichtfelder sind mit · markiert.",
+      "name": "Vor- und Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "notes": "Anmerkungen",
+      "notesPlaceholder": "Allergien, Geburtstag, Anreisezeit, oder einfach ein Gruss …",
+      "marketing": "Ja, ich möchte gelegentlich vom Hausgeflüster hören (etwa viermal im Jahr). Abmelden ist mit einem Klick möglich.",
+      "back": "Zurück",
+      "continue": "Weiter zur Übersicht"
+    },
+    "stepReview": {
+      "eyebrow": "Fünfter Schritt",
+      "title": "Stimmt alles?",
+      "intro": "Bitte überprüfen Sie die Angaben. Mit dem Abschicken senden wir Ihnen eine Bestätigung per E-Mail; bezahlt wird erst nach unserer Antwort.",
+      "stay": "Aufenthalt",
+      "checkIn": "Ankunft",
+      "checkOut": "Abreise",
+      "guests": "Gäste",
+      "adultsLabel": "Erw.",
+      "childrenLabel": "Kinder",
+      "room": "Stube",
+      "extras": "Erweiterungen",
+      "subtotal": "Zwischensumme",
+      "deposit": "Anzahlung (30 %)",
+      "total": "Gesamt",
+      "you": "Ihre Angaben",
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "notes": "Anmerkungen",
+      "back": "Zurück",
+      "submit": "Reservation absenden",
+      "submitting": "Wird abgesendet …",
+      "note": "Mit dem Absenden bestätigen Sie unsere Storno­bedingungen (Rücktritt bis 7 Tage vor Anreise kostenlos)."
+    },
+    "errors": {
+      "generic": "Etwas ist schiefgegangen. Bitte versuchen Sie es noch einmal.",
+      "network": "Wir konnten unseren Server nicht erreichen. Bitte überprüfen Sie Ihre Verbindung.",
+      "invalid_dates": "Bitte wählen Sie ein gültiges An- und Abreisedatum.",
+      "too_many_guests": "Für diese Anzahl Gäste finden wir keine passende Stube.",
+      "min_stay": "Für diese Tage gilt eine Mindestaufenthaltsdauer.",
+      "room_unavailable": "Diese Stube ist inzwischen vergeben. Bitte wählen Sie eine andere.",
+      "missing_fields": "Bitte füllen Sie alle Pflichtfelder aus.",
+      "invalid_json": "Wir konnten Ihre Eingabe nicht lesen. Bitte versuchen Sie es noch einmal.",
+      "service_unavailable": "Das Reservierungssystem ist gerade nicht erreichbar. Bitte versuchen Sie es später noch einmal oder rufen Sie uns an."
+    }
+  },
+  "bookingConfirm": {
+    "eyebrow": "Reservation eingegangen",
+    "title": "Wir haben Sie eingetragen.",
+    "intro": "Vielen Dank, {name}. Eine Bestätigung mit allen Angaben ist unterwegs zu Ihnen. Bis sie bei uns eintrifft, ist nichts weiter zu tun.",
+    "stay": "Aufenthalt",
+    "checkIn": "Ankunft",
+    "checkOut": "Abreise",
+    "guests": "Gäste",
+    "rooms": "Stube",
+    "nights": "Nächte",
+    "extras": "Erweiterungen",
+    "deposit": "Anzahlung (30 %)",
+    "total": "Gesamt",
+    "nextStep": "Was als Nächstes geschieht.",
+    "nextStepBody": "Annelies meldet sich innerhalb eines Werktages — meist schneller — mit den Angaben zur Anzahlung und allem Weiteren. Bis dahin ist Ihre Stube für Sie reserviert.",
+    "home": "Zurück zur Startseite",
+    "payDeposit": "Anzahlung jetzt bezahlen · {amount}",
+    "paid": {
+      "eyebrow": "Anzahlung erhalten",
+      "title": "Wir freuen uns auf Sie.",
+      "body": "Vielen Dank, {name}. Ihre Anzahlung ist eingegangen, die Stube ist Ihnen sicher.",
+      "nextStep": "Was als Nächstes geschieht.",
+      "nextStepBody": "Drei Tage vor Ihrer Anreise senden wir Ihnen einen kurzen Brief mit den letzten Angaben — Anreise, Wetter, was wir am ersten Abend kochen."
+    },
+    "processing": {
+      "eyebrow": "Zahlung in Verarbeitung",
+      "title": "Wir warten auf die Bestätigung der Bank.",
+      "body": "Twint und manche Karten brauchen einen kurzen Augenblick. Sobald die Zahlung bestätigt ist, wechselt der Status auf dieser Seite."
+    },
+    "cancelled": {
+      "eyebrow": "Zahlung abgebrochen",
+      "title": "Die Zahlung wurde nicht abgeschlossen.",
+      "body": "Kein Problem — die Stube ist noch für 15 Minuten für Sie reserviert. Sie können erneut versuchen oder uns telefonisch kontaktieren."
+    }
+  },
+  "admin": {
+    "nav": {
+      "eyebrow": "Hausverwaltung",
+      "overview": "Übersicht",
+      "calendar": "Kalender",
+      "bookings": "Reservationen",
+      "reviews": "Bewertungen",
+      "rooms": "Stuben",
+      "pricing": "Preise",
+      "experiences": "Erweiterungen"
+    },
+    "calendar": {
+      "eyebrow": "Belegung",
+      "title": "Kalender",
+      "intro": "Alle aktiven Reservationen auf einen Blick. Klicken Sie eine Reservation an, um sie zu öffnen."
+    },
+    "rooms": {
+      "eyebrow": "Stuben",
+      "title": "Stuben verwalten",
+      "intro": "Vier Stuben — wir wachsen nicht. Sie können Beschreibungen, Kapazität und Grundpreis bearbeiten.",
+      "back": "Zurück zur Liste",
+      "editEyebrow": "Stube bearbeiten",
+      "guests": "Gäste",
+      "rooms": "Räume",
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "save": "Speichern",
+      "saving": "Speichert …",
+      "saved": "Gespeichert",
+      "fields": {
+        "nameDe": "Name (Deutsch)",
+        "nameEn": "Name (Englisch)",
+        "subtitleDe": "Untertitel (Deutsch)",
+        "subtitleEn": "Untertitel (Englisch)",
+        "descriptionDe": "Beschreibung (Deutsch)",
+        "descriptionEn": "Beschreibung (Englisch)",
+        "capacity": "Kapazität",
+        "basePrice": "Grundpreis (CHF)",
+        "areaSqm": "Fläche (m²)",
+        "position": "Reihenfolge",
+        "active": "Aktiv"
+      }
+    },
+    "pricing": {
+      "eyebrow": "Preisregeln",
+      "title": "Saisonpreise & Mindestaufenthalt",
+      "intro": "Regeln werden nach Priorität sortiert. Die höchste Priorität, deren Datum auf eine Nacht zutrifft, wird angewandt.",
+      "new": "Neue Regel",
+      "newEyebrow": "Neue Preisregel",
+      "newTitle": "Regel erstellen",
+      "editEyebrow": "Regel bearbeiten",
+      "back": "Zurück zur Liste",
+      "empty": "Noch keine Regel.",
+      "nights": "Nächte",
+      "priority": "Prio.",
+      "save": "Speichern",
+      "saving": "Speichert …",
+      "saved": "Gespeichert",
+      "delete": "Löschen",
+      "deleting": "Löscht …",
+      "confirmDelete": "Diese Regel wirklich löschen?",
+      "fields": {
+        "name": "Name",
+        "dateFrom": "Gültig ab",
+        "dateTo": "Gültig bis",
+        "multiplier": "Multiplikator",
+        "flatAdjust": "Aufschlag CHF",
+        "minStay": "Mindestaufenthalt",
+        "priority": "Priorität",
+        "notes": "Anmerkungen"
+      }
+    },
+    "experiences": {
+      "eyebrow": "Erweiterungen",
+      "title": "Erweiterungen verwalten",
+      "intro": "Halbpension, Transfers, Bergführer und alles, was Gäste optional zur Stube buchen können.",
+      "new": "Neue Erweiterung",
+      "newEyebrow": "Neue Erweiterung",
+      "newTitle": "Erweiterung erstellen",
+      "editEyebrow": "Erweiterung bearbeiten",
+      "back": "Zurück zur Liste",
+      "empty": "Noch keine Erweiterung.",
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "save": "Speichern",
+      "saving": "Speichert …",
+      "saved": "Gespeichert",
+      "delete": "Löschen",
+      "deleting": "Löscht …",
+      "confirmDelete": "Diese Erweiterung wirklich löschen?",
+      "fields": {
+        "slug": "Schlüssel (Slug)",
+        "nameDe": "Name (Deutsch)",
+        "nameEn": "Name (Englisch)",
+        "descriptionDe": "Beschreibung (Deutsch)",
+        "descriptionEn": "Beschreibung (Englisch)",
+        "unitPrice": "Stückpreis (CHF)",
+        "unit": "Einheit",
+        "active": "Aktiv"
+      },
+      "units": {
+        "person": "pro Person",
+        "day": "pro Tag",
+        "piece": "pro Stück",
+        "hour": "pro Stunde"
+      }
+    },
+    "reviews": {
+      "eyebrow": "Bewertungen",
+      "title": "Gästebuch",
+      "all": "Alle",
+      "pendingFilter": "Wartend",
+      "approvedFilter": "Veröffentlicht",
+      "empty": "Noch keine Bewertung."
+    },
+    "overview": {
+      "title": "Was im Haus geschieht.",
+      "intro": "Eine kurze Übersicht der laufenden Reservationen, des Umsatzes des Jahres und dessen, was als Nächstes ansteht.",
+      "revenueYtd": "Umsatz Jahr",
+      "upcoming": "Kommende",
+      "pending": "Wartend",
+      "recent": "Letzte Einträge",
+      "seeAll": "Alle ansehen",
+      "empty": "Noch keine Reservation."
+    },
+    "bookings": {
+      "eyebrow": "Reservationen",
+      "title": "Buchungsbuch",
+      "all": "Alle",
+      "empty": "Keine Reservation gefunden.",
+      "status": {
+        "pending_payment": "Wartend",
+        "confirmed": "Bestätigt",
+        "checked_in": "Eingecheckt",
+        "checked_out": "Ausgecheckt",
+        "cancelled": "Storniert",
+        "no_show": "Nicht erschienen"
+      }
+    },
+    "bookingDetail": {
+      "back": "Zurück zur Liste",
+      "eyebrow": "Reservation",
+      "guest": "Gast",
+      "name": "Name",
+      "email": "E-Mail",
+      "user": "Konto",
+      "locale": "Sprache",
+      "stay": "Aufenthalt",
+      "checkIn": "Ankunft",
+      "checkOut": "Abreise",
+      "guests": "Gäste",
+      "hold": "Reservation läuft ab",
+      "rooms": "Stuben",
+      "extras": "Erweiterungen",
+      "payments": "Zahlungen",
+      "noPayments": "Noch keine Zahlung verbucht.",
+      "total": "Gesamt",
+      "notes": "Anmerkungen des Gastes"
+    }
+  }
+}

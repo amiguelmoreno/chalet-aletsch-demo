@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: 251 248 241;       /* parchment-50 */
+    --color-fg: 31 30 24;          /* ink-700 */
+    --color-rule: 169 159 138;     /* warm rule */
+
+    /* Paper grain — subtle */
+    --grain-opacity: 0.035;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-fg));
+    font-family: var(--font-serif), Georgia, serif;
+    font-feature-settings: "kern", "liga", "calt", "onum";
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    line-height: 1.55;
+  }
+
+  /* Paper grain overlay — fixed, ignores pointer */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image:
+      radial-gradient(rgba(82, 70, 47, var(--grain-opacity)) 1px, transparent 1px),
+      radial-gradient(rgba(82, 70, 47, calc(var(--grain-opacity) * 0.6)) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+    mix-blend-mode: multiply;
+  }
+
+  /* Top corner decorative borders — old letterhead feel */
+  ::selection {
+    background-color: #2A3F2C;
+    color: #F4ECD8;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 400;
+    color: rgb(20 19 15);
+  }
+
+  /* Drop cap utility */
+  .dropcap::first-letter {
+    font-family: var(--font-display), Georgia, serif;
+    float: left;
+    font-size: 4.5em;
+    line-height: 0.85;
+    padding-right: 0.08em;
+    padding-top: 0.08em;
+    color: #2A3F2C;
+    font-feature-settings: "swsh", "salt";
+  }
+
+  /* Old-style figures everywhere */
+  .lining-nums {
+    font-variant-numeric: lining-nums;
+  }
+
+  /* Roman numeral utility */
+  .roman {
+    font-variant-numeric: oldstyle-nums;
+    font-feature-settings: "smcp";
+    letter-spacing: 0.08em;
+  }
+
+  /* Small-caps eyebrow */
+  .smallcaps {
+    font-feature-settings: "smcp";
+    text-transform: lowercase;
+    letter-spacing: 0.18em;
+  }
+
+  /* Editorial caps — for menus, labels */
+  .editorial-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.72rem;
+    font-weight: 500;
+  }
+
+  /* Ornamental rule */
+  .rule-warm {
+    border-color: rgba(169, 159, 138, 0.55);
+  }
+
+  /* Link style — like printed text reference */
+  .ink-link {
+    color: rgb(20 19 15);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(60, 65, 50, 0.4);
+    transition: text-decoration-color 200ms ease;
+  }
+  .ink-link:hover {
+    text-decoration-color: rgba(168, 42, 31, 0.9);
+  }
+}
+
+@layer components {
+  /* Container — generous editorial width */
+  .container-editorial {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 78rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-editorial {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}
+
+@layer utilities {
+  .above-grain {
+    position: relative;
+    z-index: 2;
+  }
+}

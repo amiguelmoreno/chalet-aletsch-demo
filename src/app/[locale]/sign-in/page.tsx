@@ -1,0 +1,60 @@
+import { setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
+import { Container } from "@/components/ui/Container";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
+import { Monogram } from "@/components/ornaments/Monogram";
+import { authConfigured } from "@/auth";
+import { SignInActions } from "./SignInActions";
+
+export default async function SignInPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <Content />;
+}
+
+function Content() {
+  const t = useTranslations("signIn");
+  const googleEnabled = !!process.env.AUTH_GOOGLE_ID;
+  const emailEnabled = !!process.env.RESEND_API_KEY;
+
+  return (
+    <section className="py-20 md:py-28">
+      <Container width="narrow">
+        <div className="border border-ink-700/15 bg-parchment-100/30 p-8 md:p-14">
+          <div className="flex flex-col items-center text-center mb-10">
+            <Monogram size={72} />
+            <Eyebrow className="mt-6">{t("eyebrow")}</Eyebrow>
+            <h1 className="font-display italic text-display-md mt-3 text-ink-700">
+              {t("title")}
+            </h1>
+            <p className="mt-5 max-w-md text-ink-600 leading-relaxed">
+              {t("intro")}
+            </p>
+          </div>
+
+          <OrnamentRule className="mb-10" />
+
+          {!authConfigured ? (
+            <div className="text-center">
+              <p className="editorial-caps text-seal mb-3">{t("notConfiguredEyebrow")}</p>
+              <p className="text-ink-600 leading-relaxed max-w-md mx-auto">
+                {t("notConfigured")}
+              </p>
+            </div>
+          ) : (
+            <SignInActions googleEnabled={googleEnabled} emailEnabled={emailEnabled} />
+          )}
+        </div>
+
+        <p className="mt-8 text-center text-sm text-ink-500 italic">
+          {t("note")}
+        </p>
+      </Container>
+    </section>
+  );
+}
