@@ -23,13 +23,13 @@ export function Hero() {
                 <CornerBrackets />
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1633341500706-62690376b1ec?w=1200&q=85&auto=format&fit=crop"
-                    alt="Ein Chalet im Walliser Bergwald"
+                    src="https://images.unsplash.com/photo-1747137985267-2cee0fad023a?w=1400&q=88&auto=format&fit=crop"
+                    alt="Ein Walliser Chalet auf einer Bergwiese, dahinter schneebedeckte Gipfel"
                     fill
                     sizes="(min-width: 1024px) 36vw, 92vw"
                     priority
                     className="object-cover"
-                    style={{ filter: "sepia(0.08) saturate(0.92) contrast(1.03)" }}
+                    style={{ filter: "saturate(0.95) contrast(1.04)" }}
                   />
                 </div>
                 <p className="editorial-caps text-center mt-3 md:mt-4 text-forest-700/80">
