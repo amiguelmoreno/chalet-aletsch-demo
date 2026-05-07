@@ -103,7 +103,7 @@ export function ChatWidget() {
             "fixed bottom-44 md:bottom-48 right-4 md:right-6 z-40",
             "w-[calc(100vw-2rem)] md:w-[420px] h-[min(540px,75vh)]",
             "border border-ink-700/30 bg-parchment-50 shadow-[0_8px_40px_-8px_rgba(20,19,15,0.35)]",
-            "flex flex-col above-grain",
+            "flex flex-col",
           )}
         >
           <header className="flex items-center gap-3 px-5 py-4 border-b border-ink-700/15 bg-forest-800 text-parchment-50">

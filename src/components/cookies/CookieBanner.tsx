@@ -18,7 +18,7 @@ export function CookieBanner() {
     <div
       role="region"
       aria-label={t("title")}
-      className="fixed bottom-0 inset-x-0 z-50 above-grain bg-parchment-50 border-t border-ink-700/25 shadow-[0_-2px_24px_-12px_rgba(20,19,15,0.25)]"
+      className="fixed bottom-0 inset-x-0 z-50 bg-parchment-50 border-t border-ink-700/25 shadow-[0_-2px_24px_-12px_rgba(20,19,15,0.25)]"
     >
       <div className="container-editorial py-4 md:py-5">
         {!expanded ? (
