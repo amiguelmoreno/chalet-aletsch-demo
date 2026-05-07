@@ -43,6 +43,7 @@ export function ChatWidget() {
   const callApi = async (payload: { message?: string; faqId?: string }) => {
     setPending(true);
     setError(null);
+    const startedAt = Date.now();
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
@@ -55,7 +56,18 @@ export function ChatWidget() {
         else setError(t("genericError"));
         return;
       }
-      setMessages((m) => [...m, { role: "assistant", content: data.reply }]);
+
+      // Simulated thinking — keyword matching is instant, but an instant
+      // reply feels uncanny. Wait 700–1700 ms based on response length so
+      // longer answers feel like more typing happened.
+      const reply = String(data.reply ?? "");
+      const target = Math.min(700 + reply.length * 8, 1700);
+      const elapsed = Date.now() - startedAt;
+      if (elapsed < target) {
+        await new Promise((r) => setTimeout(r, target - elapsed));
+      }
+
+      setMessages((m) => [...m, { role: "assistant", content: reply }]);
     } catch {
       setError(t("networkError"));
     } finally {
@@ -150,7 +162,7 @@ export function ChatWidget() {
               </div>
             )}
 
-            {pending && <div className="text-sm italic text-ink-500">…</div>}
+            {pending && <TypingIndicator />}
             {error && <p className="text-sm text-seal italic">{error}</p>}
           </div>
 
@@ -178,6 +190,22 @@ export function ChatWidget() {
         </div>
       )}
     </>
+  );
+}
+
+function TypingIndicator() {
+  return (
+    <div className="bg-parchment-100/60 border-l-2 border-forest-700 pl-3 py-2 max-w-[85%] inline-flex items-center gap-1.5 text-forest-700">
+      <span className="typing-dot block w-1.5 h-1.5 rounded-full bg-current" />
+      <span
+        className="typing-dot block w-1.5 h-1.5 rounded-full bg-current"
+        style={{ animationDelay: "0.18s" }}
+      />
+      <span
+        className="typing-dot block w-1.5 h-1.5 rounded-full bg-current"
+        style={{ animationDelay: "0.36s" }}
+      />
+    </div>
   );
 }
 
