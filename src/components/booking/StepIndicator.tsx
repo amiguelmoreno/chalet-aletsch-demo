@@ -44,5 +44,5 @@ export function StepIndicator({ current }: { current: Step }) {
 }
 
 function romanFor(n: number) {
-  return ["I", "II", "III", "IV", "V"][n - 1] ?? `${n}`;
+  return String(n);
 }

@@ -108,7 +108,7 @@ function RoomRow({
             <span className="font-display">CHF {Math.round(room.price.subtotal / room.price.nights)}</span>
           </p>
           {room.price.breakdown.some((n) => n.ruleApplied) && (
-            <p className="text-xs italic text-forest-700 mt-1">— Saisonpreis</p>
+            <p className="text-xs italic text-forest-700 mt-1">Saisonpreis</p>
           )}
         </div>
         <div className="col-span-5 md:col-span-3 text-right">

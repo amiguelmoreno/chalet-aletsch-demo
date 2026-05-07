@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
@@ -8,43 +7,67 @@ import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { Edelweiss } from "@/components/ornaments/Edelweiss";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { hotelJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+import { RoomGallery } from "@/components/marketing/RoomGallery";
 
 type RoomKey = "arvenstube" | "blauseeli" | "fiescher" | "konkordia";
+
+const u = (id: string, w = 1600) =>
+  `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
 
 const rooms: Array<{
   key: RoomKey;
   price: number;
   sleeps: number;
   area: number;
-  hero: string;
+  photos: Array<{ src: string; alt: string }>;
 }> = [
   {
     key: "arvenstube",
     price: 320,
     sleeps: 2,
     area: 22,
-    hero: "https://picsum.photos/seed/arvenstube/1600/1000",
+    photos: [
+      { src: u("1722603931808-d5ddd71f4924"), alt: "Arvenstube, Bett am Fenster" },
+      { src: u("1723258345401-793598c38e10"), alt: "Arvenstube, Doppelbett, Holzwand" },
+      { src: u("1722650364897-33fb86a44592"), alt: "Arvenstube, Holzgetäfelte Wände" },
+      { src: u("1645640929991-867520dce42a"), alt: "Arvenstube, Detail am Bett" },
+    ],
   },
   {
     key: "blauseeli",
     price: 280,
     sleeps: 2,
     area: 18,
-    hero: "https://picsum.photos/seed/blauseeli/1600/1000",
+    photos: [
+      { src: u("1721824297615-bdce9177708d"), alt: "Blauseeli, Stube mit Fenster" },
+      { src: u("1721743170664-55c9602291ac"), alt: "Blauseeli, Holzboden" },
+      { src: u("1721396187257-a2bcdabb25c0"), alt: "Blauseeli, Bett, Holzwand" },
+      { src: u("1606602266678-d29114013ac6"), alt: "Blauseeli, Detail" },
+    ],
   },
   {
     key: "fiescher",
     price: 410,
     sleeps: 4,
     area: 36,
-    hero: "https://picsum.photos/seed/fiescher/1600/1000",
+    photos: [
+      { src: u("1631941392209-70cad44ecfb7"), alt: "Fiescher, Stube mit Specksteinofen" },
+      { src: u("1698933787104-3f91cf25909c"), alt: "Fiescher, Specksteinofen" },
+      { src: u("1631756964162-25c8c07579b5"), alt: "Fiescher, Wohnstube" },
+      { src: u("1721396187827-8606a4a6b4e3"), alt: "Fiescher, Schlafraum" },
+    ],
   },
   {
     key: "konkordia",
     price: 540,
     sleeps: 6,
     area: 58,
-    hero: "https://picsum.photos/seed/konkordia/1600/1000",
+    photos: [
+      { src: u("1774627868171-0a08bcc8d9ca"), alt: "Konkordia, Suite mit Bergblick" },
+      { src: u("1670914120781-4b7c8512fc41"), alt: "Konkordia, Wohnraum" },
+      { src: u("1773423391716-04e278b07b1b"), alt: "Konkordia, Schlafraum mit Ausblick" },
+      { src: u("1551927411-95e412943b58"), alt: "Konkordia, Detail am Fenster" },
+    ],
   },
 ];
 
@@ -121,19 +144,13 @@ function RoomsContent() {
               </div>
 
               <div className="lg:col-span-10 grid grid-cols-1 md:grid-cols-12 gap-10">
-                {/* Hero photo — anchors the room visually */}
-                <figure className="ken-burns md:col-span-7 relative aspect-[16/10] overflow-hidden border border-ink-700/15 bg-parchment-100">
-                  <Image
-                    src={room.hero}
-                    alt={t(`items.${room.key}.name`)}
-                    fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover ken-burns-img"
+                {/* Hero photo, anchors the room visually */}
+                <div className="md:col-span-7">
+                  <RoomGallery
+                    photos={room.photos}
+                    caption={`Plate ${i + 1}, ${t(`items.${room.key}.name`)}`}
                   />
-                  <figcaption className="absolute bottom-0 left-0 right-0 bg-ink-700/70 text-parchment-50 px-4 py-2 editorial-caps-sm">
-                    Plate {romanFor(i + 1)} — {t(`items.${room.key}.name`)}
-                  </figcaption>
-                </figure>
+                </div>
 
                 {/* Description */}
                 <div className="md:col-span-5">
@@ -145,7 +162,7 @@ function RoomsContent() {
                     {t(`items.${room.key}.description`)}
                   </p>
                   <p className="mt-4 italic text-forest-700 text-sm">
-                    — {t(`items.${room.key}.quirk`)}
+                   , {t(`items.${room.key}.quirk`)}
                   </p>
                 </div>
 

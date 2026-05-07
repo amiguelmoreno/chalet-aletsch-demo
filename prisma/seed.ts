@@ -37,9 +37,10 @@ async function main() {
       areaSqm: 22,
       position: 1,
       photos: [
-        "https://picsum.photos/seed/arvenstube/1600/1000",
-        "https://picsum.photos/seed/arvenstube-2/1600/1000",
-        "https://picsum.photos/seed/arvenstube-3/1600/1000",
+        "https://images.unsplash.com/photo-1722603931808-d5ddd71f4924?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1723258345401-793598c38e10?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1722650364897-33fb86a44592?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1645640929991-867520dce42a?w=1600&q=80&auto=format&fit=crop",
       ],
     },
     {
@@ -53,8 +54,10 @@ async function main() {
       areaSqm: 18,
       position: 2,
       photos: [
-        "https://picsum.photos/seed/blauseeli/1600/1000",
-        "https://picsum.photos/seed/blauseeli-2/1600/1000",
+        "https://images.unsplash.com/photo-1721824297615-bdce9177708d?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1721743170664-55c9602291ac?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1721396187257-a2bcdabb25c0?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1606602266678-d29114013ac6?w=1600&q=80&auto=format&fit=crop",
       ],
     },
     {
@@ -68,9 +71,10 @@ async function main() {
       areaSqm: 36,
       position: 3,
       photos: [
-        "https://picsum.photos/seed/fiescher/1600/1000",
-        "https://picsum.photos/seed/fiescher-2/1600/1000",
-        "https://picsum.photos/seed/fiescher-3/1600/1000",
+        "https://images.unsplash.com/photo-1631941392209-70cad44ecfb7?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1698933787104-3f91cf25909c?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1631756964162-25c8c07579b5?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1721396187827-8606a4a6b4e3?w=1600&q=80&auto=format&fit=crop",
       ],
     },
     {
@@ -84,10 +88,10 @@ async function main() {
       areaSqm: 58,
       position: 4,
       photos: [
-        "https://picsum.photos/seed/konkordia/1600/1000",
-        "https://picsum.photos/seed/konkordia-2/1600/1000",
-        "https://picsum.photos/seed/konkordia-3/1600/1000",
-        "https://picsum.photos/seed/konkordia-4/1600/1000",
+        "https://images.unsplash.com/photo-1774627868171-0a08bcc8d9ca?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1670914120781-4b7c8512fc41?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1773423391716-04e278b07b1b?w=1600&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1551927411-95e412943b58?w=1600&q=80&auto=format&fit=crop",
       ],
     },
   ];

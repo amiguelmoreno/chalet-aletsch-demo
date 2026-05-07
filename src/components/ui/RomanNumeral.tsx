@@ -5,35 +5,21 @@ type Props = {
   className?: string;
 };
 
-const map: Array<[number, string]> = [
-  [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
-  [100, "C"], [90, "XC"], [50, "L"], [40, "XL"],
-  [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"],
-];
-
-function toRoman(n: number): string {
-  let result = "";
-  let remainder = n;
-  for (const [value, symbol] of map) {
-    while (remainder >= value) {
-      result += symbol;
-      remainder -= value;
-    }
-  }
-  return result;
-}
-
-/** Roman numeral display — used for section numbering. */
+/**
+ * Section number — formerly Roman, now plain Arabic numerals
+ * (kept the component name to avoid touching every call site).
+ * Padded to 2 digits so "01", "02" line up like a chapter book.
+ */
 export function RomanNumeral({ value, className }: Props) {
   return (
     <span
       className={cn(
-        "font-display text-forest-600 tracking-wide-md",
+        "font-display italic text-forest-700 tracking-tight",
         className,
       )}
       aria-label={`Section ${value}`}
     >
-      {toRoman(value)}
+      {String(value).padStart(2, "0")}
     </span>
   );
 }

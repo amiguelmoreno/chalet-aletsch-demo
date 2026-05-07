@@ -29,7 +29,7 @@ export function StoryExcerpt() {
         <blockquote className="mt-14 mb-10 border-l-2 border-parchment-200/40 pl-6 italic text-parchment-100/95 text-xl font-display">
           “{t("pullQuote")}”
           <footer className="not-italic editorial-caps mt-4 text-parchment-200/70 font-serif text-xs">
-            — {t("pullQuoteAttribution")}
+            {t("pullQuoteAttribution")}
           </footer>
         </blockquote>
 

@@ -1,9 +1,9 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { RomanNumeral } from "@/components/ui/RomanNumeral";
-import { ChaletSketch } from "@/components/ornaments/ChaletSketch";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { Reveal } from "@/components/motion/Reveal";
 import { Parallax } from "@/components/motion/Parallax";
@@ -15,14 +15,24 @@ export function Hero() {
     <section className="pt-12 md:pt-20 pb-20 md:pb-28">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center">
-          {/* Left — chalet sketch */}
+          {/* Left — hero photograph in editorial frame */}
           <Reveal from="left" className="lg:col-span-5 order-2 lg:order-1">
             <Parallax amplitude={18}>
-              <div className="border border-ink-700/15 p-4 md:p-8 bg-parchment-100/40 relative">
+              <div className="border border-ink-700/15 p-3 md:p-5 bg-parchment-100/40 relative">
                 {/* Tiny corner brackets, like an old map cartouche */}
                 <CornerBrackets />
-                <ChaletSketch />
-                <p className="editorial-caps text-center mt-4 text-forest-700/80">
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1633341500706-62690376b1ec?w=1200&q=85&auto=format&fit=crop"
+                    alt="Ein Chalet im Walliser Bergwald"
+                    fill
+                    sizes="(min-width: 1024px) 36vw, 92vw"
+                    priority
+                    className="object-cover"
+                    style={{ filter: "sepia(0.08) saturate(0.92) contrast(1.03)" }}
+                  />
+                </div>
+                <p className="editorial-caps text-center mt-3 md:mt-4 text-forest-700/80">
                   {t("plate")}
                 </p>
               </div>

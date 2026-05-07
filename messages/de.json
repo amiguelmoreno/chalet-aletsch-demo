@@ -1,6 +1,6 @@
 {
   "nav": {
-    "tagline": "Berghaus seit MCMXXIII",
+    "tagline": "Berghaus seit 1923",
     "rooms": "Stuben",
     "story": "Geschichte",
     "blog": "Hausgeflüster",
@@ -29,7 +29,7 @@
   },
   "home": {
     "hero": {
-      "plate": "Tafel I — Das Haus von Süden",
+      "plate": "Tafel I, Das Haus von Süden",
       "eyebrow": "Eine Einladung",
       "titleA": "Im Schatten des Aletschgletschers,",
       "titleB": "ein Berghaus seit hundert Jahren.",
@@ -68,7 +68,7 @@
     "rooms": {
       "eyebrow": "Stuben & Zimmer",
       "title": "Vier Stuben, jede mit eigenem Charakter.",
-      "intro": "Wir nennen sie nicht Zimmer, sondern Stuben — wie es im Wallis seit jeher gemacht wird. Jede trägt den Namen eines Berges, einer Hütte oder eines Sees aus der Umgebung. Keine zwei sind gleich.",
+      "intro": "Wir nennen sie nicht Zimmer, sondern Stuben, wie es im Wallis seit jeher gemacht wird. Jede trägt den Namen eines Berges, einer Hütte oder eines Sees aus der Umgebung. Keine zwei sind gleich.",
       "from": "ab",
       "perNight": "pro Nacht",
       "cta": "Alle Stuben ansehen",
@@ -115,7 +115,7 @@
   "rooms": {
     "eyebrow": "Tafel der Stuben",
     "title": "Vier Stuben.",
-    "intro": "Jede Stube ist über die Jahrzehnte gewachsen — durch Reparaturen, kleine Anbauten, ein neues Fenster hier, ein anderes Bett dort. Wir beschreiben jede einzeln, damit Sie wählen können, was Ihnen am ehesten zusagt.",
+    "intro": "Jede Stube ist über die Jahrzehnte gewachsen, durch Reparaturen, kleine Anbauten, ein neues Fenster hier, ein anderes Bett dort. Wir beschreiben jede einzeln, damit Sie wählen können, was Ihnen am ehesten zusagt.",
     "specs": {
       "from": "Ab",
       "sleeps": "Plätze",
@@ -127,7 +127,7 @@
       "arvenstube": {
         "name": "Arvenstube",
         "subtitle": "Doppelstube · Süd · Erdgeschoss",
-        "description": "Die ursprüngliche Stube aus dem Bauteil von 1923. Wände, Boden und das Himmelbett sind aus zweihundertjährigem Arvenholz, von Anton Imboden persönlich geschnitten. Der Tritt knarrt — manche sagen, das gehört zum Schlaflied.",
+        "description": "Die ursprüngliche Stube aus dem Bauteil von 1923. Wände, Boden und das Himmelbett sind aus zweihundertjährigem Arvenholz, von Anton Imboden persönlich geschnitten. Der Tritt knarrt, manche sagen, das gehört zum Schlaflied.",
         "quirk": "Die Tür schliesst nur, wenn man sie leicht anhebt. Eine Eigenheit, die wir nicht beheben werden.",
         "bath": "Eigene Dusche, getrennte Toilette",
         "view": "Bietschhorn, Schinhorn"
@@ -152,7 +152,7 @@
         "name": "Konkordia",
         "subtitle": "Suite · Dachgeschoss",
         "description": "Die ganze Dachetage. Drei Schlafräume, eine kleine Küche mit Gasherd, ein gemeinsamer Wohnraum unter den Dachbalken, ein langer Holzbalkon mit Sicht über den Aletschwald bis ins Rhonetal. Benannt nach der Stelle, an der drei Gletscher zusammenfliessen.",
-        "quirk": "Im Sommer flimmert die Hitze unter dem Dach — wir empfehlen, früh aufzustehen.",
+        "quirk": "Im Sommer flimmert die Hitze unter dem Dach, wir empfehlen, früh aufzustehen.",
         "bath": "Zwei Bäder",
         "view": "Aletschgletscher (an klaren Tagen)"
       }
@@ -167,7 +167,7 @@
       "eyebrow": "Erstes Kapitel · 1923–1948",
       "title": "Anton baut. Marie führt.",
       "body1": "Anton Imboden war Schreiner. Im Frühjahr 1923 stand auf der Lichtung über Riederalp nur eine kleine Sennhütte, halb verfallen. Anton kaufte das Stück für 600 Franken, schlug Arven, sägte sie im Tal, trug die Balken zurück. Im Spätsommer stand das Haus, ohne Strom, ohne fliessendes Wasser, mit einem Kachelofen aus Brig. Marie führte die Wirtschaft.",
-      "body2": "Die ersten Gäste kamen aus dem Berner Oberland — Bergsteiger, die für die Konkordiahütte Quartier suchten. Bezahlt wurde mit Fünflibern und gelegentlich mit einem Schinken. Im Winter 1948 starb Anton. Marie führte das Haus allein bis 1962."
+      "body2": "Die ersten Gäste kamen aus dem Berner Oberland, Bergsteiger, die für die Konkordiahütte Quartier suchten. Bezahlt wurde mit Fünflibern und gelegentlich mit einem Schinken. Im Winter 1948 starb Anton. Marie führte das Haus allein bis 1962."
     },
     "ch2": {
       "eyebrow": "Zweites Kapitel · 1962–1995",
@@ -178,7 +178,7 @@
     "ch3": {
       "eyebrow": "Drittes Kapitel · 1995–heute",
       "title": "Annelies. Wenig ändert sich. Manches bleibt.",
-      "body1": "Annelies Imboden-Truffer übernahm das Haus von ihrem Vater Hans. Sie hat in Lausanne und Florenz Hotellerie studiert, ist nach zehn Jahren in Zürich zurückgekehrt. Sie hat manches geändert — die Bäder modernisiert, die Heizung erneuert, ein leichteres Frühstück eingeführt. Vieles bewusst nicht: die Stuben, das Brot, die Stille.",
+      "body1": "Annelies Imboden-Truffer übernahm das Haus von ihrem Vater Hans. Sie hat in Lausanne und Florenz Hotellerie studiert, ist nach zehn Jahren in Zürich zurückgekehrt. Sie hat manches geändert, die Bäder modernisiert, die Heizung erneuert, ein leichteres Frühstück eingeführt. Vieles bewusst nicht: die Stuben, das Brot, die Stille.",
       "body2": "Sie kocht sonntags selbst. Das Hausbuch wird weitergeführt. Die nächste Generation, Annelies' Tochter Lea, lernt zur Zeit Köchin im Restaurant Walliser Stube in Brig. Wer weiss."
     },
     "closing": "Wir hoffen, das genügt fürs Erste.",
@@ -207,7 +207,7 @@
       "frontDesk": "Empfang täglich 7.30–22.00 Uhr",
       "kitchen": "Stube 12.00–14.00 / 18.30–21.30 Uhr",
       "access": "Anreise",
-      "accessBody": "Mit der Bahn nach Mörel (BLS), dann mit der Seilbahn auf die Riederalp. Vom Bahnhof Mörel bis zur Türe rund 15 Minuten. Auto­frei — Parkplatz im Tal."
+      "accessBody": "Mit der Bahn nach Mörel (BLS), dann mit der Seilbahn auf die Riederalp. Vom Bahnhof Mörel bis zur Türe rund 15 Minuten. Auto­frei, Parkplatz im Tal."
     },
     "map": {
       "eyebrow": "Wo wir liegen",
@@ -279,7 +279,7 @@
   "blog": {
     "eyebrow": "Aus dem Hausgeflüster",
     "title": "Notizen, Rezepte und Berichte aus den Bergen.",
-    "intro": "Vier- bis fünfmal im Jahr setzen wir uns hin und schreiben auf, was uns beschäftigt — von der ersten Schneelinie bis zum Ofenbrot vom Sonntag.",
+    "intro": "Vier- bis fünfmal im Jahr setzen wir uns hin und schreiben auf, was uns beschäftigt, von der ersten Schneelinie bis zum Ofenbrot vom Sonntag.",
     "emptyTitle": "Noch nichts geschrieben.",
     "emptyBody": "Die nächste Notiz erscheint, wenn die ersten Schneeflocken den Aletschwald erreichen.",
     "comingSoonTitle": "Hausgeflüster kommt bald.",
@@ -343,7 +343,7 @@
         "body": "Wir haben Ihre Reservation eingetragen, die Anzahlung steht noch aus. Sobald sie eingegangen ist, ist die Stube fest für Sie reserviert."
       },
       "confirmed": {
-        "title": "Bestätigt — wir freuen uns auf Sie.",
+        "title": "Bestätigt, wir freuen uns auf Sie.",
         "body": "Drei Tage vor Ihrer Anreise senden wir Ihnen einen kurzen Brief mit den letzten Angaben."
       },
       "checked_in": {
@@ -365,10 +365,10 @@
     },
     "review": {
       "heading": "Eine Notiz im Gästebuch",
-      "intro": "Hat Ihnen der Aufenthalt gefallen? Bitte hinterlassen Sie uns eine kurze Bewertung — sie hilft anderen Reisenden bei der Wahl.",
+      "intro": "Hat Ihnen der Aufenthalt gefallen? Bitte hinterlassen Sie uns eine kurze Bewertung, sie hilft anderen Reisenden bei der Wahl.",
       "ratingLabel": "Bewertung",
       "bodyLabel": "Ihre Worte",
-      "bodyPlaceholder": "Was Ihnen geblieben ist — die Stube, die Stille, das Brot vom Sonntag …",
+      "bodyPlaceholder": "Was Ihnen geblieben ist, die Stube, die Stille, das Brot vom Sonntag …",
       "submit": "Eintragen",
       "submitting": "Wird eingetragen …",
       "thanks": "Eingetragen. Vielen Dank.",
@@ -378,7 +378,7 @@
   "booking": {
     "eyebrow": "Reservation",
     "title": "Schreiben Sie sich ein.",
-    "intro": "In fünf einfachen Schritten reservieren Sie eine Stube. Bezahlung und Anzahlung folgen erst nach Bestätigung — Sie sind nichts schuldig, bevor wir uns persönlich gemeldet haben.",
+    "intro": "In fünf einfachen Schritten reservieren Sie eine Stube. Bezahlung und Anzahlung folgen erst nach Bestätigung, Sie sind nichts schuldig, bevor wir uns persönlich gemeldet haben.",
     "steps": {
       "dates": "Tage",
       "room": "Stube",
@@ -402,13 +402,13 @@
       "title": "Wählen Sie Ihre Stube.",
       "intro": "Für Ihre {nights} Nächte stehen die folgenden Stuben offen.",
       "noneTitle": "Für diese Tage ist nichts mehr frei.",
-      "noneBody": "Bitte wählen Sie andere Daten — oder schreiben Sie uns direkt, manchmal lässt sich etwas einrichten.",
+      "noneBody": "Bitte wählen Sie andere Daten, oder schreiben Sie uns direkt, manchmal lässt sich etwas einrichten.",
       "back": "Andere Daten",
       "continue": "Weiter zu den Erweiterungen"
     },
     "stepExtras": {
       "eyebrow": "Dritter Schritt",
-      "title": "Erweiterungen — ganz nach Belieben.",
+      "title": "Erweiterungen, ganz nach Belieben.",
       "intro": "Optional. Sie können auch alles weglassen und es bei der Stube belassen.",
       "from": "ab",
       "note": "Endabrechnung erfolgt vor Ort. Mengen können Sie noch ändern.",
@@ -423,7 +423,7 @@
       "items": {
         "halbpension": {
           "name": "Halbpension",
-          "body": "Frühstück und viergängiges Abendessen in der Stube. Was Sie morgens und abends erwartet, hängt vom Markt ab — Annelies entscheidet."
+          "body": "Frühstück und viergängiges Abendessen in der Stube. Was Sie morgens und abends erwartet, hängt vom Markt ab, Annelies entscheidet."
         },
         "transfer-moerel": {
           "name": "Bahnhoftransfer Mörel",
@@ -503,7 +503,7 @@
     "deposit": "Anzahlung (30 %)",
     "total": "Gesamt",
     "nextStep": "Was als Nächstes geschieht.",
-    "nextStepBody": "Annelies meldet sich innerhalb eines Werktages — meist schneller — mit den Angaben zur Anzahlung und allem Weiteren. Bis dahin ist Ihre Stube für Sie reserviert.",
+    "nextStepBody": "Annelies meldet sich innerhalb eines Werktages, meist schneller, mit den Angaben zur Anzahlung und allem Weiteren. Bis dahin ist Ihre Stube für Sie reserviert.",
     "home": "Zurück zur Startseite",
     "payDeposit": "Anzahlung jetzt bezahlen · {amount}",
     "paid": {
@@ -511,7 +511,7 @@
       "title": "Wir freuen uns auf Sie.",
       "body": "Vielen Dank, {name}. Ihre Anzahlung ist eingegangen, die Stube ist Ihnen sicher.",
       "nextStep": "Was als Nächstes geschieht.",
-      "nextStepBody": "Drei Tage vor Ihrer Anreise senden wir Ihnen einen kurzen Brief mit den letzten Angaben — Anreise, Wetter, was wir am ersten Abend kochen."
+      "nextStepBody": "Drei Tage vor Ihrer Anreise senden wir Ihnen einen kurzen Brief mit den letzten Angaben, Anreise, Wetter, was wir am ersten Abend kochen."
     },
     "processing": {
       "eyebrow": "Zahlung in Verarbeitung",
@@ -521,7 +521,7 @@
     "cancelled": {
       "eyebrow": "Zahlung abgebrochen",
       "title": "Die Zahlung wurde nicht abgeschlossen.",
-      "body": "Kein Problem — die Stube ist noch für 15 Minuten für Sie reserviert. Sie können erneut versuchen oder uns telefonisch kontaktieren."
+      "body": "Kein Problem, die Stube ist noch für 15 Minuten für Sie reserviert. Sie können erneut versuchen oder uns telefonisch kontaktieren."
     }
   },
   "admin": {
@@ -543,7 +543,7 @@
     "rooms": {
       "eyebrow": "Stuben",
       "title": "Stuben verwalten",
-      "intro": "Vier Stuben — wir wachsen nicht. Sie können Beschreibungen, Kapazität und Grundpreis bearbeiten.",
+      "intro": "Vier Stuben, wir wachsen nicht. Sie können Beschreibungen, Kapazität und Grundpreis bearbeiten.",
       "back": "Zurück zur Liste",
       "editEyebrow": "Stube bearbeiten",
       "guests": "Gäste",
@@ -693,7 +693,7 @@
     "suggestionsLabel": "Häufig gefragt",
     "placeholder": "Stellen Sie eine Frage …",
     "send": "Senden",
-    "rateLimited": "Bitte etwas langsamer — Sie haben das Limit erreicht. In einer Stunde geht's weiter.",
+    "rateLimited": "Bitte etwas langsamer, Sie haben das Limit erreicht. In einer Stunde geht's weiter.",
     "networkError": "Verbindung unterbrochen. Bitte versuchen Sie es nochmals.",
     "genericError": "Etwas ist schiefgegangen. Bitte versuchen Sie es nochmals."
   }

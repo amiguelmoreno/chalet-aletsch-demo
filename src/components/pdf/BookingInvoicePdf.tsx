@@ -122,7 +122,7 @@ const T = {
     currency: "Currency",
     amount: "Amount",
     additionalInfo: "Additional information",
-    footer: "Thank you — we look forward to your arrival.",
+    footer: "Thank you, we look forward to your arrival.",
   },
   fr: {
     title: "Facture",
@@ -486,7 +486,7 @@ export function BookingInvoicePdf({ data }: { data: BookingInvoiceData }) {
               {t.payment}
             </Text>
             <Text style={{ fontSize: 9, marginTop: 4 }}>
-              {t.payDeposit} {formatQrAmount(data.depositRappen)} —{" "}
+              {t.payDeposit} {formatQrAmount(data.depositRappen)}.{" "}
               {t.qrHint}
             </Text>
           </View>

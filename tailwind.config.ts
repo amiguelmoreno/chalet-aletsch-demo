@@ -81,11 +81,11 @@ const config: Config = {
         serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       fontSize: {
-        // Editorial type scale — generous, with optical sizing in mind
-        "display-xl": ["clamp(3.5rem, 7vw, 6rem)", { lineHeight: "0.95", letterSpacing: "-0.02em", fontWeight: "400" }],
-        "display-lg": ["clamp(2.75rem, 5vw, 4.5rem)", { lineHeight: "1.0", letterSpacing: "-0.015em", fontWeight: "400" }],
-        "display-md": ["clamp(2rem, 3.5vw, 3rem)", { lineHeight: "1.1", letterSpacing: "-0.01em", fontWeight: "400" }],
-        "display-sm": ["1.625rem", { lineHeight: "1.2", letterSpacing: "-0.005em", fontWeight: "400" }],
+        // Editorial type scale, tightened ~10% from the first pass
+        "display-xl": ["clamp(3rem, 6vw, 5rem)", { lineHeight: "0.97", letterSpacing: "-0.02em", fontWeight: "400" }],
+        "display-lg": ["clamp(2.4rem, 4.4vw, 3.75rem)", { lineHeight: "1.04", letterSpacing: "-0.015em", fontWeight: "400" }],
+        "display-md": ["clamp(1.75rem, 3vw, 2.5rem)", { lineHeight: "1.12", letterSpacing: "-0.01em", fontWeight: "400" }],
+        "display-sm": ["1.45rem", { lineHeight: "1.22", letterSpacing: "-0.005em", fontWeight: "400" }],
       },
       letterSpacing: {
         "wide-xs": "0.08em",

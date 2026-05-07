@@ -5,6 +5,7 @@ import { StoryExcerpt } from "@/components/marketing/StoryExcerpt";
 import { RoomsLedger } from "@/components/marketing/RoomsLedger";
 import { Guestbook } from "@/components/marketing/Guestbook";
 import { AvailabilityNudge } from "@/components/marketing/AvailabilityNudge";
+import { HomeMap } from "@/components/marketing/HomeMap";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { hotelJsonLd, lodgingBusinessJsonLd, faqJsonLd } from "@/lib/seo";
 import { prisma } from "@/lib/prisma";
@@ -46,7 +47,7 @@ export default async function HomePage({
           },
           {
             q: "How many rooms does the house have?",
-            a: "Four — Arvenstube (double), Blauseeli (single), Fiescher (family) and the Konkordia suite. We do not plan to add more.",
+            a: "Four: Arvenstube (double), Blauseeli (single), Fiescher (family) and the Konkordia suite. We do not plan to add more.",
           },
           {
             q: "Is breakfast included?",
@@ -68,7 +69,7 @@ export default async function HomePage({
           },
           {
             q: "Wie viele Stuben hat das Haus?",
-            a: "Vier — Arvenstube (Doppel), Blauseeli (Einzel), Fiescher (Familie) und die Konkordia-Suite. Wir planen nicht zu wachsen.",
+            a: "Vier: Arvenstube (Doppel), Blauseeli (Einzel), Fiescher (Familie) und die Konkordia-Suite. Wir planen nicht zu wachsen.",
           },
           {
             q: "Ist Frühstück inbegriffen?",
@@ -114,6 +115,9 @@ export default async function HomePage({
       </Reveal>
       <Reveal threshold={0.1}>
         <Guestbook locale={loc} />
+      </Reveal>
+      <Reveal threshold={0.05}>
+        <HomeMap locale={loc} />
       </Reveal>
       <Reveal threshold={0.1}>
         <AvailabilityNudge />

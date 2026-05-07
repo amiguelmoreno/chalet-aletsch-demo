@@ -46,7 +46,7 @@ export function AtAGlance() {
                 {t(`${item.key}.body`)}
               </p>
               <p className="mt-5 italic text-forest-700 text-sm">
-                — {t(`${item.key}.aside`)}
+                {t(`${item.key}.aside`)}
               </p>
             </article>
           ))}

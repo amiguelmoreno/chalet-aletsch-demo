@@ -1,6 +1,6 @@
 {
   "nav": {
-    "tagline": "A mountain house since MCMXXIII",
+    "tagline": "A mountain house since 1923",
     "rooms": "Rooms",
     "story": "Our story",
     "blog": "Notes",
@@ -29,11 +29,11 @@
   },
   "home": {
     "hero": {
-      "plate": "Plate I — The house from the south",
+      "plate": "Plate I, The house from the south",
       "eyebrow": "An invitation",
       "titleA": "In the shadow of the Aletsch glacier,",
       "titleB": "a mountain house for one hundred years.",
-      "lead": "Four generations have kept Chalet Aletsch on the Riederalp. The pine-panelled parlour, the rye bread from the wood-fired oven and the view that quiets every guest at dawn — none of it has changed much. We rather like it that way.",
+      "lead": "Four generations have kept Chalet Aletsch on the Riederalp. The pine-panelled parlour, the rye bread from the wood-fired oven and the view that quiets every guest at dawn, none of it has changed much. We rather like it that way.",
       "ctaPrimary": "Rooms & rates",
       "ctaSecondary": "The history of the house"
     },
@@ -60,7 +60,7 @@
       "eyebrow": "From the house chronicle",
       "title": "Anton Imboden, carpenter, built the first house.",
       "body1": "In the summer of 1923, Anton Imboden brought his wife Marie and their four children up to the Riederalp to raise a house for travellers on a clearing at the edge of the Aletschwald. He carried the beams up from the valley himself, and roofed it with the heavy schist tiles from the Goms.",
-      "body2": "Three generations on, the house still stands — a little lower in the soil, a little darker in the timber, with a roof renewed in 1987. It is run today by Annelies Imboden-Truffer, Anton’s great-granddaughter. She still cooks on Sundays.",
+      "body2": "Three generations on, the house still stands, a little lower in the soil, a little darker in the timber, with a roof renewed in 1987. It is run today by Annelies Imboden-Truffer, Anton’s great-granddaughter. She still cooks on Sundays.",
       "pullQuote": "We did not build this house to do business. We built it to remain.",
       "pullQuoteAttribution": "Anton Imboden, house chronicle, 1924",
       "cta": "Read the full chronicle"
@@ -68,7 +68,7 @@
     "rooms": {
       "eyebrow": "Rooms",
       "title": "Four rooms, each with its own character.",
-      "intro": "We don’t call them rooms; we call them Stuben — the Valaisan word for parlour. Each carries the name of a nearby peak, hut or lake. No two are alike.",
+      "intro": "We don’t call them rooms; we call them Stuben, the Valaisan word for parlour. Each carries the name of a nearby peak, hut or lake. No two are alike.",
       "from": "from",
       "perNight": "per night",
       "cta": "See all rooms",
@@ -81,12 +81,12 @@
         "blauseeli": {
           "name": "Blauseeli",
           "subtitle": "Single · east-facing",
-          "description": "Small and quiet, with a narrow oriel window and a writing desk. Named after the small alpine lake above the house — first to catch the morning sun."
+          "description": "Small and quiet, with a narrow oriel window and a writing desk. Named after the small alpine lake above the house, first to catch the morning sun."
         },
         "fiescher": {
           "name": "Fiescher",
           "subtitle": "Family · west-facing",
-          "description": "Two rooms — a sitting room with the soapstone stove, and a bedroom with two beds and a child’s berth. For a family, or two travelling couples."
+          "description": "Two rooms, a sitting room with the soapstone stove, and a bedroom with two beds and a child’s berth. For a family, or two travelling couples."
         },
         "konkordia": {
           "name": "Konkordia",
@@ -115,7 +115,7 @@
   "rooms": {
     "eyebrow": "Register of rooms",
     "title": "Four rooms.",
-    "intro": "Each room has grown over the decades — through repairs, small additions, a new window here, a different bed there. We describe each one separately, so you can choose what suits you best.",
+    "intro": "Each room has grown over the decades, through repairs, small additions, a new window here, a different bed there. We describe each one separately, so you can choose what suits you best.",
     "specs": {
       "from": "From",
       "sleeps": "Sleeps",
@@ -127,7 +127,7 @@
       "arvenstube": {
         "name": "Arvenstube",
         "subtitle": "Double · south-facing · ground floor",
-        "description": "The original parlour from the 1923 build. Walls, floor and the four-poster bed are made of two-hundred-year-old Swiss stone pine, cut by Anton Imboden himself. The floorboard creaks — some say it’s part of the lullaby.",
+        "description": "The original parlour from the 1923 build. Walls, floor and the four-poster bed are made of two-hundred-year-old Swiss stone pine, cut by Anton Imboden himself. The floorboard creaks, some say it’s part of the lullaby.",
         "quirk": "The door only closes if you lift it slightly. A peculiarity we will not be fixing.",
         "bath": "Private shower, separate WC",
         "view": "Bietschhorn, Schinhorn"
@@ -143,7 +143,7 @@
       "fiescher": {
         "name": "Fiescher",
         "subtitle": "Family · west-facing · first floor",
-        "description": "Two rooms in line — a sitting room with the old soapstone stove in front, and a bedroom behind, with two beds and a child’s berth. The west balcony catches the evening light.",
+        "description": "Two rooms in line, a sitting room with the old soapstone stove in front, and a bedroom behind, with two beds and a child’s berth. The west balcony catches the evening light.",
         "quirk": "The soapstone stove has been fired the same way since 1947.",
         "bath": "Private bath with tub",
         "view": "Eggishorn, Fiescherhörner"
@@ -152,7 +152,7 @@
         "name": "Konkordia",
         "subtitle": "Suite · attic floor",
         "description": "The whole top floor. Three bedrooms, a small kitchen with a gas hob, a shared sitting room under the rafters, a long timber balcony with views across the Aletschwald to the Rhône valley. Named after the place where three glaciers meet.",
-        "quirk": "In summer the heat shimmers under the roof — we recommend rising early.",
+        "quirk": "In summer the heat shimmers under the roof, we recommend rising early.",
         "bath": "Two bathrooms",
         "view": "Aletsch glacier (on clear days)"
       }
@@ -166,19 +166,19 @@
     "ch1": {
       "eyebrow": "Chapter the first · 1923–1948",
       "title": "Anton builds. Marie runs the house.",
-      "body1": "Anton Imboden was a carpenter. In the spring of 1923, on the clearing above Riederalp, there stood only a small alp-cheese hut, half collapsed. Anton bought the parcel for six hundred francs, felled the pines, sawed them in the valley and carried the beams back up. By late summer the house stood — without electricity, without running water, with a tiled stove brought up from Brig. Marie ran the house.",
-      "body2": "The first guests came from the Bernese Oberland — climbers seeking quarters before the Konkordia hut. They paid in five-franc coins and now and then with a ham. Anton died in the winter of 1948. Marie kept the house alone until 1962."
+      "body1": "Anton Imboden was a carpenter. In the spring of 1923, on the clearing above Riederalp, there stood only a small alp-cheese hut, half collapsed. Anton bought the parcel for six hundred francs, felled the pines, sawed them in the valley and carried the beams back up. By late summer the house stood, without electricity, without running water, with a tiled stove brought up from Brig. Marie ran the house.",
+      "body2": "The first guests came from the Bernese Oberland, climbers seeking quarters before the Konkordia hut. They paid in five-franc coins and now and then with a ham. Anton died in the winter of 1948. Marie kept the house alone until 1962."
     },
     "ch2": {
       "eyebrow": "Chapter the second · 1962–1995",
       "title": "Hans and Trudi. The house meets the grid.",
       "body1": "In 1962 the son Hans took over, with his wife Trudi from Naters. They had the house wired in 1967, built out the two upper rooms in 1972 and put in the first telephone in 1981. Trudi cooked. Hans cared for the timber. Each evening they wrote into the house book what had happened that day.",
-      "body2": "In 1987 the schist roof was replaced with a new one. In 1995 Hans retired. The same year — had such things existed yet — the house might have had its first website."
+      "body2": "In 1987 the schist roof was replaced with a new one. In 1995 Hans retired. The same year, had such things existed yet, the house might have had its first website."
     },
     "ch3": {
       "eyebrow": "Chapter the third · 1995–today",
       "title": "Annelies. Little changes. Some things remain.",
-      "body1": "Annelies Imboden-Truffer took the house from her father Hans. She studied hospitality in Lausanne and Florence, returned after ten years in Zürich. She has changed some things — modernised the bathrooms, renewed the heating, brought in a lighter breakfast. Many things, deliberately, she has not: the parlours, the bread, the silence.",
+      "body1": "Annelies Imboden-Truffer took the house from her father Hans. She studied hospitality in Lausanne and Florence, returned after ten years in Zürich. She has changed some things, modernised the bathrooms, renewed the heating, brought in a lighter breakfast. Many things, deliberately, she has not: the parlours, the bread, the silence.",
       "body2": "She still cooks on Sundays. The house book is still kept. The next generation, Annelies’ daughter Lea, is currently apprenticing as a cook at the Walliser Stube in Brig. Who knows."
     },
     "closing": "We hope this will do for now.",
@@ -207,7 +207,7 @@
       "frontDesk": "Reception 7.30–22.00 daily",
       "kitchen": "Dining room 12.00–14.00 / 18.30–21.30",
       "access": "Getting here",
-      "accessBody": "Train to Mörel (BLS), then cable car to the Riederalp. Around 15 minutes door to door. Car-free village — parking down in the valley."
+      "accessBody": "Train to Mörel (BLS), then cable car to the Riederalp. Around 15 minutes door to door. Car-free village, parking down in the valley."
     },
     "map": {
       "eyebrow": "Where we are",
@@ -259,7 +259,7 @@
     "intro": "To keep our parlour in order, we leave a few small notes in your browser. You decide which ones.",
     "necessary": {
       "title": "Necessary",
-      "body": "Session cookies and security. Always on — without them the reservation flow does not work."
+      "body": "Session cookies and security. Always on, without them the reservation flow does not work."
     },
     "analytics": {
       "title": "Analytics",
@@ -279,7 +279,7 @@
   "blog": {
     "eyebrow": "From the house notes",
     "title": "Letters, recipes and dispatches from the mountain.",
-    "intro": "Four or five times a year we sit down and write what's on our mind — from the first snowline to the Sunday loaf out of the wood-fired oven.",
+    "intro": "Four or five times a year we sit down and write what's on our mind, from the first snowline to the Sunday loaf out of the wood-fired oven.",
     "emptyTitle": "Nothing written yet.",
     "emptyBody": "The next note will appear when the first flakes reach the Aletschwald.",
     "comingSoonTitle": "House notes are coming.",
@@ -343,7 +343,7 @@
         "body": "We've noted your reservation; the deposit is still pending. Once it arrives, the room is firmly held for you."
       },
       "confirmed": {
-        "title": "Confirmed — we look forward to your arrival.",
+        "title": "Confirmed, we look forward to your arrival.",
         "body": "Three days before your arrival we'll send a short letter with the final details."
       },
       "checked_in": {
@@ -365,10 +365,10 @@
     },
     "review": {
       "heading": "A note in the guest book",
-      "intro": "Did you enjoy your stay? Please leave us a short review — it helps other travellers choose.",
+      "intro": "Did you enjoy your stay? Please leave us a short review, it helps other travellers choose.",
       "ratingLabel": "Rating",
       "bodyLabel": "Your words",
-      "bodyPlaceholder": "What stayed with you — the parlour, the silence, Sunday's bread …",
+      "bodyPlaceholder": "What stayed with you, the parlour, the silence, Sunday's bread …",
       "submit": "Sign the book",
       "submitting": "Submitting …",
       "thanks": "Noted. Thank you.",
@@ -378,7 +378,7 @@
   "booking": {
     "eyebrow": "Reservation",
     "title": "Reserve your stay.",
-    "intro": "Five short steps. Payment and deposit follow only after we confirm — nothing is owed before you hear from us in person.",
+    "intro": "Five short steps. Payment and deposit follow only after we confirm, nothing is owed before you hear from us in person.",
     "steps": {
       "dates": "Dates",
       "room": "Room",
@@ -402,13 +402,13 @@
       "title": "Choose your room.",
       "intro": "For your {nights} nights, the following rooms are open.",
       "noneTitle": "Nothing free for those dates.",
-      "noneBody": "Please try other dates — or write to us directly, sometimes something can be arranged.",
+      "noneBody": "Please try other dates, or write to us directly, sometimes something can be arranged.",
       "back": "Other dates",
       "continue": "Continue to extras"
     },
     "stepExtras": {
       "eyebrow": "Third step",
-      "title": "Extras — entirely as you wish.",
+      "title": "Extras, entirely as you wish.",
       "intro": "Optional. You may also leave it at the room and skip the rest.",
       "from": "from",
       "note": "Final settlement happens at the house. Quantities can still be changed.",
@@ -423,7 +423,7 @@
       "items": {
         "halbpension": {
           "name": "Half board",
-          "body": "Breakfast and a four-course dinner in the parlour. What appears morning and evening depends on the market — Annelies decides."
+          "body": "Breakfast and a four-course dinner in the parlour. What appears morning and evening depends on the market, Annelies decides."
         },
         "transfer-moerel": {
           "name": "Mörel station transfer",
@@ -503,7 +503,7 @@
     "deposit": "Deposit (30%)",
     "total": "Total",
     "nextStep": "What happens next.",
-    "nextStepBody": "Annelies will reply within one working day — usually sooner — with the deposit details and everything else. Your room is held for you until then.",
+    "nextStepBody": "Annelies will reply within one working day, usually sooner, with the deposit details and everything else. Your room is held for you until then.",
     "home": "Back to the front page",
     "payDeposit": "Pay deposit now · {amount}",
     "paid": {
@@ -511,7 +511,7 @@
       "title": "We look forward to your arrival.",
       "body": "Many thanks, {name}. Your deposit has been received and the room is yours.",
       "nextStep": "What happens next.",
-      "nextStepBody": "Three days before your arrival we'll send a short letter with the final details — arrival, weather, what we'll cook on your first evening."
+      "nextStepBody": "Three days before your arrival we'll send a short letter with the final details, arrival, weather, what we'll cook on your first evening."
     },
     "processing": {
       "eyebrow": "Payment processing",
@@ -521,7 +521,7 @@
     "cancelled": {
       "eyebrow": "Payment cancelled",
       "title": "The payment was not completed.",
-      "body": "No problem — the room is still held for you for 15 minutes. You can try again or contact us by phone."
+      "body": "No problem, the room is still held for you for 15 minutes. You can try again or contact us by phone."
     }
   },
   "admin": {
@@ -543,7 +543,7 @@
     "rooms": {
       "eyebrow": "Rooms",
       "title": "Manage rooms",
-      "intro": "Four rooms — we don't grow. You can edit descriptions, capacity and the base price.",
+      "intro": "Four rooms, we don't grow. You can edit descriptions, capacity and the base price.",
       "back": "Back to list",
       "editEyebrow": "Edit room",
       "guests": "guests",
@@ -599,7 +599,7 @@
     "experiences": {
       "eyebrow": "Extras",
       "title": "Manage extras",
-      "intro": "Half board, transfers, mountain guides — anything guests can add to a stay.",
+      "intro": "Half board, transfers, mountain guides, anything guests can add to a stay.",
       "new": "New extra",
       "newEyebrow": "New extra",
       "newTitle": "Create extra",
@@ -693,7 +693,7 @@
     "suggestionsLabel": "Often asked",
     "placeholder": "Ask a question …",
     "send": "Send",
-    "rateLimited": "Please slow down — you've hit the hourly limit. Try again in an hour.",
+    "rateLimited": "Please slow down, you've hit the hourly limit. Try again in an hour.",
     "networkError": "Connection lost. Please try again.",
     "genericError": "Something went wrong. Please try again."
   }

@@ -1,6 +1,6 @@
 {
   "nav": {
-    "tagline": "Casa di montagna dal MCMXXIII",
+    "tagline": "Casa di montagna dal 1923",
     "rooms": "Camere",
     "story": "Storia",
     "blog": "Diario",
@@ -29,11 +29,11 @@
   },
   "home": {
     "hero": {
-      "plate": "Tavola I — La casa vista da sud",
+      "plate": "Tavola I, La casa vista da sud",
       "eyebrow": "Un invito",
       "titleA": "All'ombra del ghiacciaio d'Aletsch,",
       "titleB": "una casa di montagna da cent'anni.",
-      "lead": "Quattro generazioni custodiscono il Chalet Aletsch sulla Riederalp. La Stube di pino cembro, il pane di segale dal forno a legna e la vista che all'alba zittisce ogni ospite — quasi nulla è cambiato. Ci piace così.",
+      "lead": "Quattro generazioni custodiscono il Chalet Aletsch sulla Riederalp. La Stube di pino cembro, il pane di segale dal forno a legna e la vista che all'alba zittisce ogni ospite, quasi nulla è cambiato. Ci piace così.",
       "ctaPrimary": "Camere e tariffe",
       "ctaSecondary": "La storia della casa"
     },
@@ -60,7 +60,7 @@
       "eyebrow": "Dalla cronaca della casa",
       "title": "Anton Imboden, falegname, costruì la prima casa.",
       "body1": "Nell'estate del 1923 Anton Imboden salì sulla Riederalp con la moglie Marie e quattro figli per costruire una casa per i viaggiatori in una radura ai margini dell'Aletschwald. Portò lui stesso le travi dalla valle e coprì il tetto con le pesanti ardesie del Goms.",
-      "body2": "Tre generazioni dopo, la casa è ancora lì — un po' più affondata nel suolo, un po' più scura nel legno, con un tetto rifatto nel 1987. Oggi la conduce Annelies Imboden-Truffer, la pronipote di Anton. La domenica cucina ancora di persona.",
+      "body2": "Tre generazioni dopo, la casa è ancora lì, un po' più affondata nel suolo, un po' più scura nel legno, con un tetto rifatto nel 1987. Oggi la conduce Annelies Imboden-Truffer, la pronipote di Anton. La domenica cucina ancora di persona.",
       "pullQuote": "Non abbiamo costruito questa casa per fare affari. L'abbiamo costruita per restare.",
       "pullQuoteAttribution": "Anton Imboden, cronaca della casa, 1924",
       "cta": "Leggi la cronaca completa"
@@ -68,7 +68,7 @@
     "rooms": {
       "eyebrow": "Camere",
       "title": "Quattro camere, ognuna con il suo carattere.",
-      "intro": "Non le chiamiamo camere ma Stuben — come da sempre in Vallese. Ognuna porta il nome di un monte, di un rifugio o di un lago dei dintorni. Nessuna è uguale all'altra.",
+      "intro": "Non le chiamiamo camere ma Stuben, come da sempre in Vallese. Ognuna porta il nome di un monte, di un rifugio o di un lago dei dintorni. Nessuna è uguale all'altra.",
       "from": "da",
       "perNight": "a notte",
       "cta": "Vedi tutte le camere",
@@ -81,12 +81,12 @@
         "blauseeli": {
           "name": "Blauseeli",
           "subtitle": "Singola · esposizione est",
-          "description": "Piccola e tranquilla, con un bovindo sottile e una scrivania. Prende il nome dal piccolo lago alpino sopra la casa — il primo a catturare il sole del mattino."
+          "description": "Piccola e tranquilla, con un bovindo sottile e una scrivania. Prende il nome dal piccolo lago alpino sopra la casa, il primo a catturare il sole del mattino."
         },
         "fiescher": {
           "name": "Fiescher",
           "subtitle": "Familiare · esposizione ovest",
-          "description": "Due ambienti — un soggiorno con la stufa in pietra ollare e una camera con due letti e un giaciglio per bambini. Per una famiglia o due coppie di viaggio."
+          "description": "Due ambienti, un soggiorno con la stufa in pietra ollare e una camera con due letti e un giaciglio per bambini. Per una famiglia o due coppie di viaggio."
         },
         "konkordia": {
           "name": "Konkordia",
@@ -115,7 +115,7 @@
   "rooms": {
     "eyebrow": "Registro delle camere",
     "title": "Quattro camere.",
-    "intro": "Ogni camera è cresciuta nei decenni — riparazioni, piccoli ampliamenti, una nuova finestra qui, un altro letto là. Le descriviamo una a una, perché possiate scegliere quella che fa per voi.",
+    "intro": "Ogni camera è cresciuta nei decenni, riparazioni, piccoli ampliamenti, una nuova finestra qui, un altro letto là. Le descriviamo una a una, perché possiate scegliere quella che fa per voi.",
     "specs": {
       "from": "Da",
       "sleeps": "Posti letto",
@@ -127,7 +127,7 @@
       "arvenstube": {
         "name": "Arvenstube",
         "subtitle": "Doppia · esposizione sud · pianoterra",
-        "description": "La Stube originale dalla costruzione del 1923. Pareti, pavimento e letto a baldacchino sono in pino cembro di duecento anni, tagliato da Anton Imboden in persona. La tavola scricchiola — qualcuno dice che fa parte della ninnananna.",
+        "description": "La Stube originale dalla costruzione del 1923. Pareti, pavimento e letto a baldacchino sono in pino cembro di duecento anni, tagliato da Anton Imboden in persona. La tavola scricchiola, qualcuno dice che fa parte della ninnananna.",
         "quirk": "La porta si chiude solo sollevandola un poco. Una particolarità che non sistemeremo.",
         "bath": "Doccia privata, WC separato",
         "view": "Bietschhorn, Schinhorn"
@@ -143,7 +143,7 @@
       "fiescher": {
         "name": "Fiescher",
         "subtitle": "Familiare · esposizione ovest · 1° piano",
-        "description": "Due ambienti in fila — un soggiorno con la vecchia stufa in pietra ollare davanti, e una camera dietro, con due letti e un giaciglio per bambini. Il balcone a ovest accoglie la luce della sera.",
+        "description": "Due ambienti in fila, un soggiorno con la vecchia stufa in pietra ollare davanti, e una camera dietro, con due letti e un giaciglio per bambini. Il balcone a ovest accoglie la luce della sera.",
         "quirk": "La stufa in pietra ollare viene accesa allo stesso modo dal 1947.",
         "bath": "Bagno privato con vasca",
         "view": "Eggishorn, Fiescherhörner"
@@ -152,7 +152,7 @@
         "name": "Konkordia",
         "subtitle": "Suite · sottotetto",
         "description": "Tutto l'ultimo piano. Tre camere, una piccola cucina a gas, un soggiorno comune sotto le travi, un lungo balcone in legno con vista sull'Aletschwald fino alla valle del Rodano. Prende il nome dal punto in cui si incontrano tre ghiacciai.",
-        "quirk": "D'estate il calore vibra sotto il tetto — consigliamo di alzarsi presto.",
+        "quirk": "D'estate il calore vibra sotto il tetto, consigliamo di alzarsi presto.",
         "bath": "Due bagni",
         "view": "Ghiacciaio d'Aletsch (nelle giornate limpide)"
       }
@@ -166,19 +166,19 @@
     "ch1": {
       "eyebrow": "Capitolo primo · 1923–1948",
       "title": "Anton costruisce. Marie tiene la casa.",
-      "body1": "Anton Imboden era falegname. Nella primavera del 1923, sulla radura sopra Riederalp, c'era solo una piccola baita d'alpe mezza crollata. Anton comprò il terreno per seicento franchi, abbatté i pini, li segò in valle e portò su le travi. A fine estate la casa stava in piedi — senza luce, senza acqua corrente, con una stufa in maiolica portata da Briga. Marie teneva la casa.",
-      "body2": "I primi ospiti venivano dall'Oberland bernese — alpinisti che cercavano alloggio prima della capanna Konkordia. Pagavano in monete da cinque franchi e a volte con un prosciutto. Anton morì nell'inverno del 1948. Marie tenne la casa da sola fino al 1962."
+      "body1": "Anton Imboden era falegname. Nella primavera del 1923, sulla radura sopra Riederalp, c'era solo una piccola baita d'alpe mezza crollata. Anton comprò il terreno per seicento franchi, abbatté i pini, li segò in valle e portò su le travi. A fine estate la casa stava in piedi, senza luce, senza acqua corrente, con una stufa in maiolica portata da Briga. Marie teneva la casa.",
+      "body2": "I primi ospiti venivano dall'Oberland bernese, alpinisti che cercavano alloggio prima della capanna Konkordia. Pagavano in monete da cinque franchi e a volte con un prosciutto. Anton morì nell'inverno del 1948. Marie tenne la casa da sola fino al 1962."
     },
     "ch2": {
       "eyebrow": "Capitolo secondo · 1962–1995",
       "title": "Hans e Trudi. La casa entra in rete.",
       "body1": "Nel 1962 il figlio Hans subentrò, con la moglie Trudi di Naters. Fecero arrivare la corrente nel 1967, ampliarono le due Stuben superiori nel 1972 e installarono il primo telefono nel 1981. Trudi cucinava. Hans curava il legno. Ogni sera scrivevano nel libro della casa quel che era successo.",
-      "body2": "Nel 1987 il tetto in ardesia fu rifatto. Nel 1995 Hans andò in pensione. Lo stesso anno — se cose simili fossero già esistite — la casa avrebbe forse avuto il suo primo sito web."
+      "body2": "Nel 1987 il tetto in ardesia fu rifatto. Nel 1995 Hans andò in pensione. Lo stesso anno, se cose simili fossero già esistite, la casa avrebbe forse avuto il suo primo sito web."
     },
     "ch3": {
       "eyebrow": "Capitolo terzo · 1995–oggi",
       "title": "Annelies. Cambia poco. Qualcosa resta.",
-      "body1": "Annelies Imboden-Truffer prese in mano la casa dal padre Hans. Aveva studiato hôtellerie a Losanna e a Firenze, ed era tornata dopo dieci anni a Zurigo. Ha cambiato qualcosa — ha modernizzato i bagni, rifatto il riscaldamento, introdotto una colazione più leggera. Molte cose, di proposito, non le ha toccate: le Stuben, il pane, il silenzio.",
+      "body1": "Annelies Imboden-Truffer prese in mano la casa dal padre Hans. Aveva studiato hôtellerie a Losanna e a Firenze, ed era tornata dopo dieci anni a Zurigo. Ha cambiato qualcosa, ha modernizzato i bagni, rifatto il riscaldamento, introdotto una colazione più leggera. Molte cose, di proposito, non le ha toccate: le Stuben, il pane, il silenzio.",
       "body2": "La domenica cucina ancora. Il libro della casa continua a essere tenuto. La generazione successiva, Lea, sua figlia, sta facendo l'apprendistato di cuoca alla Walliser Stube di Briga. Chi sa."
     },
     "closing": "Speriamo basti per ora.",
@@ -207,7 +207,7 @@
       "frontDesk": "Reception 7.30–22.00 ogni giorno",
       "kitchen": "Sala 12.00–14.00 / 18.30–21.30",
       "access": "Come arrivare",
-      "accessBody": "Treno fino a Mörel (BLS), poi funivia per la Riederalp. Circa 15 minuti dalla porta. Villaggio senza auto — parcheggio in valle."
+      "accessBody": "Treno fino a Mörel (BLS), poi funivia per la Riederalp. Circa 15 minuti dalla porta. Villaggio senza auto, parcheggio in valle."
     },
     "map": {
       "eyebrow": "Dove siamo",
@@ -259,7 +259,7 @@
     "intro": "Per tenere in ordine la Stube lasciamo qualche piccolo appunto nel vostro browser. Voi scegliete quali.",
     "necessary": {
       "title": "Necessari",
-      "body": "Cookie di sessione e di sicurezza. Sempre attivi — senza di essi la prenotazione non funziona."
+      "body": "Cookie di sessione e di sicurezza. Sempre attivi, senza di essi la prenotazione non funziona."
     },
     "analytics": {
       "title": "Analisi",
@@ -279,7 +279,7 @@
   "blog": {
     "eyebrow": "Dal diario della casa",
     "title": "Lettere, ricette e racconti dalla montagna.",
-    "intro": "Quattro o cinque volte all'anno ci sediamo e scriviamo cosa abbiamo in mente — dalla prima neve al pane della domenica appena uscito dal forno.",
+    "intro": "Quattro o cinque volte all'anno ci sediamo e scriviamo cosa abbiamo in mente, dalla prima neve al pane della domenica appena uscito dal forno.",
     "emptyTitle": "Niente di scritto per ora.",
     "emptyBody": "Il prossimo appunto apparirà quando i primi fiocchi raggiungeranno l'Aletschwald.",
     "comingSoonTitle": "Il diario sta arrivando.",
@@ -343,7 +343,7 @@
         "body": "Abbiamo registrato la prenotazione; l'acconto è in attesa. Appena arriva, la camera è tenuta per voi."
       },
       "confirmed": {
-        "title": "Confermata — vi attendiamo con piacere.",
+        "title": "Confermata, vi attendiamo con piacere.",
         "body": "Tre giorni prima dell'arrivo vi invieremo una breve lettera con gli ultimi dettagli."
       },
       "checked_in": {
@@ -365,10 +365,10 @@
     },
     "review": {
       "heading": "Una nota nel libro degli ospiti",
-      "intro": "Vi è piaciuto il soggiorno? Lasciateci una breve recensione — aiuta altri viaggiatori a scegliere.",
+      "intro": "Vi è piaciuto il soggiorno? Lasciateci una breve recensione, aiuta altri viaggiatori a scegliere.",
       "ratingLabel": "Voto",
       "bodyLabel": "Le vostre parole",
-      "bodyPlaceholder": "Cosa vi è rimasto — la Stube, il silenzio, il pane della domenica …",
+      "bodyPlaceholder": "Cosa vi è rimasto, la Stube, il silenzio, il pane della domenica …",
       "submit": "Firma il libro",
       "submitting": "Invio …",
       "thanks": "Annotato. Grazie.",
@@ -378,7 +378,7 @@
   "booking": {
     "eyebrow": "Prenotazione",
     "title": "Prenotate il vostro soggiorno.",
-    "intro": "Cinque brevi passaggi. Pagamento e acconto seguono solo dopo la nostra conferma — nulla è dovuto prima di nostre notizie.",
+    "intro": "Cinque brevi passaggi. Pagamento e acconto seguono solo dopo la nostra conferma, nulla è dovuto prima di nostre notizie.",
     "steps": {
       "dates": "Date",
       "room": "Camera",
@@ -402,13 +402,13 @@
       "title": "Scegliete la vostra camera.",
       "intro": "Per le vostre {nights} notti sono libere queste camere.",
       "noneTitle": "Nulla di libero per queste date.",
-      "noneBody": "Provate altre date — o scriveteci direttamente, a volte qualcosa si trova.",
+      "noneBody": "Provate altre date, o scriveteci direttamente, a volte qualcosa si trova.",
       "back": "Altre date",
       "continue": "Continua agli extra"
     },
     "stepExtras": {
       "eyebrow": "Terzo passo",
-      "title": "Extra — del tutto a vostra scelta.",
+      "title": "Extra, del tutto a vostra scelta.",
       "intro": "Opzionali. Potete anche lasciare tutto e tenere solo la camera.",
       "from": "da",
       "note": "Il conteggio finale si fa in casa. Le quantità possono ancora cambiare.",
@@ -423,7 +423,7 @@
       "items": {
         "halbpension": {
           "name": "Mezza pensione",
-          "body": "Colazione e cena di quattro portate nella Stube. Quel che compare al mattino e alla sera dipende dal mercato — Annelies decide."
+          "body": "Colazione e cena di quattro portate nella Stube. Quel che compare al mattino e alla sera dipende dal mercato, Annelies decide."
         },
         "transfer-moerel": {
           "name": "Transfer dalla stazione di Mörel",
@@ -503,7 +503,7 @@
     "deposit": "Acconto (30%)",
     "total": "Totale",
     "nextStep": "Cosa succede ora.",
-    "nextStepBody": "Annelies risponde in giornata — di solito prima — con i dettagli per l'acconto e il resto. La camera è tenuta per voi nel frattempo.",
+    "nextStepBody": "Annelies risponde in giornata, di solito prima, con i dettagli per l'acconto e il resto. La camera è tenuta per voi nel frattempo.",
     "home": "Torna alla home",
     "payDeposit": "Paga ora l'acconto · {amount}",
     "paid": {
@@ -511,7 +511,7 @@
       "title": "Vi attendiamo con piacere.",
       "body": "Grazie, {name}. L'acconto è arrivato e la camera è vostra.",
       "nextStep": "Cosa succede ora.",
-      "nextStepBody": "Tre giorni prima dell'arrivo vi invieremo una breve lettera con gli ultimi dettagli — arrivo, meteo, cosa cuciniamo la prima sera."
+      "nextStepBody": "Tre giorni prima dell'arrivo vi invieremo una breve lettera con gli ultimi dettagli, arrivo, meteo, cosa cuciniamo la prima sera."
     },
     "processing": {
       "eyebrow": "Pagamento in elaborazione",
@@ -521,7 +521,7 @@
     "cancelled": {
       "eyebrow": "Pagamento annullato",
       "title": "Il pagamento non è stato completato.",
-      "body": "Nessun problema — la camera è ancora tenuta per 15 minuti. Potete riprovare o chiamarci."
+      "body": "Nessun problema, la camera è ancora tenuta per 15 minuti. Potete riprovare o chiamarci."
     }
   },
   "admin": {
@@ -543,7 +543,7 @@
     "rooms": {
       "eyebrow": "Camere",
       "title": "Gestisci le camere",
-      "intro": "Quattro camere — non cresciamo. Potete modificare descrizioni, capacità e prezzo base.",
+      "intro": "Quattro camere, non cresciamo. Potete modificare descrizioni, capacità e prezzo base.",
       "back": "Torna all'elenco",
       "editEyebrow": "Modifica camera",
       "guests": "ospiti",
@@ -599,7 +599,7 @@
     "experiences": {
       "eyebrow": "Extra",
       "title": "Gestisci gli extra",
-      "intro": "Mezza pensione, transfer, guide — tutto ciò che un ospite può aggiungere al soggiorno.",
+      "intro": "Mezza pensione, transfer, guide, tutto ciò che un ospite può aggiungere al soggiorno.",
       "new": "Nuovo extra",
       "newEyebrow": "Nuovo extra",
       "newTitle": "Crea extra",
@@ -693,7 +693,7 @@
     "suggestionsLabel": "Domande frequenti",
     "placeholder": "Fate una domanda …",
     "send": "Invia",
-    "rateLimited": "Un attimo — avete raggiunto il limite orario. Riprovate fra un'ora.",
+    "rateLimited": "Un attimo, avete raggiunto il limite orario. Riprovate fra un'ora.",
     "networkError": "Connessione persa. Riprovate.",
     "genericError": "Qualcosa è andato storto. Riprovate."
   }

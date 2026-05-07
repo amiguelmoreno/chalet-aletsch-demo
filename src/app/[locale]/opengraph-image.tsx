@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Chalet Aletsch — Berghaus seit 1923";
+export const alt = "Chalet Aletsch · Berghaus seit 1923";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -15,28 +15,28 @@ const COPY = {
     location: "Riederalp · Wallis · Schweiz",
     line1: "Im Schatten des",
     line2: "Aletschgletschers,",
-    line3: "ein Berghaus seit MCMXXIII.",
-    tagline: "Berghaus seit MCMXXIII",
+    line3: "ein Berghaus seit 1923.",
+    tagline: "Berghaus seit 1923",
   },
   en: {
     location: "Riederalp · Valais · Switzerland",
     line1: "In the shadow of",
     line2: "the Aletsch glacier,",
-    line3: "a mountain house since MCMXXIII.",
+    line3: "a mountain house since 1923.",
     tagline: "Family-run since 1923",
   },
   fr: {
     location: "Riederalp · Valais · Suisse",
     line1: "À l'ombre",
     line2: "du glacier d'Aletsch,",
-    line3: "une maison de montagne depuis MCMXXIII.",
+    line3: "une maison de montagne depuis 1923.",
     tagline: "Maison de montagne depuis 1923",
   },
   it: {
     location: "Riederalp · Vallese · Svizzera",
     line1: "All'ombra",
     line2: "del ghiacciaio d'Aletsch,",
-    line3: "una casa di montagna dal MCMXXIII.",
+    line3: "una casa di montagna dal 1923.",
     tagline: "Una casa di montagna dal 1923",
   },
 } as const;
