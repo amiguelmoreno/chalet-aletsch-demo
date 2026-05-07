@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "de_CH",
-    alternateLocale: ["en_US"],
+    alternateLocale: ["en_US", "fr_CH", "it_CH"],
     siteName: "Chalet Aletsch",
     url: SITE_URL,
     title: "Chalet Aletsch — Berghaus seit 1923",
@@ -65,6 +65,8 @@ export const metadata: Metadata = {
     languages: {
       de: `${SITE_URL}/de`,
       en: `${SITE_URL}/en`,
+      fr: `${SITE_URL}/fr`,
+      it: `${SITE_URL}/it`,
     },
   },
   robots: {

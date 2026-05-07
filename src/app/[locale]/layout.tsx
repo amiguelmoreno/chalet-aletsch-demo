@@ -8,6 +8,7 @@ import { ConsentProvider } from "@/components/cookies/ConsentProvider";
 import { CookieBanner } from "@/components/cookies/CookieBanner";
 import { AnalyticsLoader } from "@/components/cookies/AnalyticsLoader";
 import { AuthSessionProvider } from "@/components/providers/SessionProvider";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -31,6 +32,7 @@ export default async function LocaleLayout({
           <Header />
           <main className="above-grain">{children}</main>
           <Footer />
+          <ChatWidget />
           <CookieBanner />
           <AnalyticsLoader />
         </ConsentProvider>

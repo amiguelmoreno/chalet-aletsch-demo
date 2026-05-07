@@ -10,13 +10,47 @@ const FOREST = "#2A3F2C";
 const FOREST_LIGHT = "#4E6E50";
 const INK = "#1F1E18";
 
+const COPY = {
+  de: {
+    location: "Riederalp · Wallis · Schweiz",
+    line1: "Im Schatten des",
+    line2: "Aletschgletschers,",
+    line3: "ein Berghaus seit MCMXXIII.",
+    tagline: "Berghaus seit MCMXXIII",
+  },
+  en: {
+    location: "Riederalp · Valais · Switzerland",
+    line1: "In the shadow of",
+    line2: "the Aletsch glacier,",
+    line3: "a mountain house since MCMXXIII.",
+    tagline: "Family-run since 1923",
+  },
+  fr: {
+    location: "Riederalp · Valais · Suisse",
+    line1: "À l'ombre",
+    line2: "du glacier d'Aletsch,",
+    line3: "une maison de montagne depuis MCMXXIII.",
+    tagline: "Maison de montagne depuis 1923",
+  },
+  it: {
+    location: "Riederalp · Vallese · Svizzera",
+    line1: "All'ombra",
+    line2: "del ghiacciaio d'Aletsch,",
+    line3: "una casa di montagna dal MCMXXIII.",
+    tagline: "Una casa di montagna dal 1923",
+  },
+} as const;
+
 export default async function OpenGraphImage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const isEn = locale === "en";
+  const lang = (["de", "en", "fr", "it"] as const).includes(locale as never)
+    ? (locale as keyof typeof COPY)
+    : "de";
+  const copy = COPY[lang];
 
   return new ImageResponse(
     (
@@ -52,7 +86,7 @@ export default async function OpenGraphImage({
           }}
         >
           <span style={{ width: 56, height: 1, background: FOREST_LIGHT, opacity: 0.6 }} />
-          <span>Riederalp · Wallis · Schweiz</span>
+          <span>{copy.location}</span>
         </div>
 
         {/* Main heading */}
@@ -74,7 +108,7 @@ export default async function OpenGraphImage({
               letterSpacing: "-0.01em",
             }}
           >
-            {isEn ? "In the shadow of" : "Im Schatten des"}
+            {copy.line1}
           </div>
           <div
             style={{
@@ -86,7 +120,7 @@ export default async function OpenGraphImage({
               marginTop: 6,
             }}
           >
-            {isEn ? "the Aletsch glacier," : "Aletschgletschers,"}
+            {copy.line2}
           </div>
           <div
             style={{
@@ -98,7 +132,7 @@ export default async function OpenGraphImage({
               marginTop: 4,
             }}
           >
-            {isEn ? "a mountain house since MCMXXIII." : "ein Berghaus seit MCMXXIII."}
+            {copy.line3}
           </div>
         </div>
 
@@ -156,7 +190,7 @@ export default async function OpenGraphImage({
                   marginTop: 4,
                 }}
               >
-                {isEn ? "Family-run since 1923" : "Berghaus seit MCMXXIII"}
+                {copy.tagline}
               </div>
             </div>
           </div>

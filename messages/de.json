@@ -208,6 +208,13 @@
       "kitchen": "Stube 12.00–14.00 / 18.30–21.30 Uhr",
       "access": "Anreise",
       "accessBody": "Mit der Bahn nach Mörel (BLS), dann mit der Seilbahn auf die Riederalp. Vom Bahnhof Mörel bis zur Türe rund 15 Minuten. Auto­frei — Parkplatz im Tal."
+    },
+    "map": {
+      "eyebrow": "Wo wir liegen",
+      "title": "Auf der Riederalp.",
+      "popupTitle": "Chalet Aletsch",
+      "popupAddress": "Furkastrasse 14 · 3987 Riederalp · Wallis",
+      "popupHint": "Anreise mit der Seilbahn ab Mörel."
     }
   },
   "imprint": {
@@ -329,6 +336,7 @@
     "payDeposit": "Anzahlung jetzt bezahlen · {amount}",
     "cancel": "Stornieren",
     "policy": "Kostenloser Rücktritt bis 7 Tage vor Anreise. Danach wird die Anzahlung einbehalten.",
+    "downloadPdf": "Rechnung als PDF herunterladen",
     "status": {
       "pending_payment": {
         "title": "Wartend auf Bestätigung.",
@@ -675,5 +683,18 @@
       "total": "Gesamt",
       "notes": "Anmerkungen des Gastes"
     }
+  },
+  "chat": {
+    "title": "Concierge",
+    "subtitle": "Wir antworten gerne",
+    "open": "Concierge öffnen",
+    "close": "Schliessen",
+    "welcome": "Grüezi. Ich bin der Assistent vom Chalet Aletsch. Wie kann ich Ihnen helfen — Stuben, Anreise, Verpflegung?",
+    "placeholder": "Stellen Sie eine Frage …",
+    "send": "Senden",
+    "notConfigured": "Der Concierge ist gerade nicht erreichbar. Bitte schreiben Sie an hallo@chalet-aletsch.ch.",
+    "rateLimited": "Bitte etwas langsamer — Sie haben das Limit erreicht. In einer Stunde geht's weiter.",
+    "networkError": "Verbindung unterbrochen. Bitte versuchen Sie es nochmals.",
+    "genericError": "Etwas ist schiefgegangen. Bitte versuchen Sie es nochmals."
   }
 }

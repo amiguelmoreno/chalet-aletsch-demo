@@ -1,0 +1,185 @@
+"use client";
+
+import * as React from "react";
+import { useTranslations, useLocale } from "next-intl";
+import { cn } from "@/lib/cn";
+import { Edelweiss } from "@/components/ornaments/Edelweiss";
+
+type Message = { role: "user" | "assistant"; content: string };
+
+export function ChatWidget() {
+  const t = useTranslations("chat");
+  const locale = useLocale();
+  const [open, setOpen] = React.useState(false);
+  const [messages, setMessages] = React.useState<Message[]>([]);
+  const [draft, setDraft] = React.useState("");
+  const [pending, setPending] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+
+  // Inject the welcome line when first opened
+  React.useEffect(() => {
+    if (open && messages.length === 0) {
+      setMessages([{ role: "assistant", content: t("welcome") }]);
+    }
+  }, [open, messages.length, t]);
+
+  // Auto-scroll on new messages
+  React.useEffect(() => {
+    scrollRef.current?.scrollTo({
+      top: scrollRef.current.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [messages]);
+
+  const send = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = draft.trim();
+    if (!trimmed || pending) return;
+
+    const next: Message[] = [...messages, { role: "user", content: trimmed }];
+    setMessages(next);
+    setDraft("");
+    setPending(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ messages: next, locale }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        if (data.error === "chatbot_not_configured") {
+          setError(t("notConfigured"));
+        } else if (data.error === "rate_limited") {
+          setError(t("rateLimited"));
+        } else {
+          setError(t("genericError"));
+        }
+        return;
+      }
+      setMessages((m) => [...m, { role: "assistant", content: data.reply }]);
+    } catch {
+      setError(t("networkError"));
+    } finally {
+      setPending(false);
+    }
+  };
+
+  return (
+    <>
+      {/* Floating trigger — bottom right (above cookie banner) */}
+      <button
+        onClick={() => setOpen((o) => !o)}
+        aria-label={open ? t("close") : t("open")}
+        className={cn(
+          "fixed bottom-24 md:bottom-28 right-4 md:right-6 z-40",
+          "w-14 h-14 border border-ink-700 bg-forest-700 text-parchment-50",
+          "shadow-[0_4px_24px_-6px_rgba(20,19,15,0.4)] hover:bg-forest-800 transition-colors",
+          "flex items-center justify-center",
+        )}
+      >
+        {open ? <CloseGlyph /> : <ChatGlyph />}
+      </button>
+
+      {/* Panel */}
+      {open && (
+        <div
+          role="dialog"
+          aria-label={t("title")}
+          className={cn(
+            "fixed bottom-44 md:bottom-48 right-4 md:right-6 z-40",
+            "w-[calc(100vw-2rem)] md:w-[420px] h-[min(540px,75vh)]",
+            "border border-ink-700/30 bg-parchment-50 shadow-[0_8px_40px_-8px_rgba(20,19,15,0.35)]",
+            "flex flex-col above-grain",
+          )}
+        >
+          {/* Header */}
+          <header className="flex items-center gap-3 px-5 py-4 border-b border-ink-700/15 bg-forest-800 text-parchment-50">
+            <Edelweiss size={28} className="text-parchment-50 flex-shrink-0" />
+            <div className="flex-1 min-w-0">
+              <p className="font-display italic text-lg leading-tight">{t("title")}</p>
+              <p className="editorial-caps-sm text-parchment-200/70 mt-0.5">
+                {t("subtitle")}
+              </p>
+            </div>
+          </header>
+
+          {/* Messages */}
+          <div ref={scrollRef} className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
+            {messages.map((m, i) => (
+              <div
+                key={i}
+                className={cn(
+                  "max-w-[85%] text-[0.95rem] leading-relaxed",
+                  m.role === "user"
+                    ? "ml-auto bg-ink-700 text-parchment-50 px-3 py-2"
+                    : "bg-parchment-100/60 text-ink-700 border-l-2 border-forest-700 pl-3 py-1",
+                )}
+              >
+                {m.content}
+              </div>
+            ))}
+            {pending && (
+              <div className="text-sm italic text-ink-500">…</div>
+            )}
+            {error && <p className="text-sm text-seal italic">{error}</p>}
+          </div>
+
+          {/* Input */}
+          <form
+            onSubmit={send}
+            className="border-t border-ink-700/15 p-3 flex items-center gap-2"
+          >
+            <input
+              type="text"
+              value={draft}
+              onChange={(e) => setDraft(e.target.value)}
+              placeholder={t("placeholder")}
+              disabled={pending}
+              maxLength={500}
+              className="flex-1 bg-transparent border-0 border-b border-ink-700/40 focus:border-ink-700 focus:outline-none py-2 px-1 font-serif text-[0.95rem]"
+            />
+            <button
+              type="submit"
+              disabled={pending || !draft.trim()}
+              className="editorial-caps-sm border border-ink-700 px-4 py-2 text-ink-700 hover:bg-ink-700 hover:text-parchment-50 disabled:opacity-40 transition-colors"
+            >
+              {t("send")}
+            </button>
+          </form>
+        </div>
+      )}
+    </>
+  );
+}
+
+function ChatGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden>
+      <path
+        d="M 4 6 L 4 17 L 8 17 L 8 21 L 13 17 L 20 17 L 20 6 Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <circle cx="9" cy="11.5" r="1" fill="currentColor" />
+      <circle cx="13" cy="11.5" r="1" fill="currentColor" />
+    </svg>
+  );
+}
+
+function CloseGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden>
+      <path
+        d="M 6 6 L 18 18 M 6 18 L 18 6"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}

@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { Monogram } from "@/components/ornaments/Monogram";
+import { ContactMapWrapper } from "@/components/marketing/ContactMapWrapper";
 
 export async function generateMetadata({
   params,
@@ -122,6 +123,24 @@ function ContactContent() {
               </dl>
             </div>
           </div>
+        </Container>
+      </section>
+
+      <section className="pb-24">
+        <Container>
+          <div className="text-center mb-10">
+            <Eyebrow ornament>{t("map.eyebrow")}</Eyebrow>
+            <h2 className="font-display italic text-display-md mt-4">
+              {t("map.title")}
+            </h2>
+          </div>
+          <ContactMapWrapper
+            labels={{
+              popupTitle: t("map.popupTitle"),
+              popupAddress: t("map.popupAddress"),
+              popupHint: t("map.popupHint"),
+            }}
+          />
         </Container>
       </section>
     </>

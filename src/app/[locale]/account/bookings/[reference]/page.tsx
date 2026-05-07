@@ -182,6 +182,17 @@ export default async function AccountBookingDetailPage({
         <p className="mt-10 text-center text-sm italic text-ink-500">
           {t("policy")}
         </p>
+
+        <div className="mt-8 text-center">
+          <a
+            href={`/api/pdf/booking/${booking.reference}`}
+            target="_blank"
+            rel="noopener"
+            className="ink-link editorial-caps-sm text-forest-700"
+          >
+            ↓ {t("downloadPdf")}
+          </a>
+        </div>
       </Container>
     </section>
   );

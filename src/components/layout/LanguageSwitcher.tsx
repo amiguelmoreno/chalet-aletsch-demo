@@ -13,7 +13,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       aria-label="Sprache"
       className={cn("flex items-center gap-2 editorial-caps-sm", className)}
     >
-      {(["de", "en"] as const).map((l, i) => (
+      {(["de", "en", "fr", "it"] as const).map((l, i) => (
         <span key={l} className="flex items-center gap-2">
           {i > 0 && <span className="text-parchment-100/40">·</span>}
           <Link

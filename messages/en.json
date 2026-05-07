@@ -208,6 +208,13 @@
       "kitchen": "Dining room 12.00–14.00 / 18.30–21.30",
       "access": "Getting here",
       "accessBody": "Train to Mörel (BLS), then cable car to the Riederalp. Around 15 minutes door to door. Car-free village — parking down in the valley."
+    },
+    "map": {
+      "eyebrow": "Where we are",
+      "title": "On the Riederalp.",
+      "popupTitle": "Chalet Aletsch",
+      "popupAddress": "Furkastrasse 14 · 3987 Riederalp · Valais",
+      "popupHint": "Reach us by cable car from Mörel."
     }
   },
   "imprint": {
@@ -329,6 +336,7 @@
     "payDeposit": "Pay deposit now · {amount}",
     "cancel": "Cancel reservation",
     "policy": "Free cancellation up to 7 days before arrival. After that the deposit is retained.",
+    "downloadPdf": "Download invoice as PDF",
     "status": {
       "pending_payment": {
         "title": "Awaiting confirmation.",
@@ -675,5 +683,18 @@
       "total": "Total",
       "notes": "Guest notes"
     }
+  },
+  "chat": {
+    "title": "Concierge",
+    "subtitle": "We're glad to help",
+    "open": "Open concierge",
+    "close": "Close",
+    "welcome": "Welcome. I'm the assistant for Chalet Aletsch — happy to help with rooms, getting here, dining or anything else about the house.",
+    "placeholder": "Ask a question …",
+    "send": "Send",
+    "notConfigured": "The concierge is unavailable right now. Please write to hallo@chalet-aletsch.ch.",
+    "rateLimited": "Please slow down — you've hit the hourly limit. Try again in an hour.",
+    "networkError": "Connection lost. Please try again.",
+    "genericError": "Something went wrong. Please try again."
   }
 }
