@@ -46,7 +46,16 @@ export async function findAvailableRooms(args: {
       rooms: {
         include: {
           bookings: {
-            select: { booking: { select: { checkIn: true, checkOut: true, status: true } } },
+            select: {
+              booking: {
+                select: {
+                  checkIn: true,
+                  checkOut: true,
+                  status: true,
+                  holdExpiresAt: true,
+                },
+              },
+            },
           },
           blocked: { select: { dateFrom: true, dateTo: true } },
         },
@@ -107,16 +116,30 @@ export async function findAvailableRooms(args: {
 }
 
 type RoomWithLinks = {
-  bookings: { booking: { checkIn: Date; checkOut: Date; status: string } }[];
+  bookings: {
+    booking: {
+      checkIn: Date;
+      checkOut: Date;
+      status: string;
+      holdExpiresAt: Date | null;
+    };
+  }[];
   blocked: { dateFrom: Date; dateTo: Date }[];
 };
 
 function isRoomFree(room: RoomWithLinks, checkIn: Date, checkOut: Date): boolean {
   const blockingStatuses = new Set(["pending_payment", "confirmed", "checked_in"]);
+  const now = new Date();
 
   for (const link of room.bookings) {
     const b = link.booking;
     if (!blockingStatuses.has(b.status)) continue;
+    // pending_payment with an expired hold no longer reserves the room —
+    // the daily cron will eventually mark it cancelled, but availability
+    // queries should treat it as free immediately.
+    if (b.status === "pending_payment" && b.holdExpiresAt && b.holdExpiresAt < now) {
+      continue;
+    }
     if (intervalsOverlap(b.checkIn, b.checkOut, checkIn, checkOut)) return false;
   }
 
