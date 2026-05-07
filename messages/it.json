@@ -71,6 +71,7 @@
       "intro": "Non le chiamiamo camere ma Stuben, come da sempre in Vallese. Ognuna porta il nome di un monte, di un rifugio o di un lago dei dintorni. Nessuna è uguale all'altra.",
       "from": "da",
       "perNight": "a notte",
+      "reserveThis": "Prenota questa camera",
       "cta": "Vedi tutte le camere",
       "items": {
         "arvenstube": {
@@ -117,6 +118,7 @@
   "rooms": {
     "eyebrow": "Registro delle camere",
     "title": "Quattro camere.",
+    "reserveThis": "Prenota questa camera",
     "intro": "Ogni camera è cresciuta nei decenni, riparazioni, piccoli ampliamenti, una nuova finestra qui, un altro letto là. Le descriviamo una a una, perché possiate scegliere quella che fa per voi.",
     "specs": {
       "from": "Da",

@@ -71,6 +71,7 @@
       "intro": "Wir nennen sie nicht Zimmer, sondern Stuben, wie es im Wallis seit jeher gemacht wird. Jede trägt den Namen eines Berges, einer Hütte oder eines Sees aus der Umgebung. Keine zwei sind gleich.",
       "from": "ab",
       "perNight": "pro Nacht",
+      "reserveThis": "Diese Stube reservieren",
       "cta": "Alle Stuben ansehen",
       "items": {
         "arvenstube": {
@@ -117,6 +118,7 @@
   "rooms": {
     "eyebrow": "Tafel der Stuben",
     "title": "Vier Stuben.",
+    "reserveThis": "Diese Stube reservieren",
     "intro": "Jede Stube ist über die Jahrzehnte gewachsen, durch Reparaturen, kleine Anbauten, ein neues Fenster hier, ein anderes Bett dort. Wir beschreiben jede einzeln, damit Sie wählen können, was Ihnen am ehesten zusagt.",
     "specs": {
       "from": "Ab",

@@ -71,6 +71,7 @@
       "intro": "Nous ne les appelons pas chambres mais Stuben, comme on le fait depuis toujours en Valais. Chacune porte le nom d'un sommet, d'un refuge ou d'un lac voisin. Aucune n'est pareille à l'autre.",
       "from": "à partir de",
       "perNight": "par nuit",
+      "reserveThis": "Réserver cette chambre",
       "cta": "Voir toutes les chambres",
       "items": {
         "arvenstube": {
@@ -117,6 +118,7 @@
   "rooms": {
     "eyebrow": "Registre des chambres",
     "title": "Quatre chambres.",
+    "reserveThis": "Réserver cette chambre",
     "intro": "Chaque chambre a évolué au fil des décennies, par des réparations, de petits agrandissements, une nouvelle fenêtre ici, un autre lit là. Nous décrivons chacune séparément, pour que vous choisissiez celle qui vous convient.",
     "specs": {
       "from": "Dès",

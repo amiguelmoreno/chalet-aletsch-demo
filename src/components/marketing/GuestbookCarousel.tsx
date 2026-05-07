@@ -12,8 +12,6 @@ export type GuestbookEntry = {
   formattedDate: string;
 };
 
-const NUMERAL = ["1", "2", "3", "4", "5", "6", "7", "8"];
-
 export function GuestbookCarousel({
   entries,
   prevLabel,
@@ -63,7 +61,7 @@ export function GuestbookCarousel({
 
   return (
     <div
-      className="relative max-w-3xl mx-auto"
+      className="relative max-w-4xl mx-auto"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
@@ -71,30 +69,52 @@ export function GuestbookCarousel({
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
+      {/* Side arrows — vertically centred against the review block. */}
+      {total > 1 && (
+        <>
+          <button
+            type="button"
+            onClick={() => go(-1)}
+            aria-label={prevLabel}
+            className="absolute left-0 sm:left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-11 md:h-11 flex items-center justify-center text-ink-700/45 hover:text-ink-700 transition-colors"
+          >
+            <Arrow dir="left" />
+          </button>
+          <button
+            type="button"
+            onClick={() => go(1)}
+            aria-label={nextLabel}
+            className="absolute right-0 sm:right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-11 md:h-11 flex items-center justify-center text-ink-700/45 hover:text-ink-700 transition-colors"
+          >
+            <Arrow dir="right" />
+          </button>
+        </>
+      )}
+
       {/* Cross-fade stage. min-height keeps the layout stable across entries. */}
-      <div className="relative min-h-[280px] sm:min-h-[300px] md:min-h-[260px]">
+      <div className="relative min-h-[260px] sm:min-h-[280px] md:min-h-[240px]">
         {entries.map((entry, i) => (
           <article
             key={entry.id}
             className={cn(
-              "absolute inset-0 transition-opacity duration-700 ease-out",
+              "absolute inset-y-0 left-12 right-12 sm:left-14 sm:right-14 md:left-16 md:right-16 transition-opacity duration-700 ease-out",
               i === index
                 ? "opacity-100"
                 : "opacity-0 pointer-events-none",
             )}
             aria-hidden={i !== index}
           >
-            <div className="flex justify-center gap-2 text-forest-700 mb-7">
+            <div className="flex justify-center gap-2 text-forest-700 mb-6 md:mb-7">
               {Array.from({ length: 5 }).map((_, s) => (
                 <Star key={s} filled={s < entry.rating} />
               ))}
             </div>
 
             <blockquote>
-              <p className="font-display italic text-2xl md:text-[1.85rem] leading-snug text-ink-700 max-w-2xl mx-auto text-center">
+              <p className="font-display italic text-xl sm:text-2xl md:text-[1.85rem] leading-snug text-ink-700 max-w-2xl mx-auto text-center">
                 &ldquo;{entry.body}&rdquo;
               </p>
-              <footer className="mt-7 md:mt-8 editorial-caps text-forest-700 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+              <footer className="mt-6 md:mt-8 editorial-caps text-forest-700 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
                 <span>
                   {entry.authorName}
                   {entry.location ? `, ${entry.location}` : ""}
@@ -106,49 +126,6 @@ export function GuestbookCarousel({
           </article>
         ))}
       </div>
-
-      {/* Pagination + arrows */}
-      {total > 1 && (
-        <div className="mt-10 md:mt-12 flex items-center justify-center gap-5 md:gap-7">
-          <button
-            type="button"
-            onClick={() => go(-1)}
-            aria-label={prevLabel}
-            className="w-9 h-9 flex items-center justify-center text-ink-700/55 hover:text-ink-700 transition-colors"
-          >
-            <Arrow dir="left" />
-          </button>
-
-          <div className="flex items-center gap-3 md:gap-4">
-            {entries.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setIndex(i)}
-                aria-label={`${i + 1}`}
-                aria-current={i === index}
-                className={cn(
-                  "font-display tracking-wide-md text-sm leading-none transition-colors tabular-nums",
-                  i === index
-                    ? "text-ink-700"
-                    : "text-ink-700/30 hover:text-ink-700/60",
-                )}
-              >
-                {NUMERAL[i] ?? i + 1}
-              </button>
-            ))}
-          </div>
-
-          <button
-            type="button"
-            onClick={() => go(1)}
-            aria-label={nextLabel}
-            className="w-9 h-9 flex items-center justify-center text-ink-700/55 hover:text-ink-700 transition-colors"
-          >
-            <Arrow dir="right" />
-          </button>
-        </div>
-      )}
     </div>
   );
 }

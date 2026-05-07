@@ -43,6 +43,7 @@ export function BookingFlow() {
     checkOut: searchParams.get("to") ?? "",
     adults: parseInt(searchParams.get("adults") ?? "2", 10),
     children: parseInt(searchParams.get("children") ?? "0", 10),
+    selectedRoomSlug: searchParams.get("room"),
   }));
 
   const checkAvailability = React.useCallback(async () => {
@@ -64,8 +65,14 @@ export function BookingFlow() {
         dispatch({ type: "SET_ERROR", error: data.hint ?? translateError(t, data.error) });
         return;
       }
-      dispatch({ type: "SET_ROOMS", rooms: data.rooms as RoomOption[] });
-      dispatch({ type: "SET_STEP", step: "room" });
+      const rooms = data.rooms as RoomOption[];
+      dispatch({ type: "SET_ROOMS", rooms });
+      // If the user arrived from a per-room reserve button (?room=slug),
+      // and that room is in the available list, skip the room-picker step
+      // and jump straight to extras.
+      const pre = state.selectedRoomSlug;
+      const preIsAvailable = pre && rooms.some((r) => r.slug === pre);
+      dispatch({ type: "SET_STEP", step: preIsAvailable ? "extras" : "room" });
     } catch {
       dispatch({ type: "SET_ERROR", error: t("errors.network") });
     } finally {

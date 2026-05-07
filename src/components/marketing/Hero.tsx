@@ -43,8 +43,11 @@ export function Hero() {
         />
 
         {/* Top-right meta strip — editorial detail */}
-        <div className="absolute top-5 md:top-8 right-5 md:right-10 z-10 flex items-center gap-3 md:gap-4 text-parchment-50/70">
-          <span className="hidden sm:block h-px w-12 md:w-20 bg-parchment-50/40" />
+        <div
+          className="absolute top-5 md:top-8 right-5 md:right-10 z-10 flex items-center gap-3 md:gap-4 text-parchment-50"
+          style={{ textShadow: "0 1px 3px rgba(20,19,15,0.55), 0 0 14px rgba(20,19,15,0.35)" }}
+        >
+          <span className="hidden sm:block h-px w-12 md:w-20 bg-parchment-50/70 shadow-[0_1px_3px_rgba(20,19,15,0.4)]" />
           <span className="editorial-caps-sm">{t("plate")}</span>
         </div>
 
@@ -99,13 +102,14 @@ export function Hero() {
 
         {/* Tiny scroll hint at bottom-right (desktop only) */}
         <div
-          className="hidden lg:flex absolute bottom-8 right-10 z-10 flex-col items-center gap-3 text-parchment-50/55"
+          className="hidden lg:flex absolute bottom-8 right-10 z-10 flex-col items-center gap-3 text-parchment-50/85"
+          style={{ textShadow: "0 1px 3px rgba(20,19,15,0.55)" }}
           aria-hidden
         >
           <span className="editorial-caps-sm rotate-90 origin-center mb-6 whitespace-nowrap">
             Tafel 1
           </span>
-          <span className="block w-px h-12 bg-parchment-50/30" />
+          <span className="block w-px h-12 bg-parchment-50/55" />
         </div>
       </div>
 

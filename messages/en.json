@@ -71,6 +71,7 @@
       "intro": "We don’t call them rooms; we call them Stuben, the Valaisan word for parlour. Each carries the name of a nearby peak, hut or lake. No two are alike.",
       "from": "from",
       "perNight": "per night",
+      "reserveThis": "Reserve this room",
       "cta": "See all rooms",
       "items": {
         "arvenstube": {
@@ -117,6 +118,7 @@
   "rooms": {
     "eyebrow": "Register of rooms",
     "title": "Four rooms.",
+    "reserveThis": "Reserve this room",
     "intro": "Each room has grown over the decades, through repairs, small additions, a new window here, a different bed there. We describe each one separately, so you can choose what suits you best.",
     "specs": {
       "from": "From",

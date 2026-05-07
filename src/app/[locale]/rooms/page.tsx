@@ -8,6 +8,7 @@ import { Edelweiss } from "@/components/ornaments/Edelweiss";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { hotelJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 import { RoomGallery } from "@/components/marketing/RoomGallery";
+import { Link } from "@/i18n/routing";
 
 type RoomKey = "arvenstube" | "blauseeli" | "fiescher" | "konkordia";
 
@@ -153,7 +154,7 @@ function RoomsContent() {
                 </div>
 
                 {/* Description */}
-                <div className="md:col-span-5">
+                <div className="md:col-span-5 flex flex-col">
                   <Eyebrow>{t(`items.${room.key}.subtitle`)}</Eyebrow>
                   <h2 className="font-display text-display-sm mt-3 text-ink-700">
                     {t(`items.${room.key}.name`)}
@@ -162,8 +163,16 @@ function RoomsContent() {
                     {t(`items.${room.key}.description`)}
                   </p>
                   <p className="mt-4 italic text-forest-700 text-sm">
-                   , {t(`items.${room.key}.quirk`)}
+                    {t(`items.${room.key}.quirk`)}
                   </p>
+                  <div className="mt-7">
+                    <Link
+                      href={`/booking/new?room=${room.key}` as never}
+                      className="editorial-caps inline-flex items-center justify-center border border-ink-700 px-6 py-3 text-ink-700 hover:bg-ink-700 hover:text-parchment-50 transition-colors"
+                    >
+                      {t("reserveThis")}
+                    </Link>
+                  </div>
                 </div>
 
                 {/* Specs strip */}
