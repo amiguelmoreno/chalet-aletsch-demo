@@ -24,8 +24,31 @@ export function ChatWidget() {
   const [error, setError] = React.useState<string | null>(null);
   const [showSuggestions, setShowSuggestions] = React.useState(true);
   const scrollRef = React.useRef<HTMLDivElement>(null);
+  const panelRef = React.useRef<HTMLDivElement>(null);
+  const buttonRef = React.useRef<HTMLButtonElement>(null);
 
   const suggestions = SUGGESTIONS[locale];
+
+  // Close on outside click + Escape — only while panel is open
+  React.useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (e: PointerEvent) => {
+      const target = e.target as Node | null;
+      if (!target) return;
+      if (panelRef.current?.contains(target)) return;
+      if (buttonRef.current?.contains(target)) return;
+      setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   React.useEffect(() => {
     if (open && messages.length === 0) {
@@ -95,6 +118,7 @@ export function ChatWidget() {
   return (
     <>
       <button
+        ref={buttonRef}
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? t("close") : t("open")}
         className={cn(
@@ -109,6 +133,7 @@ export function ChatWidget() {
 
       {open && (
         <div
+          ref={panelRef}
           role="dialog"
           aria-label={t("title")}
           className={cn(
