@@ -107,17 +107,48 @@
     border-color: rgba(169, 159, 138, 0.55);
   }
 
-  /* Link style — like printed text reference */
+  /* Link style — printed-text reference with an ink-draw underline that
+     grows from left on hover, like a pen tracing across paper. */
   .ink-link {
+    position: relative;
     color: rgb(20 19 15);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
-    text-decoration-color: rgba(60, 65, 50, 0.4);
-    transition: text-decoration-color 200ms ease;
+    text-decoration: none;
+    background-image: linear-gradient(
+      rgba(60, 65, 50, 0.45),
+      rgba(60, 65, 50, 0.45)
+    );
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    padding-bottom: 2px;
+    transition:
+      background-size 280ms cubic-bezier(0.22, 0.61, 0.36, 1),
+      color 200ms ease,
+      background-image 200ms ease;
   }
   .ink-link:hover {
-    text-decoration-color: rgba(168, 42, 31, 0.9);
+    color: rgb(168, 42, 31);
+    background-image: linear-gradient(rgb(168, 42, 31), rgb(168, 42, 31));
+  }
+
+  /* Ken Burns — very slow zoom on hover, for room photo figures. */
+  .ken-burns-img {
+    transition: transform 6s cubic-bezier(0.16, 0.84, 0.44, 1);
+    will-change: transform;
+  }
+  .ken-burns:hover .ken-burns-img,
+  .ken-burns:focus-within .ken-burns-img {
+    transform: scale(1.04);
+  }
+
+  /* Page transition — opacity fade on locale-segment children.
+     Applied via the layout's <main> wrapper. */
+  @keyframes chalet-page-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .page-fade {
+    animation: chalet-page-in 500ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
   }
 }
 

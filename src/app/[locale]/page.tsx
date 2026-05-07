@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { hotelJsonLd, lodgingBusinessJsonLd, faqJsonLd } from "@/lib/seo";
 import { prisma } from "@/lib/prisma";
 import { WalliserBand } from "@/components/ornaments/WalliserBand";
+import { Reveal } from "@/components/motion/Reveal";
 
 async function fetchAggregateRating() {
   try {
@@ -99,12 +100,24 @@ export default async function HomePage({
     <>
       <JsonLd data={[lodging, hotelJsonLd(loc), faqJsonLd(faqs)]} />
       <Hero />
-      <AtAGlance />
-      <StoryExcerpt />
-      <RoomsLedger />
-      <WalliserBand />
-      <Guestbook locale={loc} />
-      <AvailabilityNudge />
+      <Reveal threshold={0.1}>
+        <AtAGlance />
+      </Reveal>
+      <Reveal threshold={0.05}>
+        <StoryExcerpt />
+      </Reveal>
+      <Reveal threshold={0.05}>
+        <RoomsLedger />
+      </Reveal>
+      <Reveal>
+        <WalliserBand />
+      </Reveal>
+      <Reveal threshold={0.1}>
+        <Guestbook locale={loc} />
+      </Reveal>
+      <Reveal threshold={0.1}>
+        <AvailabilityNudge />
+      </Reveal>
     </>
   );
 }

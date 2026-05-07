@@ -9,6 +9,7 @@ import { CookieBanner } from "@/components/cookies/CookieBanner";
 import { AnalyticsLoader } from "@/components/cookies/AnalyticsLoader";
 import { AuthSessionProvider } from "@/components/providers/SessionProvider";
 import { ChatWidget } from "@/components/chat/ChatWidget";
+import { ScrollProgress } from "@/components/motion/ScrollProgress";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -29,8 +30,9 @@ export default async function LocaleLayout({
     <NextIntlClientProvider>
       <AuthSessionProvider>
         <ConsentProvider>
+          <ScrollProgress />
           <Header />
-          <main className="above-grain">{children}</main>
+          <main key={locale} className="page-fade">{children}</main>
           <Footer />
           <ChatWidget />
           <CookieBanner />
