@@ -4,16 +4,20 @@ type Props = {
   className?: string;
   /** Size in pixels — width and height are equal */
   size?: number;
-  variant?: "crest" | "mark";
+  /** crest = ring + peak + wordmark · mark = peak only · seal = ring + AC interlocked */
+  variant?: "crest" | "mark" | "seal";
 };
 
 /**
- * House crest of Chalet Aletsch.
- * Variant "crest" → full circular monogram with text rings.
- * Variant "mark"  → just the interlocked CA, no rings, for tight spaces.
+ * Refined house mark for Chalet Aletsch.
+ *
+ * Conceptually: a single triangular alpine peak inside a hairline ring,
+ * with the "AC" monogram tucked into the negative space above it.
+ * Reads clearly at every size — from 24px favicon to 240px footer hero.
  */
 export function Monogram({ className, size = 88, variant = "crest" }: Props) {
   if (variant === "mark") {
+    // Standalone peak — for favicons, tight nav, footer corners.
     return (
       <svg
         viewBox="0 0 64 64"
@@ -22,14 +26,52 @@ export function Monogram({ className, size = 88, variant = "crest" }: Props) {
         className={cn("text-forest-700", className)}
         aria-hidden
       >
-        <g fill="currentColor">
-          <path d="M32 8 L48 50 L42 50 L38 40 L26 40 L22 50 L16 50 Z M28 36 L36 36 L32 18 Z" />
-          <path d="M14 24 Q14 16 22 16 L26 16 L26 20 L22 20 Q18 20 18 24 L18 32 Q18 36 22 36 L26 36 L26 40 L22 40 Q14 40 14 32 Z" opacity="0.92" />
+        <g fill="none" stroke="currentColor" strokeLinejoin="round">
+          {/* Outer peak silhouette */}
+          <path
+            d="M 8 50 L 32 14 L 56 50 Z"
+            fill="currentColor"
+            stroke="none"
+          />
+          {/* Inner snowline notch */}
+          <path
+            d="M 23 30 L 32 18 L 41 30"
+            stroke="rgb(251 248 241)"
+            strokeWidth="1.4"
+            fill="none"
+          />
         </g>
       </svg>
     );
   }
 
+  if (variant === "seal") {
+    // Compact circular seal — wax-stamp feel, for very small marks.
+    return (
+      <svg
+        viewBox="0 0 64 64"
+        width={size}
+        height={size}
+        className={cn("text-seal", className)}
+        aria-hidden
+      >
+        <circle cx="32" cy="32" r="30" fill="currentColor" />
+        <text
+          x="32"
+          y="40"
+          textAnchor="middle"
+          fontFamily="var(--font-display), Georgia, serif"
+          fontSize="22"
+          fontStyle="italic"
+          fill="rgb(251 248 241)"
+        >
+          CA
+        </text>
+      </svg>
+    );
+  }
+
+  // Default crest — elegant ring + peak + wordmark
   return (
     <svg
       viewBox="0 0 200 200"
@@ -40,65 +82,72 @@ export function Monogram({ className, size = 88, variant = "crest" }: Props) {
     >
       <defs>
         <path
-          id="crest-top-arc"
-          d="M 30,100 A 70,70 0 0 1 170,100"
-          fill="none"
-        />
-        <path
           id="crest-bottom-arc"
-          d="M 35,108 A 65,65 0 0 0 165,108"
+          d="M 38,108 A 62,62 0 0 0 162,108"
           fill="none"
         />
       </defs>
 
-      {/* Hairline rings */}
-      <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" strokeWidth="0.6" />
-      <circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" strokeWidth="1.4" />
-      <circle cx="100" cy="100" r="74" fill="none" stroke="currentColor" strokeWidth="0.6" />
+      {/* Outer hairline ring */}
+      <circle
+        cx="100"
+        cy="100"
+        r="92"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.6"
+      />
+      {/* Inner ring — slightly thicker */}
+      <circle
+        cx="100"
+        cy="100"
+        r="78"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.2"
+      />
 
-      {/* Top curved label */}
+      {/* Central peak — solid triangle, the dominant graphic */}
+      <path d="M 60 130 L 100 60 L 140 130 Z" fill="currentColor" />
+
+      {/* Snowline highlight on the peak */}
+      <path
+        d="M 84 88 L 100 68 L 116 88"
+        fill="none"
+        stroke="rgb(251 248 241)"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+
+      {/* Tiny "CA" monogram tucked into the upper negative space, above the peak */}
       <text
-        fill="currentColor"
-        fontSize="10"
+        x="100"
+        y="50"
+        textAnchor="middle"
         fontFamily="var(--font-display), Georgia, serif"
-        letterSpacing="3.6"
-        style={{ fontFeatureSettings: '"smcp"' }}
+        fontSize="18"
+        fontStyle="italic"
+        fill="currentColor"
       >
-        <textPath href="#crest-top-arc" startOffset="50%" textAnchor="middle">
-          CHALET · ALETSCH
-        </textPath>
+        CA
       </text>
 
-      {/* Bottom curved label */}
+      {/* Curved date along the bottom interior of the ring */}
       <text
         fill="currentColor"
         fontSize="8"
         fontFamily="var(--font-display), Georgia, serif"
-        letterSpacing="3.2"
-        style={{ fontFeatureSettings: '"smcp"' }}
+        letterSpacing="3.6"
       >
         <textPath href="#crest-bottom-arc" startOffset="50%" textAnchor="middle">
-          EST · MCMXXIII
+          MCMXXIII
         </textPath>
       </text>
 
-      {/* Side decorations between top and bottom labels */}
+      {/* Side dot ornaments at 9 and 3 o'clock between rings */}
       <g fill="currentColor">
-        <circle cx="30" cy="100" r="1.2" />
-        <circle cx="170" cy="100" r="1.2" />
-      </g>
-
-      {/* Interlocked CA — center mark */}
-      <g transform="translate(100 116)" fill="currentColor">
-        {/* C */}
-        <path d="M -32 -22 Q -42 -22 -42 -10 L -42 6 Q -42 18 -32 18 L -16 18 L -16 12 L -30 12 Q -36 12 -36 6 L -36 -10 Q -36 -16 -30 -16 L -16 -16 L -16 -22 Z" />
-        {/* A — slightly overlapping */}
-        <path d="M 8 -22 L 30 18 L 22 18 L 17 8 L -1 8 L -6 18 L -14 18 L 8 -22 Z M 2 2 L 14 2 L 8 -12 Z" />
-      </g>
-
-      {/* Tiny star above monogram */}
-      <g transform="translate(100 56)" fill="currentColor">
-        <path d="M 0 -6 L 1.6 -1.8 L 6 -1.8 L 2.4 1 L 3.8 5.2 L 0 2.6 L -3.8 5.2 L -2.4 1 L -6 -1.8 L -1.6 -1.8 Z" />
+        <circle cx="14" cy="100" r="1.4" />
+        <circle cx="186" cy="100" r="1.4" />
       </g>
     </svg>
   );

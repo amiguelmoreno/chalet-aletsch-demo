@@ -86,12 +86,20 @@
     letter-spacing: 0.18em;
   }
 
-  /* Editorial caps — for menus, labels */
+  /* Editorial caps — for menus, labels.
+     Slightly bigger + bolder than first pass for legibility on screen
+     (especially over the paper-grain overlay). */
   .editorial-caps {
     text-transform: uppercase;
-    letter-spacing: 0.22em;
-    font-size: 0.72rem;
-    font-weight: 500;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+  .editorial-caps-sm {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.68rem;
+    font-weight: 600;
   }
 
   /* Ornamental rule */

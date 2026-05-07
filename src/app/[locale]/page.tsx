@@ -8,6 +8,7 @@ import { AvailabilityNudge } from "@/components/marketing/AvailabilityNudge";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { hotelJsonLd, lodgingBusinessJsonLd, faqJsonLd } from "@/lib/seo";
 import { prisma } from "@/lib/prisma";
+import { WalliserBand } from "@/components/ornaments/WalliserBand";
 
 async function fetchAggregateRating() {
   try {
@@ -101,6 +102,7 @@ export default async function HomePage({
       <AtAGlance />
       <StoryExcerpt />
       <RoomsLedger />
+      <WalliserBand />
       <Guestbook locale={loc} />
       <AvailabilityNudge />
     </>

@@ -36,6 +36,11 @@ async function main() {
       basePrice: 320,
       areaSqm: 22,
       position: 1,
+      photos: [
+        "https://picsum.photos/seed/arvenstube/1600/1000",
+        "https://picsum.photos/seed/arvenstube-2/1600/1000",
+        "https://picsum.photos/seed/arvenstube-3/1600/1000",
+      ],
     },
     {
       slug: "blauseeli",
@@ -47,6 +52,10 @@ async function main() {
       basePrice: 280,
       areaSqm: 18,
       position: 2,
+      photos: [
+        "https://picsum.photos/seed/blauseeli/1600/1000",
+        "https://picsum.photos/seed/blauseeli-2/1600/1000",
+      ],
     },
     {
       slug: "fiescher",
@@ -58,6 +67,11 @@ async function main() {
       basePrice: 410,
       areaSqm: 36,
       position: 3,
+      photos: [
+        "https://picsum.photos/seed/fiescher/1600/1000",
+        "https://picsum.photos/seed/fiescher-2/1600/1000",
+        "https://picsum.photos/seed/fiescher-3/1600/1000",
+      ],
     },
     {
       slug: "konkordia",
@@ -69,6 +83,12 @@ async function main() {
       basePrice: 540,
       areaSqm: 58,
       position: 4,
+      photos: [
+        "https://picsum.photos/seed/konkordia/1600/1000",
+        "https://picsum.photos/seed/konkordia-2/1600/1000",
+        "https://picsum.photos/seed/konkordia-3/1600/1000",
+        "https://picsum.photos/seed/konkordia-4/1600/1000",
+      ],
     },
   ];
 

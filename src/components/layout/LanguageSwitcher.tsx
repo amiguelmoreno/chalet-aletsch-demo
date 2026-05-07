@@ -11,17 +11,17 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   return (
     <nav
       aria-label="Sprache"
-      className={cn("flex items-center gap-2 editorial-caps", className)}
+      className={cn("flex items-center gap-2 editorial-caps-sm", className)}
     >
       {(["de", "en"] as const).map((l, i) => (
         <span key={l} className="flex items-center gap-2">
-          {i > 0 && <span className="text-forest-600/40">·</span>}
+          {i > 0 && <span className="text-parchment-100/40">·</span>}
           <Link
             href={pathname}
             locale={l}
             className={cn(
-              "transition-colors duration-200 hover:text-seal",
-              locale === l ? "text-ink-700" : "text-forest-600/70",
+              "transition-colors duration-200 hover:text-parchment-50",
+              locale === l ? "text-parchment-50" : "text-parchment-100/60",
             )}
           >
             {l}
