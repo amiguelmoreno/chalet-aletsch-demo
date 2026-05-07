@@ -27,7 +27,7 @@ export function AvailabilityNudge() {
         </div>
 
         <form
-          className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-end"
+          className="space-y-10"
           onSubmit={(e) => {
             e.preventDefault();
             const qs = new URLSearchParams({
@@ -39,35 +39,26 @@ export function AvailabilityNudge() {
             router.push(`/booking/new?${qs.toString()}` as never, { locale });
           }}
         >
-          <UnderlineField
-            className="md:col-span-4"
-            label={t("from")}
-            type="date"
-            value={from}
-            onChange={setFrom}
-          />
-          <UnderlineField
-            className="md:col-span-4"
-            label={t("to")}
-            type="date"
-            value={to}
-            onChange={setTo}
-          />
-          <UnderlineField
-            className="md:col-span-2"
-            label={t("guests")}
-            type="number"
-            value={String(guests)}
-            onChange={(v) => setGuests(Math.max(1, parseInt(v || "1", 10)))}
-            min={1}
-            max={12}
-          />
-          <button
-            type="submit"
-            className="md:col-span-2 editorial-caps border border-ink-700 px-5 py-3.5 text-ink-700 hover:bg-ink-700 hover:text-parchment-50 transition-colors"
-          >
-            {t("cta")}
-          </button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+            <UnderlineField label={t("from")} type="date" value={from} onChange={setFrom} />
+            <UnderlineField label={t("to")} type="date" value={to} onChange={setTo} />
+            <UnderlineField
+              label={t("guests")}
+              type="number"
+              value={String(guests)}
+              onChange={(v) => setGuests(Math.max(1, parseInt(v || "1", 10)))}
+              min={1}
+              max={12}
+            />
+          </div>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="editorial-caps border border-ink-700 px-10 py-3.5 text-ink-700 hover:bg-ink-700 hover:text-parchment-50 transition-colors"
+            >
+              {t("cta")}
+            </button>
+          </div>
         </form>
 
         <p className="mt-8 text-center text-sm text-ink-500 italic">
