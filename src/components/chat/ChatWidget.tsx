@@ -4,27 +4,35 @@ import * as React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/cn";
 import { Edelweiss } from "@/components/ornaments/Edelweiss";
+import { SUGGESTIONS, type Locale } from "@/lib/chat-faq";
 
 type Message = { role: "user" | "assistant"; content: string };
 
 export function ChatWidget() {
   const t = useTranslations("chat");
-  const locale = useLocale();
+  const localeRaw = useLocale();
+  const locale: Locale = (["de", "en", "fr", "it"] as Locale[]).includes(
+    localeRaw as Locale,
+  )
+    ? (localeRaw as Locale)
+    : "de";
+
   const [open, setOpen] = React.useState(false);
   const [messages, setMessages] = React.useState<Message[]>([]);
   const [draft, setDraft] = React.useState("");
   const [pending, setPending] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+  const [showSuggestions, setShowSuggestions] = React.useState(true);
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
-  // Inject the welcome line when first opened
+  const suggestions = SUGGESTIONS[locale];
+
   React.useEffect(() => {
     if (open && messages.length === 0) {
       setMessages([{ role: "assistant", content: t("welcome") }]);
     }
   }, [open, messages.length, t]);
 
-  // Auto-scroll on new messages
   React.useEffect(() => {
     scrollRef.current?.scrollTo({
       top: scrollRef.current.scrollHeight,
@@ -32,32 +40,19 @@ export function ChatWidget() {
     });
   }, [messages]);
 
-  const send = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const trimmed = draft.trim();
-    if (!trimmed || pending) return;
-
-    const next: Message[] = [...messages, { role: "user", content: trimmed }];
-    setMessages(next);
-    setDraft("");
+  const callApi = async (payload: { message?: string; faqId?: string }) => {
     setPending(true);
     setError(null);
-
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ messages: next, locale }),
+        body: JSON.stringify({ ...payload, locale }),
       });
       const data = await res.json();
       if (!res.ok) {
-        if (data.error === "chatbot_not_configured") {
-          setError(t("notConfigured"));
-        } else if (data.error === "rate_limited") {
-          setError(t("rateLimited"));
-        } else {
-          setError(t("genericError"));
-        }
+        if (data.error === "rate_limited") setError(t("rateLimited"));
+        else setError(t("genericError"));
         return;
       }
       setMessages((m) => [...m, { role: "assistant", content: data.reply }]);
@@ -68,9 +63,25 @@ export function ChatWidget() {
     }
   };
 
+  const sendChip = async (faqId: string, label: string) => {
+    if (pending) return;
+    setShowSuggestions(false);
+    setMessages((m) => [...m, { role: "user", content: label }]);
+    await callApi({ faqId });
+  };
+
+  const sendDraft = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = draft.trim();
+    if (!trimmed || pending) return;
+    setShowSuggestions(false);
+    setMessages((m) => [...m, { role: "user", content: trimmed }]);
+    setDraft("");
+    await callApi({ message: trimmed });
+  };
+
   return (
     <>
-      {/* Floating trigger — bottom right (above cookie banner) */}
       <button
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? t("close") : t("open")}
@@ -84,7 +95,6 @@ export function ChatWidget() {
         {open ? <CloseGlyph /> : <ChatGlyph />}
       </button>
 
-      {/* Panel */}
       {open && (
         <div
           role="dialog"
@@ -96,7 +106,6 @@ export function ChatWidget() {
             "flex flex-col above-grain",
           )}
         >
-          {/* Header */}
           <header className="flex items-center gap-3 px-5 py-4 border-b border-ink-700/15 bg-forest-800 text-parchment-50">
             <Edelweiss size={28} className="text-parchment-50 flex-shrink-0" />
             <div className="flex-1 min-w-0">
@@ -107,7 +116,6 @@ export function ChatWidget() {
             </div>
           </header>
 
-          {/* Messages */}
           <div ref={scrollRef} className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
             {messages.map((m, i) => (
               <div
@@ -122,15 +130,32 @@ export function ChatWidget() {
                 {m.content}
               </div>
             ))}
-            {pending && (
-              <div className="text-sm italic text-ink-500">…</div>
+
+            {showSuggestions && (
+              <div className="flex flex-col items-start gap-2 pt-2">
+                <p className="editorial-caps-sm text-forest-700/80">
+                  {t("suggestionsLabel")}
+                </p>
+                {suggestions.map((sug) => (
+                  <button
+                    key={sug.faqId}
+                    type="button"
+                    onClick={() => sendChip(sug.faqId, sug.label)}
+                    disabled={pending}
+                    className="text-left text-sm border border-ink-700/30 hover:border-ink-700 hover:bg-parchment-100/60 px-3 py-1.5 transition-colors disabled:opacity-50"
+                  >
+                    {sug.label}
+                  </button>
+                ))}
+              </div>
             )}
+
+            {pending && <div className="text-sm italic text-ink-500">…</div>}
             {error && <p className="text-sm text-seal italic">{error}</p>}
           </div>
 
-          {/* Input */}
           <form
-            onSubmit={send}
+            onSubmit={sendDraft}
             className="border-t border-ink-700/15 p-3 flex items-center gap-2"
           >
             <input

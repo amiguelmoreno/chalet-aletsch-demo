@@ -689,10 +689,10 @@
     "subtitle": "We're glad to help",
     "open": "Open concierge",
     "close": "Close",
-    "welcome": "Welcome. I'm the assistant for Chalet Aletsch — happy to help with rooms, getting here, dining or anything else about the house.",
+    "welcome": "Welcome. I'm the assistant for Chalet Aletsch. Pick a common question below or type your own.",
+    "suggestionsLabel": "Often asked",
     "placeholder": "Ask a question …",
     "send": "Send",
-    "notConfigured": "The concierge is unavailable right now. Please write to hallo@chalet-aletsch.ch.",
     "rateLimited": "Please slow down — you've hit the hourly limit. Try again in an hour.",
     "networkError": "Connection lost. Please try again.",
     "genericError": "Something went wrong. Please try again."

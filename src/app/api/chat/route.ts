@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import Anthropic from "@anthropic-ai/sdk";
-import { CHATBOT_SYSTEM_PROMPT } from "@/lib/chat-knowledge";
+import { matchFaq, getFaqAnswerById, type Locale } from "@/lib/chat-faq";
 
-export const runtime = "nodejs";
-// In-memory rate limit by IP — best-effort, resets on cold start.
-// For production-grade limiting use Upstash Ratelimit or similar.
-const RATE_LIMIT = 20; // messages per IP per window
-const WINDOW_MS = 60 * 60 * 1000; // 1 hour
+export const runtime = "edge";
+
+// Light per-IP rate limit (best-effort, in-memory).
+// Generous because the bot is deterministic and free.
+const RATE_LIMIT = 60;
+const WINDOW_MS = 60 * 60 * 1000;
 const buckets = new Map<string, { count: number; resetAt: number }>();
 
 function checkRateLimit(ip: string): boolean {
@@ -21,14 +21,14 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
-export async function POST(req: Request) {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    return NextResponse.json(
-      { error: "chatbot_not_configured" },
-      { status: 503 },
-    );
-  }
+const FALLBACKS: Record<Locale, string> = {
+  de: "Das weiss ich nicht — am besten fragen Sie direkt an der Réception unter +41 27 928 00 23 oder per E-Mail an hallo@chalet-aletsch.ch.",
+  en: "I'm not sure about that one — please reach out to reception on +41 27 928 00 23 or write to hallo@chalet-aletsch.ch.",
+  fr: "Je n'ai pas la réponse à cette question — appelez la réception au +41 27 928 00 23 ou écrivez à hallo@chalet-aletsch.ch.",
+  it: "Non ho la risposta a questa domanda — rivolgetevi alla reception allo +41 27 928 00 23 o scrivete a hallo@chalet-aletsch.ch.",
+};
 
+export async function POST(req: Request) {
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     req.headers.get("x-real-ip") ||
@@ -38,52 +38,37 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "rate_limited" }, { status: 429 });
   }
 
-  let body: { messages?: Array<{ role: "user" | "assistant"; content: string }> };
+  let body: { message?: string; faqId?: string; locale?: string };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "invalid_json" }, { status: 400 });
   }
 
-  if (!Array.isArray(body.messages) || body.messages.length === 0) {
-    return NextResponse.json({ error: "missing_messages" }, { status: 400 });
-  }
+  const locale: Locale = (["de", "en", "fr", "it"] as Locale[]).includes(
+    body.locale as Locale,
+  )
+    ? (body.locale as Locale)
+    : "de";
 
-  // Truncate to last 10 turns to keep context tight + cap input
-  const messages = body.messages
-    .slice(-10)
-    .filter((m) => typeof m.content === "string" && m.content.trim().length > 0)
-    .map((m) => ({
-      role: m.role === "assistant" ? ("assistant" as const) : ("user" as const),
-      content: m.content.slice(0, 1000),
-    }));
-
-  if (messages.length === 0 || messages[messages.length - 1]!.role !== "user") {
-    return NextResponse.json({ error: "invalid_messages" }, { status: 400 });
-  }
-
-  const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
-  try {
-    const response = await anthropic.messages.create({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 320,
-      system: CHATBOT_SYSTEM_PROMPT,
-      messages,
+  // Chip click — fetch the canned answer by id
+  if (body.faqId) {
+    const answer = getFaqAnswerById(body.faqId, locale);
+    return NextResponse.json({
+      reply: answer ?? FALLBACKS[locale],
+      matched: answer ? body.faqId : null,
     });
-
-    const text = response.content
-      .filter((c) => c.type === "text")
-      .map((c) => (c.type === "text" ? c.text : ""))
-      .join("")
-      .trim();
-
-    return NextResponse.json({ reply: text });
-  } catch (err) {
-    console.error("[chat] anthropic error:", err);
-    return NextResponse.json(
-      { error: "upstream_error", hint: (err as Error).message },
-      { status: 502 },
-    );
   }
+
+  // Free-text query — match against keywords
+  const text = (body.message ?? "").toString().slice(0, 500).trim();
+  if (!text) {
+    return NextResponse.json({ error: "missing_message" }, { status: 400 });
+  }
+
+  const match = matchFaq(text, locale);
+  return NextResponse.json({
+    reply: match ? match.answer : FALLBACKS[locale],
+    matched: match?.faqId ?? null,
+  });
 }

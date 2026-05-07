@@ -689,10 +689,10 @@
     "subtitle": "Avec plaisir",
     "open": "Ouvrir le concierge",
     "close": "Fermer",
-    "welcome": "Bienvenue. Je suis l'assistant du Chalet Aletsch — chambres, accès, restauration : posez votre question.",
+    "welcome": "Bienvenue. Je suis l'assistant du Chalet Aletsch. Choisissez une question fréquente ci-dessous ou tapez la vôtre.",
+    "suggestionsLabel": "Questions fréquentes",
     "placeholder": "Posez une question …",
     "send": "Envoyer",
-    "notConfigured": "Le concierge n'est pas joignable pour l'instant. Écrivez-nous à hallo@chalet-aletsch.ch.",
     "rateLimited": "Doucement — vous avez atteint la limite horaire. Réessayez dans une heure.",
     "networkError": "Connexion perdue. Réessayez.",
     "genericError": "Une erreur s'est produite. Réessayez."

@@ -689,10 +689,10 @@
     "subtitle": "Wir antworten gerne",
     "open": "Concierge öffnen",
     "close": "Schliessen",
-    "welcome": "Grüezi. Ich bin der Assistent vom Chalet Aletsch. Wie kann ich Ihnen helfen — Stuben, Anreise, Verpflegung?",
+    "welcome": "Grüezi. Ich bin der Assistent vom Chalet Aletsch. Wählen Sie unten eine häufige Frage oder schreiben Sie Ihre eigene.",
+    "suggestionsLabel": "Häufig gefragt",
     "placeholder": "Stellen Sie eine Frage …",
     "send": "Senden",
-    "notConfigured": "Der Concierge ist gerade nicht erreichbar. Bitte schreiben Sie an hallo@chalet-aletsch.ch.",
     "rateLimited": "Bitte etwas langsamer — Sie haben das Limit erreicht. In einer Stunde geht's weiter.",
     "networkError": "Verbindung unterbrochen. Bitte versuchen Sie es nochmals.",
     "genericError": "Etwas ist schiefgegangen. Bitte versuchen Sie es nochmals."
