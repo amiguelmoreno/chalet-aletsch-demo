@@ -4,8 +4,10 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { LogoMark } from "@/components/ornaments/LogoMark";
-import { authConfigured } from "@/auth";
+import { authConfigured, auth } from "@/auth";
+import { Link } from "@/i18n/routing";
 import { SignInActions } from "./SignInActions";
+import { SwitchAccountButton } from "./SwitchAccountButton";
 
 export default async function SignInPage({
   params,
@@ -14,10 +16,11 @@ export default async function SignInPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <Content />;
+  const session = await auth();
+  return <Content alreadySignedInAs={session?.user?.email ?? null} />;
 }
 
-function Content() {
+function Content({ alreadySignedInAs }: { alreadySignedInAs: string | null }) {
   const t = useTranslations("signIn");
   const googleEnabled = !!process.env.AUTH_GOOGLE_ID;
   const emailEnabled = !!process.env.RESEND_API_KEY;
@@ -39,7 +42,27 @@ function Content() {
 
           <OrnamentRule className="mb-10" />
 
-          {!authConfigured ? (
+          {alreadySignedInAs ? (
+            <div className="text-center space-y-6">
+              <div>
+                <p className="editorial-caps text-forest-700 mb-2">
+                  {t("alreadyEyebrow")}
+                </p>
+                <p className="font-display italic text-xl text-ink-700">
+                  {alreadySignedInAs}
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                <Link
+                  href="/account"
+                  className="editorial-caps border border-ink-700 bg-ink-700 text-parchment-50 px-7 py-3 hover:bg-ink-800 transition-colors"
+                >
+                  {t("continueToAccount")}
+                </Link>
+                <SwitchAccountButton label={t("switchAccount")} />
+              </div>
+            </div>
+          ) : !authConfigured ? (
             <div className="text-center">
               <p className="editorial-caps text-seal mb-3">{t("notConfiguredEyebrow")}</p>
               <p className="text-ink-600 leading-relaxed max-w-md mx-auto">

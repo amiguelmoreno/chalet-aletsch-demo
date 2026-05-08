@@ -305,6 +305,9 @@
     "notConfiguredEyebrow": "Note",
     "notConfigured": "La connexion n'est pas encore configurée. Définissez AUTH_GOOGLE_ID + AUTH_GOOGLE_SECRET ou RESEND_API_KEY dans votre environnement et tout fonctionnera.",
     "note": "Pas de mot de passe : nous vous envoyons un lien par courriel ou vous continuez avec Google.",
+    "alreadyEyebrow": "Vous êtes déjà connecté en tant que",
+    "continueToAccount": "Continuer vers mon espace",
+    "switchAccount": "Changer de compte",
     "verify": {
       "eyebrow": "Lettre en route",
       "title": "Nous vous avons envoyé un lien de connexion.",

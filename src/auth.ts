@@ -17,6 +17,12 @@ if (process.env.AUTH_GOOGLE_ID && process.env.AUTH_GOOGLE_SECRET) {
       // pre-seeded by `npm run admin:make` to be claimable on first
       // Google sign-in instead of failing with OAuthAccountNotLinked.
       allowDangerousEmailAccountLinking: true,
+      // Always force Google's account picker — prevents the case where
+      // the user is signed into multiple Google accounts and Google
+      // silently re-uses the last one, making "switch account" useless.
+      authorization: {
+        params: { prompt: "select_account" },
+      },
     }),
   );
 }

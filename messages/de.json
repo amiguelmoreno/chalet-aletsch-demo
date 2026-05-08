@@ -305,6 +305,9 @@
     "notConfiguredEyebrow": "Hinweis",
     "notConfigured": "Die Anmeldung ist noch nicht eingerichtet. Setzen Sie AUTH_GOOGLE_ID + AUTH_GOOGLE_SECRET oder RESEND_API_KEY in Ihrer Umgebung, dann funktioniert sie auf Anhieb.",
     "note": "Wir verwenden keine Passwörter. Stattdessen senden wir Ihnen einen Anmeldelink per E-Mail oder Sie wählen Google.",
+    "alreadyEyebrow": "Sie sind bereits angemeldet als",
+    "continueToAccount": "Weiter zu meinem Bereich",
+    "switchAccount": "Konto wechseln",
     "verify": {
       "eyebrow": "Brief unterwegs",
       "title": "Wir haben Ihnen einen Anmeldelink gesendet.",
