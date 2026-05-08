@@ -13,6 +13,7 @@
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
     "admin:make": "tsx --env-file=.env scripts/make-admin.ts",
+    "user:reset": "tsx --env-file=.env scripts/reset-user.ts",
     "db:generate": "prisma generate",
     "db:seed": "tsx --env-file=.env prisma/seed.ts"
   },
