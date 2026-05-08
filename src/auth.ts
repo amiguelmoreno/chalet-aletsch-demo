@@ -11,6 +11,12 @@ if (process.env.AUTH_GOOGLE_ID && process.env.AUTH_GOOGLE_SECRET) {
     Google({
       clientId: process.env.AUTH_GOOGLE_ID,
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
+      // Auto-link the Google identity to an existing User row with the
+      // same verified email. Safe here because Google guarantees the
+      // email belongs to the signed-in user, and we want admin rows
+      // pre-seeded by `npm run admin:make` to be claimable on first
+      // Google sign-in instead of failing with OAuthAccountNotLinked.
+      allowDangerousEmailAccountLinking: true,
     }),
   );
 }
