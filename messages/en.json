@@ -22,7 +22,8 @@
       "story": "Our story",
       "contact": "Find us",
       "imprint": "Imprint",
-      "privacy": "Privacy"
+      "privacy": "Privacy",
+      "admin": "Management"
     },
     "copyright": { "held": "All rights reserved" },
     "colophon": "Set in Fraunces & EB Garamond",
@@ -318,6 +319,11 @@
     "name": "Name",
     "email": "E-mail",
     "signOut": "Sign out",
+    "admin": {
+      "label": "Management",
+      "body": "Reservations, calendar, rooms and pricing.",
+      "cta": "Open the panel"
+    },
     "bookings": {
       "heading": "Reservations",
       "empty": "No reservation on file yet.",

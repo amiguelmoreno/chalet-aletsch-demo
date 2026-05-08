@@ -22,7 +22,8 @@
       "story": "Storia",
       "contact": "Come arrivare",
       "imprint": "Note legali",
-      "privacy": "Privacy"
+      "privacy": "Privacy",
+      "admin": "Amministrazione"
     },
     "copyright": { "held": "Tutti i diritti riservati" },
     "colophon": "Composto in Fraunces & EB Garamond",
@@ -318,6 +319,11 @@
     "name": "Nome",
     "email": "E-mail",
     "signOut": "Esci",
+    "admin": {
+      "label": "Amministrazione",
+      "body": "Prenotazioni, calendario, camere e tariffe.",
+      "cta": "Apri il pannello"
+    },
     "bookings": {
       "heading": "Prenotazioni",
       "empty": "Nessuna prenotazione ancora.",

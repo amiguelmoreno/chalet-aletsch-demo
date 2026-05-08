@@ -1,13 +1,17 @@
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { auth } from "@/auth";
 import { Container } from "@/components/ui/Container";
 import { LogoMark } from "@/components/ornaments/LogoMark";
 import { OrnamentRule } from "@/components/ornaments/OrnamentRule";
 import { MountainRule } from "@/components/ornaments/MountainRule";
 import { CookieSettingsTrigger } from "@/components/cookies/CookieBanner";
 
-export function Footer() {
-  const t = useTranslations("footer");
+export async function Footer() {
+  const t = await getTranslations("footer");
+  const session = await auth();
+  const isAdmin =
+    (session?.user as { role?: string } | undefined)?.role === "admin";
 
   return (
     <footer className="bg-forest-800 text-parchment-100 above-grain mt-32 relative">
@@ -63,6 +67,16 @@ export function Footer() {
               <li><Link href="/contact" className="hover:text-parchment-50 underline decoration-parchment-200/30 underline-offset-4">{t("pages.contact")}</Link></li>
               <li><Link href="/legal/imprint" className="hover:text-parchment-50 underline decoration-parchment-200/30 underline-offset-4">{t("pages.imprint")}</Link></li>
               <li><Link href="/legal/privacy" className="hover:text-parchment-50 underline decoration-parchment-200/30 underline-offset-4">{t("pages.privacy")}</Link></li>
+              {isAdmin && (
+                <li className="pt-2 border-t border-parchment-200/20 mt-3">
+                  <Link
+                    href="/admin"
+                    className="inline-flex items-center gap-2 italic text-parchment-200/85 hover:text-parchment-50 underline decoration-parchment-200/30 underline-offset-4"
+                  >
+                    {t("pages.admin")} →
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>

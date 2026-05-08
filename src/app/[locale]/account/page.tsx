@@ -33,6 +33,8 @@ export default async function AccountPage({
   const session = await auth();
   const email = session?.user?.email ?? "";
   const name = session?.user?.name ?? "";
+  const isAdmin =
+    (session?.user as { role?: string } | undefined)?.role === "admin";
 
   const bookings = email ? await fetchBookings(email, locale) : [];
   const t = await getTranslations({ locale, namespace: "account" });
@@ -51,6 +53,23 @@ export default async function AccountPage({
         <div className="my-12">
           <OrnamentRule />
         </div>
+
+        {isAdmin && (
+          <div className="mb-12 border border-forest-700/30 bg-forest-700/[0.04] px-6 md:px-8 py-5 md:py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <p className="editorial-caps text-forest-700">{t("admin.label")}</p>
+              <p className="mt-1.5 text-ink-600 text-sm leading-relaxed">
+                {t("admin.body")}
+              </p>
+            </div>
+            <Link
+              href={"/admin" as never}
+              className="editorial-caps inline-flex items-center justify-center border border-forest-700 px-6 py-3 text-forest-700 hover:bg-forest-700 hover:text-parchment-50 transition-colors whitespace-nowrap"
+            >
+              {t("admin.cta")} →
+            </Link>
+          </div>
+        )}
 
         <BookingsBlock bookings={bookings} locale={locale} />
 

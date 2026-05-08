@@ -22,7 +22,8 @@
       "story": "Geschichte",
       "contact": "Anreise",
       "imprint": "Impressum",
-      "privacy": "Datenschutz"
+      "privacy": "Datenschutz",
+      "admin": "Hausverwaltung"
     },
     "copyright": { "held": "Alle Rechte vorbehalten" },
     "colophon": "Gesetzt in Fraunces & EB Garamond",
@@ -318,6 +319,11 @@
     "name": "Name",
     "email": "E-Mail",
     "signOut": "Abmelden",
+    "admin": {
+      "label": "Hausverwaltung",
+      "body": "Reservationen, Kalender, Stuben und Preise pflegen.",
+      "cta": "Panel öffnen"
+    },
     "bookings": {
       "heading": "Reservationen",
       "empty": "Noch keine Reservation eingetragen.",
