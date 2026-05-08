@@ -192,8 +192,11 @@
 }
 
 @layer utilities {
+  /* Stacks an element above the body's fixed paper-grain overlay
+     (z-index: 1). Doesn't touch `position` so it composes cleanly with
+     sticky/fixed/absolute layouts (the sticky header is the main case). */
   .above-grain {
-    position: relative;
+    isolation: isolate;
     z-index: 2;
   }
 
