@@ -36,6 +36,20 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "database" },
   trustHost: true,
+  debug: process.env.AUTH_DEBUG === "1",
+  logger: {
+    error(error) {
+      console.error("[auth][error]", error);
+    },
+    warn(code) {
+      console.warn("[auth][warn]", code);
+    },
+    debug(message, metadata) {
+      if (process.env.AUTH_DEBUG === "1") {
+        console.log("[auth][debug]", message, metadata);
+      }
+    },
+  },
   pages: {
     signIn: "/de/sign-in",
     verifyRequest: "/de/sign-in/verify",
