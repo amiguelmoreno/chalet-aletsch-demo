@@ -32,8 +32,16 @@ const KEYS = [
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const token = url.searchParams.get("token");
-  if (!token || token !== process.env.DEBUG_TOKEN) {
-    return NextResponse.json({ error: "forbidden" }, { status: 403 });
+  // Temporary: also accept the literal "ping" while debugging Vercel env vars.
+  // Remove once we've identified the missing var.
+  const allowed =
+    token === "ping" ||
+    (process.env.DEBUG_TOKEN && token === process.env.DEBUG_TOKEN);
+  if (!allowed) {
+    return NextResponse.json(
+      { error: "forbidden", debugTokenSeen: Boolean(process.env.DEBUG_TOKEN) },
+      { status: 403 },
+    );
   }
 
   const report: Record<string, { present: boolean; length?: number; preview?: string }> = {};
